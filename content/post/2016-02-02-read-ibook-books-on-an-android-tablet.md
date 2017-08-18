@@ -1,0 +1,29 @@
+---
+title: Read iBook books on an Android tablet
+author: Bill Farmer
+type: post
+date: 2016-02-02T16:59:51+00:00
+url: /read-ibook-books-on-an-android-tablet/
+categories:
+  - Hacking
+
+---
+You will need to install <a href="http://calibre-ebook.com" target="_blank">Calibre</a>  to make the books usable, and the books must be DRM free.
+
+There are two ways to do this:
+
+  * If you have a Mac or Hackintosh you can find your books in `~/Library/Containers/com.apple.BKAgentService/Data/Documents/iBooks/Books`, in what appears to be epub files but are really folders with numeric names. Copy the ones you want to somewhere accessible, like `~/Books`, and zip the contents of each folder, not the folder itself. Rename the zip files as epub files.
+
+<a href="http://billthefarmer.users.sourceforge.net/wordpress/wp-content/uploads/2016/02/iBooks.png" rel="attachment wp-att-344"><img class="alignnone size-full wp-image-344" src="http://billthefarmer.users.sourceforge.net/wordpress/wp-content/uploads/2016/02/iBooks.png" alt="iBooks" width="770" height="405" srcset="http://billthefarmer.users.sourceforge.net/wordpress/wp-content/uploads/2016/02/iBooks.png 770w, http://billthefarmer.users.sourceforge.net/wordpress/wp-content/uploads/2016/02/iBooks-300x158.png 300w, http://billthefarmer.users.sourceforge.net/wordpress/wp-content/uploads/2016/02/iBooks-768x404.png 768w, http://billthefarmer.users.sourceforge.net/wordpress/wp-content/uploads/2016/02/iBooks-624x328.png 624w" sizes="(max-width: 770px) 100vw, 770px" /></a>
+
+  * Alternatively, use iTunes on a PC to download the books you want. You can find them by right clicking a book and selecting _Show in Windows Explorer_.
+
+<a href="http://billthefarmer.users.sourceforge.net/wordpress/wp-content/uploads/2016/02/iTunes.png" rel="attachment wp-att-357"><img class="alignnone size-full wp-image-357" src="http://billthefarmer.users.sourceforge.net/wordpress/wp-content/uploads/2016/02/iTunes.png" alt="iTunes" width="545" height="313" srcset="http://billthefarmer.users.sourceforge.net/wordpress/wp-content/uploads/2016/02/iTunes.png 545w, http://billthefarmer.users.sourceforge.net/wordpress/wp-content/uploads/2016/02/iTunes-300x172.png 300w" sizes="(max-width: 545px) 100vw, 545px" /></a>
+
+Your books will be readable epub files with no front cover and no table of contents, despite having a file called `cover.jpg` and `toc.ncx` in them. Load them into Calibre, and use the _Edit book_ toolbar button to edit the book. Use the _Tools>Table of Contents>edit Table of Contents_ menu item, and press the _Generate ToC from major headings_ button. Use the _Tools>Add cover_ menu item and pick the `cover.jpg` item for the cover. Save the edits, and you now have a usable epub book to export to your tablet. Use Aldiko, or your favourite epub reader to read it.
+
+<a href="http://billthefarmer.users.sourceforge.net/wordpress/wp-content/uploads/2016/02/Calibre.png" rel="attachment wp-att-345"><img class="alignnone size-full wp-image-345" src="http://billthefarmer.users.sourceforge.net/wordpress/wp-content/uploads/2016/02/Calibre.png" alt="Calibre" width="1012" height="762" srcset="http://billthefarmer.users.sourceforge.net/wordpress/wp-content/uploads/2016/02/Calibre.png 1012w, http://billthefarmer.users.sourceforge.net/wordpress/wp-content/uploads/2016/02/Calibre-300x226.png 300w, http://billthefarmer.users.sourceforge.net/wordpress/wp-content/uploads/2016/02/Calibre-768x578.png 768w, http://billthefarmer.users.sourceforge.net/wordpress/wp-content/uploads/2016/02/Calibre-624x470.png 624w" sizes="(max-width: 1012px) 100vw, 1012px" /></a>
+
+<a href="http://billthefarmer.users.sourceforge.net/wordpress/wp-content/uploads/2016/02/Edit.png" rel="attachment wp-att-346"><img class="alignnone size-large wp-image-346" src="http://billthefarmer.users.sourceforge.net/wordpress/wp-content/uploads/2016/02/Edit-1024x740.png" alt="Edit" width="625" height="452" srcset="http://billthefarmer.users.sourceforge.net/wordpress/wp-content/uploads/2016/02/Edit-1024x740.png 1024w, http://billthefarmer.users.sourceforge.net/wordpress/wp-content/uploads/2016/02/Edit-300x217.png 300w, http://billthefarmer.users.sourceforge.net/wordpress/wp-content/uploads/2016/02/Edit-768x555.png 768w, http://billthefarmer.users.sourceforge.net/wordpress/wp-content/uploads/2016/02/Edit-624x451.png 624w, http://billthefarmer.users.sourceforge.net/wordpress/wp-content/uploads/2016/02/Edit.png 1230w" sizes="(max-width: 625px) 100vw, 625px" /></a>
+
+<a href="http://billthefarmer.users.sourceforge.net/wordpress/wp-content/uploads/2016/02/ToC.png" rel="attachment wp-att-347"><img class="alignnone size-full wp-image-347" src="http://billthefarmer.users.sourceforge.net/wordpress/wp-content/uploads/2016/02/ToC.png" alt="ToC" width="950" height="652" srcset="http://billthefarmer.users.sourceforge.net/wordpress/wp-content/uploads/2016/02/ToC.png 950w, http://billthefarmer.users.sourceforge.net/wordpress/wp-content/uploads/2016/02/ToC-300x206.png 300w, http://billthefarmer.users.sourceforge.net/wordpress/wp-content/uploads/2016/02/ToC-768x527.png 768w, http://billthefarmer.users.sourceforge.net/wordpress/wp-content/uploads/2016/02/ToC-624x428.png 624w" sizes="(max-width: 950px) 100vw, 950px" /></a><a href="http://billthefarmer.users.sourceforge.net/wordpress/wp-content/uploads/2016/02/Cover.png" rel="attachment wp-att-348"><img class="alignnone size-full wp-image-348" src="http://billthefarmer.users.sourceforge.net/wordpress/wp-content/uploads/2016/02/Cover.png" alt="Cover" width="602" height="532" srcset="http://billthefarmer.users.sourceforge.net/wordpress/wp-content/uploads/2016/02/Cover.png 602w, http://billthefarmer.users.sourceforge.net/wordpress/wp-content/uploads/2016/02/Cover-300x265.png 300w" sizes="(max-width: 602px) 100vw, 602px" /></a>

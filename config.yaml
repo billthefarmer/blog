@@ -1,0 +1,32 @@
+---
+baseURL: http://example.org/
+languageCode: en-gb
+title: Bill Farmer's Blog
+theme: theme-hugo-foundation6
+
+# number of posts to show on home/category/tag pages (Default: 10)
+paginate: 5
+
+taxonomies:
+  category: categories
+  # tag: tags
+
+permalinks:
+  page: /:slug/
+  post: /:year/:month/:title/
+
+menu:
+  sidebar:
+    - name: Bill Farmer
+      url: https://example.com
+    - name: Link 2
+      url: https://example.org
+
+params:
+  sidebar:
+    # Optional about block for sidebar (can be Markdown)
+    # about: Bill Farmer's Blog
+    num_recent_posts: 5
+  sharingicons:
+    hide: true
+...

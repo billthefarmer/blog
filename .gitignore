@@ -1,0 +1,6 @@
+# Hugo folders
+public/
+themes/
+
+# Emacs backups
+*~
