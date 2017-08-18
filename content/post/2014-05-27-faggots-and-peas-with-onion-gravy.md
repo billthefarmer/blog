@@ -23,4 +23,4 @@ When I was a teenager the chippy at Preston, Weymouth, Dorset used to serve fagg
   3. Cook the peas in accordance with the instructions. When they are done, use the cooking water for the gravy.
   4. Serve, pouring the gravy over the faggots and peas.
 
- [1]: http://billthefarmer.users.sourceforge.net/wordpress/truly-evil-onion-gravy "http://billthefarmer.users.sourceforge.net/wordpress/truly-evil-onion-gravy"
+ [1]: truly-evil-onion-gravy

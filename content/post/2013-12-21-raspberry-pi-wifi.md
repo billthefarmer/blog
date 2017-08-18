@@ -13,7 +13,7 @@ When I got my Pi some months ago I bought a wifi adapter for it, as you do. But 
 I dug it out again the other day because I wanted to hear just how good the [Sonivox EAS library][1] I ported to the Pi sounded when hooked up to the hifi with some decent speakers. After extensive googling, and putting together various bits and pieces of info from various blog posts, and wikis, I came up with sort-of working configs for Raspbian and Arch Linux.
 
 ## Raspbian
-
+```
     /etc/network/interfaces:
     
     auto lo
@@ -33,18 +33,17 @@ You can use `wpa_passphrase` to generate the `wpa_supplicant.conf` file:
             #psk="passphrase"
             psk=41167ee7545cb4d9b1c7d7e113cfc1f0ac367b020141c46c9418965c1926fd80
     }
-
+```
 Redirect the output to the `wpa_supplicant.conf` file. I found this in the Arch Linux wiki. The wpa-conf and wpa-roam stanzas do not appear to be officially documented anywhere I can find.
 
 ### Raspbian Jessie
 
 If your wifi router has a WPS button, press it. Run `wpa_cli` on the Pi and enter the following commands:
-
+```
     > wps_pbc
     > quit
-    
-
-This should automatically pick up the ssid and key, connect, and set up `wpa_supplicant.conf<code> so that the Pi will reconnect when rebooted.`</code>
+```
+This should automatically pick up the ssid and key, connect, and set up `wpa_supplicant.conf` so that the Pi will reconnect when rebooted.
 
 ## Arch Linux
 
@@ -53,7 +52,7 @@ Use `wifi-menu` to create a `netctl` profile. Use `netctl list` to list profiles
 I dug it out again the other day because I wanted to hear just how good the [Sonivox EAS library][1] I ported to the Pi sounded when hooked up to the hifi with some decent speakers. After extensive googling, and putting together various bits and pieces of info from various blog posts, and wikis, I came up with sort-of working configs for Raspbian and Arch Linux.
 
 ## Raspbian
-
+```
     /etc/network/interfaces:
     
     auto lo
@@ -64,35 +63,34 @@ I dug it out again the other day because I wanted to hear just how good the [Son
     auto wlan0
     iface wlan0 inet dhcp
     wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
-
+```
 You can use `wpa_passphrase` to generate the `wpa_supplicant.conf` file:
-
+```
     $ wpa_passphrase ssid passphrase
     network={
             ssid="ssid"
             #psk="passphrase"
             psk=41167ee7545cb4d9b1c7d7e113cfc1f0ac367b020141c46c9418965c1926fd80
     }
-
+```
 Redirect the output to the `wpa_supplicant.conf` file. I found this in the Arch Linux wiki. The wpa-conf and wpa-roam stanzas do not appear to be officially documented anywhere I can find.
 
 ### Raspbian Jessie
 
 If your wifi router has a WPS button, press it. Run `wpa_cli` on the Pi and enter the following commands:
-
+```
     > wps_pbc
     > quit
-    
-
-This should automatically pick up the ssid and key, connect, and set up `wpa_supplicant.conf<code> so that the Pi will reconnect when rebooted.`</code>
+```
+This should automatically pick up the ssid and key, connect, and set up `wpa_supplicant.conf` so that the Pi will reconnect when rebooted.
 
 ## Arch Linux
 
 Use `wifi-menu` to create a `netctl` profile. Use `netctl list` to list profiles and`` to enable and start your profile.
-
+```
     sudo netctl enable wlan0-yourSSIDhere
     sudo netctl start wlan0-yourSSIDhere
-
+```
 This appears to work just fine.
 
  [1]: https://github.com/billthefarmer/mididriver

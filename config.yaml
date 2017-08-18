@@ -2,6 +2,7 @@
 baseURL: http://example.org/
 languageCode: en-gb
 title: Bill Farmer's Blog
+copyright: Copyright &copy; 2017 Bill Farmer
 theme: theme-hugo-foundation6
 
 # number of posts to show on home/category/tag pages (Default: 10)
@@ -18,11 +19,12 @@ permalinks:
 menu:
   sidebar:
     - name: Bill Farmer
-      url: https://example.com
-    - name: Link 2
-      url: https://example.org
+      url: http://billthefarmer.github.io
+    - name: Github
+      url: https://github.com/billthefarmer
 
 params:
+  description: Random thoughts on random subjects
   sidebar:
     # Optional about block for sidebar (can be Markdown)
     # about: Bill Farmer's Blog

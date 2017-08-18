@@ -16,4 +16,6 @@ The applications I have written involve a loop running with about a 100ms repeat
 
 What is interesting is what you are supposed to do with the case where you&#8217;ve got an event driven audio library function writing data into a buffer, while concurrently an asynchronous  display callback function is reading and displaying it. I haven&#8217;t worried about it, it just works.
 
-I have had to eat my words to a limited extent. I have had an issue reported with my <a href="https://github.com/billthefarmer/mididriver" target="_blank">Android Midi Driver</a>. A user has reported lockups with lots of midi events, so suggested using a synchronised queue, which I have done. I consider that a special case, however, as there is both Java and native code running concurrently using the same native library.
+I have had to eat my words to a limited extent. I have had an issue reported with my [Android Midi Driver][1]. A user has reported lockups with lots of midi events, so suggested using a synchronised queue, which I have done. I consider that a special case, however, as there is both Java and native code running concurrently using the same native library.
+
+ [1]: https://github.com/billthefarmer/mididriver

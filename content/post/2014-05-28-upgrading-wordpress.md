@@ -8,15 +8,15 @@ categories:
   - Hacking
 
 ---
-This site has the firewall set up so that the web server has no external access. This means that I can&#8217;t use the usual WordPress update mechanism to keep it up to date. I use <a title="https://filezilla-project.org" href="https://filezilla-project.org" target="_blank">FileZilla</a> for maintaining the server, and I recently discovered you can use drag and drop to move stuff around remotely.
+This site has the firewall set up so that the web server has no external access. This means that I can&#8217;t use the usual WordPress update mechanism to keep it up to date. I use [FileZilla](https://filezilla-project.org) for maintaining the server, and I recently discovered you can use drag and drop to move stuff around remotely.
 
 So my easy WordPress upgrade method is:
 
   * Download the latest zip file and unzip it.
-  * Rename the wordpress folder to something else, like wordprezz.
+  * Rename the wordpress folder to something else, like wordpress-old.
   * Upload the new wordpress folder.
-  * Move the stuff you need from the old wordprezz folder, like themes, plugins, uploads, any modified theme files and your config.php file.
+  * Move the stuff you need from the old wordpress-old folder, like themes, plugins, uploads, any modified theme files and your config.php file.
   * Check it works and upgrade the database.
-  * Remove the old wordprezz folder.
+  * Remove the old wordpress-old folder.
 
 Nearly as easy as letting it do it itself.

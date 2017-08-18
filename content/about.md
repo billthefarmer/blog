@@ -5,7 +5,7 @@ type: page
 date: 2013-11-28T17:28:33+00:00
 
 ---
-![Oldland Mill](2013/11/20131726.jpg)
+![Oldland Mill](images/2013/11/20131726.jpg)
 Playing at Oldland Mill, near Ditchling.
 
 I am retired, a morris musician and an itinerant developer. I was a chartered electrical engineer until I stopped paying for a journal I couldn&#8217;t understand. Over the course of a long career working for the local electrick light company I developed various bits and pieces of software in so many different languages I can no longer remember them all. In rough order they are:
