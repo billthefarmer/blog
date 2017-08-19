@@ -103,6 +103,7 @@ menu:
 
 params:
   description: Random thoughts on random subjects
+  header_background: images/2013/12/cropped-P1010089.jpg
   sidebar:
     # Optional about block for sidebar (can be Markdown)
     # about: Bill Farmer's Blog
@@ -137,7 +138,7 @@ with some extra styles.
 
 <style>
 .callout.large {
-    background-image: url(images/2013/12/cropped-P1010089.jpg);
+    background-image: url({{ $.Site.Params.header_background }});
     background-size: cover;
     background-position: center bottom;
     background-repeat: no-repeat;
@@ -145,10 +146,10 @@ with some extra styles.
 </style>
 ```
 
-Reading the documentation on [variables][20], I should have probably
-put an entry in the config file `header_background:
-images/2013/12/cropped-P1010089.jpg` and put `{{
-$.Site.Params.header_background }}` instead of the path in the styles.
+Reading the documentation on [variables][20], I put an entry in the
+config file `header_background: images/2013/12/cropped-P1010089.jpg`
+and put `{{ $.Site.Params.header_background }}` instead of the path in
+the styles.
 
 I wanted to get syntax highlighting working, so I installed
 [Pygments][19]. It's on the path, it works, but Hugo can't find it.
