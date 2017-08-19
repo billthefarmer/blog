@@ -27,6 +27,7 @@ menu:
 
 params:
   description: Random thoughts on random subjects
+  header_background: images/2013/12/cropped-P1010089.jpg
   sidebar:
     # Optional about block for sidebar (can be Markdown)
     # about: Bill Farmer's Blog

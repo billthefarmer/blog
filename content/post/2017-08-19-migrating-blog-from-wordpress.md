@@ -121,6 +121,35 @@ necessary to add the `sidebar` entry to stop an error, so the
 the `about` item. I had to look at the source template to work that
 out.
 
+I wanted a background image for the page header like on my original
+blog. To get that to work was quite complex. There aren't any hooks
+for modifying the blog header, but there is for the page `<head>`. So
+I copied the `head-custom.html` from the `layouts/partials` folder in
+the theme to `layouts/partials` in the blog source and modified it
+with some extra styles.
+
+```
+<!--
+    Create <project-root>/layouts/partials/head-custom.html to
+    overwrite this empty template and put custom code into the <head>
+    section.
+  -->
+
+<style>
+.callout.large {
+    background-image: url(images/2013/12/cropped-P1010089.jpg);
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+</style>
+```
+
+Reading the documentation on [variables][20], I should have probably
+put an entry in the config file `header_background:
+images/2013/12/cropped-P1010089.jpg` and put `{{
+$.Site.Params.header_background }}` instead of the path in the styles.
+
 I wanted to get syntax highlighting working, so I installed
 [Pygments][19]. It's on the path, it works, but Hugo can't find it.
 
@@ -148,4 +177,5 @@ I shall have to try it on Linux to see if it works there.
  [16]: http://www.msys2.org
  [17]: https://git-scm.com
  [18]: https://www.python.org
- [19]: http://pygments.org/
+ [19]: http://pygments.org
+ [20]: http://gohugo.io/variables
