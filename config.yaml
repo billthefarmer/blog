@@ -5,6 +5,7 @@ title: Bill Farmer's Blog
 copyright: Copyright &copy; 2017 Bill Farmer
 theme: theme-hugo-foundation6
 publishDir: d:/billthefarmer.github.io/blog/
+pygmentscodefences: true
 
 # number of posts to show on home/category/tag pages (Default: 10)
 paginate: 5
