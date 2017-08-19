@@ -8,13 +8,14 @@ categories:
   - Hacking
 
 ---
-Two articles, [Handling Runtime Changes][1] and [Two articles, [Handling Runtime Changes][1] and][2] recommend the use of fragments to retain data and background tasks in Android during the life of an app. There are two problems with this:
+Two articles, [Handling Configuration Changes][1] and [Handling Configuration Changes with Fragments][2] recommend the use of fragments to retain data and background tasks in Android during the life of an app. There are two problems with this:
 
   * An android fragment is quite a complex heavyweight object to use just for retaining data and possibly a background task, and the fragment management is not simple.
-  * Fragments are not retained if the associated activity is discarded by calling finish().
+  * Fragments are not retained if the associated activity is discarded by calling `finish()`.
 
 A simpler and less complex solution is to use a static singleton, mentioned here in a different context: [Setting Up a RequestQueue][3]. This is quite simple to implement, like this:
 
+<pre>
     
     // Activity
         // On create
@@ -127,7 +128,7 @@ A simpler and less complex solution is to use a static singleton, mentioned here
             void onPostExecute(Map<String, Double> map);
         }
     }
-    
+</pre>
 
 The data instance will be retained while the app is running and can be used to avoid expensive operations like downloading data more than once.
 
