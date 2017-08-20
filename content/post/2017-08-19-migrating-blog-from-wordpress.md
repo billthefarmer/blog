@@ -9,7 +9,7 @@ categories:
 
 ---
 
-I have got fed up with [Wordpress][1]. It requires constant updates,
+I have got fed up with [Wordpress][1]. It required constant updates,
 which doesn't work automatically on [Sourceforge developer web][2],
 and it's slow, especially in admin mode. I came across a reference to
 [Hugo][3] while following up on something unrelated, so I decided to
@@ -52,6 +52,10 @@ anyway. So I used the plugin from the admin page instead, which did
 work. The output looked pretty good, except for making a right pig's
 ear of image references and some links. And for some reason it left
 the first blog page in HTML.
+
+It did use the very neat Markdown syntax for some of the links
+`[Hugo][1]` with the list of urls at the end of the page `[1]:
+http://gohugo.io`.
 
 Installing [Hugo][3] and getting it working was not a problem, there's
 a [Quick Start][9] page with links to the bits you need. The next
@@ -160,6 +164,57 @@ WARN 2017/08/19 16:42:47 Highlighting requires Pygments to be installed and in t
 
 I shall have to try it on Linux to see if it works there.
 
+I gave up on highlighting to get my site index page working. I found a
+template on the [Taxonomy Variables][21] page to generate a list of
+blog pages.
+
+```
+<section>
+  <ul>
+    {{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
+      <li><a href="{{ "/" | relLangURL}}{{ $taxonomyname | urlize }}">{{ $taxonomyname }}</a>
+        <ul>
+          {{ range $key, $value := $taxonomy }}
+          <li> {{ $key }} </li>
+                <ul>
+                {{ range $value.Pages }}
+                    <li><a href="{{ .Permalink}}"> {{ .LinkTitle }} </a> </li>
+                {{ end }}
+                </ul>
+          {{ end }}
+        </ul>
+      </li>
+    {{ end }}
+  </ul>
+</section>
+```
+
+After hacking that about and putting it in
+`layouts/shortcodes/site-index.html`, and putting a shortcode `{{</*
+site-index */>}}` in the index page, I got a reasonable site index.
+
+```
+<section>
+  {{ range $key, $value := .Site.Taxonomies.categories }}
+  <h3>{{ title $key }}</h3>
+  <ul>
+    {{ range $value.Pages.ByTitle }}
+    <li><a href="{{ .Permalink }}">{{ safeHTML .LinkTitle }}</a></li>
+    {{ end }}
+  </ul>
+  {{ end }}
+</section>
+```
+
+There were a couple of extra tweaks that took a long time to find in
+the docs. The `key` for each category is in lower case, and I wanted
+it capitalised. I found `upper` and `lower`, tried searching for
+'capital' and got nothing useful. Eventually I found it somewhere in
+the template docs as a throw away reference: [`title`][22]. Wordpress
+put curly quote characters in my posts and post titles and they were
+showing up as `&#8217;` in the post titles in the index. I found
+`safeHTML` in the same place which tidied that up.
+
  [1]: https://wordpress.org
  [2]: https://sourceforge.net/p/forge/documentation/Developer%20Web%20Services
  [3]: http://gohugo.io
@@ -180,3 +235,5 @@ I shall have to try it on Linux to see if it works there.
  [18]: https://www.python.org
  [19]: http://pygments.org
  [20]: http://gohugo.io/variables
+ [21]: https://gohugo.io/variables/taxonomy
+ [22]: https://gohugo.io/functions/title

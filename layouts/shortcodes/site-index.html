@@ -1,0 +1,10 @@
+<section>
+  {{ range $key, $value := .Site.Taxonomies.categories }}
+  <h3>{{ title $key }}</h3>
+  <ul>
+    {{ range $value.Pages.ByTitle }}
+    <li><a href="{{ .Permalink }}">{{ safeHTML .LinkTitle }}</a></li>
+    {{ end }}
+  </ul>
+  {{ end }}
+</section>
