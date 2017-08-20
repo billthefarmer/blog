@@ -1,7 +1,7 @@
 ---
 baseURL: http://billthefarmer.github.io/blog/
 languageCode: en-gb
-title: Bill Farmer's Blog
+title: "Bill Farmer's Blog"
 copyright: Copyright &copy; 2017 Bill Farmer
 theme: theme-hugo-foundation6
 publishDir: d:/billthefarmer.github.io/blog/
@@ -28,9 +28,10 @@ menu:
 params:
   description: Random thoughts on random subjects
   header_background: images/2013/12/cropped-P1010089.jpg
+  cookie_consent_info_url: http://cookiesandyou.com
   sidebar:
     # Optional about block for sidebar (can be Markdown)
-    # about: Bill Farmer's Blog
+    # about: "Bill Farmer's Blog"
     num_recent_posts: 8
   sharingicons:
     hide: true
