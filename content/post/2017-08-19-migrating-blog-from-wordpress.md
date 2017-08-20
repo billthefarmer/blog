@@ -162,7 +162,8 @@ I wanted to get syntax highlighting working, so I installed
 WARN 2017/08/19 16:42:47 Highlighting requires Pygments to be installed and in the path
 ```
 
-I shall have to try it on Linux to see if it works there.
+I shall have to try it on Linux to see if it works there, which it
+does, but the style is horrible. I changed it to `default`.
 
 I gave up on highlighting to get my site index page working. I found a
 template on the [Taxonomy Variables][21] page to generate a list of
