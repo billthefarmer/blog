@@ -10,7 +10,7 @@ categories:
 ---
 If you write an android app that handles images or any other sort of file your app may be required to deal with &#8216;content&#8217; uris (`content://`). There is a very useful utility which resolves these into &#8216;file&#8217; uris (`file:///`) [FileUtils.java][1]. This contains one external reference to [LocalStorageProvider][2], which can be resolved by replacing the reference with a string.
 
-<pre>
+```java
     // import com.ianhanniballake.localstorage.LocalStorageProvider;
     // ...
         /**
@@ -24,11 +24,11 @@ If you write an android app that handles images or any other sort of file your a
                 .equals(uri.getAuthority());
     
         }
-</pre>
+```
 
 Alternatively, you could just comment out this function and references to it. Having done that, you can then resolve &#8216;content&#8217; uris
 
-<pre>
+```java
     public final static String CONTENT = "content";
     // ...
             if (uri.getScheme().equalsIgnoreCase(CONTENT))
@@ -46,7 +46,7 @@ Alternatively, you could just comment out this function and references to it. Ha
             }
             return uri;
         }
-</pre>
+```
 
 This may not always work, but I haven&#8217;t been able to defeat it.
 

@@ -14,8 +14,8 @@ I dug it out again the other day because I wanted to hear just how good the [Son
 
 ## Raspbian
 
-<pre>
-    /etc/network/interfaces:
+```shell
+/etc/network/interfaces:
     
     auto lo
     iface lo inet loopback
@@ -25,18 +25,19 @@ I dug it out again the other day because I wanted to hear just how good the [Son
     auto wlan0
     iface wlan0 inet dhcp
     wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
-</pre>
+```
 
 You can use `wpa_passphrase` to generate the `wpa_supplicant.conf` file:
 
-<pre>
-    $ wpa_passphrase ssid passphrase
+```shell
+$ wpa_passphrase ssid passphrase
+
     network={
             ssid="ssid"
             #psk="passphrase"
             psk=41167ee7545cb4d9b1c7d7e113cfc1f0ac367b020141c46c9418965c1926fd80
     }
-</pre>
+```
 
 Redirect the output to the `wpa_supplicant.conf` file. I found this in the Arch Linux wiki. The wpa-conf and wpa-roam stanzas do not appear to be officially documented anywhere I can find.
 
@@ -44,10 +45,10 @@ Redirect the output to the `wpa_supplicant.conf` file. I found this in the Arch 
 
 If your wifi router has a WPS button, press it. Run `wpa_cli` on the Pi and enter the following commands:
 
-<pre>
+```shell
     > wps_pbc
     > quit
-</pre>
+```
 
 This should automatically pick up the ssid and key, connect, and set up `wpa_supplicant.conf` so that the Pi will reconnect when rebooted.
 
@@ -55,10 +56,10 @@ This should automatically pick up the ssid and key, connect, and set up `wpa_sup
 
 Use `wifi-menu` to create a `netctl` profile. Use `netctl list` to list profiles and `netctl` to enable and start your profile.
 
-<pre>
+```shell
     sudo netctl enable wlan0-yourSSIDhere
     sudo netctl start wlan0-yourSSIDhere
-</pre>
+```
 
 This appears to work just fine.
 
