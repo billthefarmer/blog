@@ -15,7 +15,7 @@ Two articles, [Handling Configuration Changes][1] and [Handling Configuration Ch
 
 A simpler and less complex solution is to use a static singleton, mentioned here in a different context: [Setting Up a RequestQueue][3]. This is quite simple to implement, like this:
 
-<pre>
+```java
     
     // Activity
         // On create
@@ -128,7 +128,7 @@ A simpler and less complex solution is to use a static singleton, mentioned here
             void onPostExecute(Map<String, Double> map);
         }
     }
-</pre>
+```
 
 The data instance will be retained while the app is running and can be used to avoid expensive operations like downloading data more than once.
 
