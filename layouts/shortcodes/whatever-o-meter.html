@@ -1,0 +1,157 @@
+<!--
+    Whatever-o-meter shortcode
+  -->
+
+{{ if isset .Page.Params "question" }}
+
+<!-- whatever-o-meter html -->
+<div id="whatever-o-meter"  style="text-align: center">
+  <!-- SVG dial -->
+  <svg id="tacho-dial" width="560" height="560">
+    <g  transform="translate(280,280)">
+      <circle class="background" r="280" fill="palegoldenrod" />
+      <circle class="ticks" r="272" stroke="black"
+              fill="palegoldenrod" stroke-width="6" />
+      <circle class="ticks" r="140" stroke="black"
+              fill="palegoldenrod" stroke-width="6" />
+      <line class="ticks" x1="0" y1="-212" x2="0" y2="-272"
+	    stroke="black" stroke-width="6" />
+      <line class="ticks" x1="0" y1="-108" x2="0" y2="-138"
+	    stroke="black" stroke-width="4" />
+
+      {{ range $i := seq 28 28 140 }}
+
+      <g transform="rotate({{ $i }})">
+	<line class="ticks" x1="0" y1="-212" x2="0" y2="-272"
+	      stroke="black" stroke-width="6" />
+	<line class="ticks" x1="0" y1="-108" x2="0" y2="-138"
+	      stroke="black" stroke-width="4" />
+	{{ range $j := seq 7 7 28 }}
+
+	<line class="ticks" x1="0" y1="-242" x2="0" y2="-272"
+	      stroke="black" stroke-width="2" transform="rotate(-{{ $j }})" />
+
+        {{ end }}
+
+      </g>
+
+      <g transform="rotate(-{{ $i }})">
+	<line class="ticks" x1="0" y1="-212" x2="0" y2="-272"
+	      stroke="black" stroke-width="6" />
+	<line class="ticks" x1="0" y1="-108" x2="0" y2="-138"
+	      stroke="black" stroke-width="4" />
+
+	{{ range $j := seq 7 7 28 }}
+
+	<line class="ticks" x1="0" y1="-242" x2="0" y2="-272"
+	      stroke="black" stroke-width="2" transform="rotate({{ $j }})" />
+
+        {{ end }}
+
+      </g>
+
+      {{ end }}
+
+      <!-- Od-o-meter digits -->
+      <text class="digits" id="digit-1" x="-72" y="82" font-size="48"
+	    stroke="black" fill="black">0</text>
+      <text class="digits" id="digit-2" x="-42" y="82" font-size="48"
+	    stroke="black" fill="black">0</text>
+      <text class="digits" id="digit-3" x="-12" y="82" font-size="48"
+	    stroke="black" fill="black">0</text>
+      <text class="digits" id="digit-4" x="18" y="82" font-size="48"
+	    stroke="black" fill="black">0</text>
+      <text class="digits" id="digit-5" x="48" y="82" font-size="48"
+	    stroke="black" fill="black">0</text>
+
+      <!-- Pointer -->
+      <path d="M0,64 L8,56 L3,-196 L0,-200 L-3,-196 L-8,56 Z"
+	    fill="black" class="pointer" id="pointer" />
+      <circle class="pointer" r="20" fill="black" />
+    </g>
+  </svg>
+
+  {{ $intro := index .Page.Params.intro 0 }}
+
+  <div id="first" style="text-align: center">
+    <h4>{{ $intro }}</h4>
+    <input type="button" value="Start" class="start" id="start" />
+  </div>
+
+  {{ $questions := .Page.Params.question }}
+
+  {{ $left_texts := .Page.Params.left }}
+  {{ $centre_texts := default .Page.Params.centre .Page.Params.center }}
+  {{ $right_texts := .Page.Params.right }}
+
+  {{ $last_index := sub (len $questions) 1 }}
+
+  {{ range $index, $question := $questions }}
+
+  {{ $left := default "No" (index $left_texts $index) }}
+
+  {{ $centre := default "-" (index $centre_texts $index) }}
+
+  {{ $right := default "Yes" (index $right_texts $index) }}
+  <p>{{ $centre }}</p>
+  <div id="panel-{{ add $index 1 }}" style="display: none; text-align: center">
+    <h5>{{ $question }}</h5>
+    <div class="slider" id="value-$count"></div>
+    <div>
+
+      {{ if ne  $centre "-" }}
+
+      <div class="left"
+	   style="text-align: left; float: left; width: 33%">{{ $left }}</div>
+      <div class="centre" 
+	   style="float: left; width: 34%">{{ $centre }}</div>
+      <div class="right"
+	   style="text-align: right; float: left; width: 33%">{{ $right }}</div>
+    </div>
+    <div style="width: 100%; clear: left; padding: 20px 0 0;">
+
+      {{ else }}
+
+      <div class="left"
+	   style="text-align: left; float: left; width: 50%">{{ $left }}</div>
+      <div class="right"
+	   style="text-align: right; float: left; width: 50%">{{ $right }}</div>
+    </div>
+    <div style="width: 100%; clear: left; padding: 24px 0 0;">
+
+      {{ end }}
+
+  {{ if lt $index $last_index }}
+
+      <input type="button" value="Next" class="next" id="next$count" />
+    </div>
+  </div>
+
+  {{ else }}
+
+      <input type="button" value="Get Results" class="result" id="result" />
+     </div>
+    </div>
+
+  {{ end }}
+
+{{ end }}
+
+{{ else }}
+
+<!-- No questions -->
+<p>
+  No whatever-o-meter questions defined, you need to define some
+  custom fields.
+</p>
+
+{{ end }}
+
+{{ if .Page.Params.result }}
+
+{{ .Scratch.Set "results" .Page.Params.result }}
+{{ .Scratch.Set "colours" (default .Page.Params.colors .Page.Params.colours) }}
+{{ if .Page.Params.weights }}
+{{ end }}
+
+{{ end }}

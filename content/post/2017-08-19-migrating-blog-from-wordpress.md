@@ -77,7 +77,7 @@ to run [Python][18] utilities in, so installing the prerequisites for
 
 So now I've got a config file which does what I want it to do:
 
-```
+```yaml
 ---
 baseURL: http://billthefarmer.github.io/blog/
 languageCode: en-gb
@@ -133,7 +133,7 @@ I copied the `head-custom.html` from the `layouts/partials` folder in
 the theme to `layouts/partials` in the blog source and modified it
 with some extra styles.
 
-```
+```html
 <!--
     Create <project-root>/layouts/partials/head-custom.html to
     overwrite this empty template and put custom code into the <head>
@@ -165,11 +165,13 @@ WARN 2017/08/19 16:42:47 Highlighting requires Pygments to be installed and in t
 I shall have to try it on Linux to see if it works there, which it
 does, but the style is horrible. I changed it to `default`.
 
-I gave up on highlighting to get my site index page working. I found a
-template on the [Taxonomy Variables][21] page to generate a list of
-blog pages.
+To get the highlighting working in windows I had to install real
+windows python and install Pygments there.
 
-```
+I found a template on the [Taxonomy Variables][21] page to generate a
+list of blog pages.
+
+```html
 <section>
   <ul>
     {{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
@@ -194,7 +196,7 @@ After hacking that about and putting it in
 `layouts/shortcodes/site-index.html`, and putting a shortcode `{{</*
 site-index */>}}` in the index page, I got a reasonable site index.
 
-```
+```html
 <section>
   {{ range $key, $value := .Site.Taxonomies.categories }}
   <h3>{{ title $key }}</h3>

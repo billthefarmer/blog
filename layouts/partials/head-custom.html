@@ -6,9 +6,22 @@
 
 <style>
 .callout.large {
-    background-image: url({{ $.Site.Params.header_background }});
+    background-image: url({{ absURL $.Site.Params.header_background }});
     background-size: cover;
     background-position: center bottom;
     background-repeat: no-repeat;
 }
 </style>
+
+{{ if isset .Params "question" }}
+
+<!-- Whatever-o-meter css -->
+<link href="{{ absURL "css/jquery-ui.min.css" }}" rel="stylesheet">
+
+<!-- Whatever-o-meter js -->
+<script src="{{ absURL "js/jquery-3.2.1.min.js" }}" async></script>
+<script src="{{ absURL "js/jquery-ui.min.js" }}" async></script>
+<script src="{{ absURL "js/jquery.rotate.min.js" }}" async></script>
+<script src="{{ absURL "js/whatever-o-meter.min.js" }}" async></script>
+
+{{ end }}

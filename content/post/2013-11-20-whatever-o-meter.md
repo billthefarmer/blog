@@ -16,7 +16,7 @@ Whatever-o-meter is a WordPress plugin that shows a tachometer-like dial with a 
 
 Whatever-o-meter uses the shortcode [**whateverometer**] or [**whatever-o-meter**] to insert the whatever-o-meter display into the page. Other page content above and below the shortcode will appear on the page as normal. Do not use more than one whatever-o-meter shortcode on the page, only the first one is likely to work. If the shortcode is used on a page with no questions defined, the code will be replaced with the message:
 
-    No whatever-o-meter questions defined, you need to define some custom fields.
+{{< whatever-o-meter >}}
 
 I&#8217;ve called the parts of the page that slide up and down panels, because calling them divs, which is what they are, is too technical.
 

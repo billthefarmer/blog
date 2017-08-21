@@ -10,7 +10,7 @@ categories:
 ---
 ![OSX El Capitan][1]
 
-## Prerequisites
+### Prerequisites
 
   * A real Mac or Hackintosh
   * A spare disk drive &#8211; at least 8Gb, preferably USB
@@ -18,13 +18,13 @@ categories:
   * The Install OSX El Capitan.app from the App Store
   * A disk partition to install in
 
-## Install on spare disk drive
+### Install on spare disk drive
 
 ![El Capitan Installer][4]
 
 Connect your spare drive to your PC. Use the method described [here][5] to build the El Capitan install USB stick and install OSX using the GPT partition scheme on your spare disk drive. Check it boots up OK and works OK.
 
-## Copy to your MBR partition
+### Copy to your MBR partition
 
 ![Disk Utility][6]
 

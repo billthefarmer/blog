@@ -6,6 +6,7 @@ copyright: Copyright &copy; 2017 Bill Farmer
 theme: theme-hugo-foundation6
 publishDir: d:/billthefarmer.github.io/blog/
 pygmentscodefences: true
+pygmentsStyle: default
 
 # number of posts to show on home/category/tag pages (Default: 10)
 paginate: 5
@@ -14,9 +15,9 @@ taxonomies:
   category: categories
   # tag: tags
 
-permalinks:
-  page: /:slug/
-  post: /:year/:month/:title/
+# permalinks:
+#   page: /:slug/
+#   post: /:year/:month/:title/
 
 menu:
   sidebar:
@@ -28,11 +29,11 @@ menu:
 params:
   description: Random thoughts on random subjects
   header_background: images/2013/12/cropped-P1010089.jpg
-  cookie_consent_info_url: http://cookiesandyou.com
+  # cookie_consent_info_url: http://cookiesandyou.com
   sidebar:
     # Optional about block for sidebar (can be Markdown)
     # about: "Bill Farmer's Blog"
-    num_recent_posts: 8
+    num_recent_posts: 10
   sharingicons:
     hide: true
 ...

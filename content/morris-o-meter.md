@@ -42,7 +42,7 @@ more:
   <a id="meter"></a>The <a title="http://billthefarmer.users.sourceforge.net/buccaneers" href="http://billthefarmer.users.sourceforge.net/buccaneers" target="_blank">Old Shoreham Buccaneers</a> very own Morris-o-meter
 </h2>
 
-[whatever-o-meter]
+{{</* whatever-o-meter */>}}
 
 This doesn't do anything because I have to fathom out how to make the
 [Whatever-o-meter][1] work in [Hugo][2].

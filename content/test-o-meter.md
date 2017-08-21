@@ -33,8 +33,8 @@ right:
 weights:
   - 2,1,1,1,1
 centre:
-  - -
-  - -
+  - "-"
+  - "-"
   - So so
 fb-appid:
   - 455427107907032
@@ -54,11 +54,11 @@ addthis:
   Some long winded explanation of what it all means, the meaning of life and which way is up.
 </p>
 
-[whatever-o-meter]
+{{</* whatever-o-meter */>}}
 
-<h2 style="text-align: center;">
+<h3 style="text-align: center;">
   The <span style="color: #ff0000;">real </span>page content
-</h2>
+</h3>
 
 <p style="text-align: center;">
   This is some fairly <strong>boring </strong>text just to <span style="color: #0000ff;">prove </span>it comes out below the Test-o-meter.
