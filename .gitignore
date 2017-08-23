@@ -4,3 +4,6 @@ themes/
 
 # Emacs backups
 *~
+
+# Zip files
+*.zip

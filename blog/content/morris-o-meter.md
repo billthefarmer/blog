@@ -4,8 +4,8 @@ author: Bill Farmer
 type: page
 date: 2013-12-03T18:10:32+00:00
 url: /morris-o-meter/
-intro:
-  - Please answer the following questions carefully and honestly
+
+intro: Please answer the following questions carefully and honestly
 question:
   - "Your partner has a pair of tickets for the opera. However it's on the same weekend as your side's ALE. Do you..."
   - The squire wants to change the kit. You...
@@ -30,10 +30,7 @@ result:
   - You got %d%. Perhaps if you keep at it things might improve
   - "You got %d%. Perhaps you'll get a different squire next year"
   - You got %d%. Are you up for squire next year?
-colours:
-  - lightskyblue,darkblue,black,black
-addthis:
-  - below
+colours: lightskyblue,darkblue,black,black
 more:
   - http://billthefarmer.users.sourceforge.net/buccaneers
 
@@ -42,7 +39,7 @@ more:
   <a id="meter"></a>The <a title="http://billthefarmer.users.sourceforge.net/buccaneers" href="http://billthefarmer.users.sourceforge.net/buccaneers" target="_blank">Old Shoreham Buccaneers</a> very own Morris-o-meter
 </h2>
 
-{{</* whatever-o-meter */>}}
+{{< whatever-o-meter >}}
 
 This doesn't do anything because I have to fathom out how to make the
 [Whatever-o-meter][1] work in [Hugo][2].

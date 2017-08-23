@@ -1,0 +1,91 @@
+baseURL: https://billthefarmer.github.io/
+languageCode: en-gb
+title: Bill Farmer
+copyright: Copyright &copy; 2017 Bill Farmer
+theme: hugo-strata-theme
+publishDir: d:/billthefarmer.github.io/
+
+menu:
+  main:
+    - name: Old Shoreham Buccaneers
+      url: http://billthefarmer.users.sourceforge.net/buccaneers
+    - name: Will Duke workshop
+      url: http://myweb.tiscali.co.uk/williamjfarmer/workshop
+    - name: Sussex Tune Book
+      url: http://myweb.tiscali.co.uk/williamjfarmer/stb
+    - name: What-o-Clock
+      url: http://billthefarmer.users.sourceforge.net/what-o-clock
+    - name: Sourceforge
+      url: http://sourceforge.net/users/billthefarmer
+    - name: Blog
+      url: https://billthefarmer.github.io/blog
+
+params:
+  date_format: Monday January 2nd 2006
+  custom_css:
+    - css/sidebar.css
+
+  name: Bill Farmer
+  description: Home page
+
+  sidebar:
+    github: billthefarmer
+    gitlab: williamjfarmer
+    copyright:
+      - Copyright &copy; 2017 Bill Farmer
+
+  sharingicons:
+    hide: true
+
+  about:
+    hide: false
+    title: Bill Farmer
+    content: "![Bill Farmer][1]\n\n
+    * [Android Diary][2]\n
+    * [Android Tuner][3]\n
+    * [Android Crossword][4]\n
+    * [Android Currency][5]\n
+    * [Android Accordion][6]\n
+    * [Android Melodeon][7]\n
+    * [Android Mididriver][8]\n
+    * [Android Oscilloscope][9]\n
+    * [Android Signal Generator][10]\n
+    * [Android Custom Calendar View][11]\n
+    * [Android Intent Radio Shortcut creator][12]\n
+    * [Android FFTS (Fastest Fourier Transform in the South)][13]\n
+    * [Genealogy pdf chart creation][14]\n
+    * [Tuner, Windows and Mac][15]\n
+    * [Accordion, Windows and Mac][16]\n
+    * [Melodeon, Windows and Mac][17]\n
+    * [Audio Tools, Windows and Mac][18]\n
+    * [Whatever-o-Meter][19]\n
+    * [What-o-Clock][20]\n
+    [1]: /images/20131726.jpg\n
+    [2]: https://github.com/billthefarmer/diary\n
+    [3]: https://github.com/billthefarmer/tuner\n
+    [4]: https://github.com/billthefarmer/crossword\n
+    [5]: https://github.com/billthefarmer/currency\n
+    [6]: https://github.com/billthefarmer/accordion\n
+    [7]: https://github.com/billthefarmer/melodeon\n
+    [8]: https://github.com/billthefarmer/mididriver\n
+    [9]: https://github.com/billthefarmer/scope\n
+    [10]: https://github.com/billthefarmer/sig-gen\n
+    [11]: https://github.com/billthefarmer/customcalendarview\n
+    [12]: https://github.com/billthefarmer/shorty\n
+    [13]: https://github.com/billthefarmer/ffts\n
+    [14]: https://github.com/billthefarmer/gpdf\n
+    [15]: https://github.com/billthefarmer/c-tuner\n
+    [16]: https://github.com/billthefarmer/c-accordion\n
+    [17]: https://github.com/billthefarmer/c-melodeon\n
+    [18]: https://github.com/billthefarmer/audiotools\n
+    [19]: https://github.com/billthefarmer/whatever-o-meter\n
+    [20]: https://github.com/billthefarmer/what-o-clock"
+
+  portfolio:
+    hide: true
+
+  recentposts:
+    hide: true
+
+  contact:
+    hide: true

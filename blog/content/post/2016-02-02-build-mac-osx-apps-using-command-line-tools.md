@@ -30,10 +30,11 @@ When building for Mac OS X, specify the minimum version supported by your applic
 
 The easiest way to build an app is to use a Makefile:
 
-<pre>
+```makefile
 RM=rm
 MD=mkdir
 CP=cp
+SIPS=sips
 
 GCC=gcc
 CFLAGS=-framework Carbon -framework Audiounit -framework CoreAudio \
@@ -64,25 +65,27 @@ $(APPNAME): $(APPNAME).c
 $(APPNAME).icns: $(APPNAME).png
 	$(RM) -rf $(APPNAME).iconset
 	$(MD) $(APPNAME).iconset
-	sips -z 16 16   $(APPNAME).png --out $(APPNAME).iconset/icon_16x16.png
-	sips -z 32 32   $(APPNAME).png --out $(APPNAME).iconset/icon_16x16@2x.png
-	sips -z 32 32   $(APPNAME).png --out $(APPNAME).iconset/icon_32x32.png
-	sips -z 64 64   $(APPNAME).png --out $(APPNAME).iconset/icon_32x32@2x.png
-	sips -z 128 128 $(APPNAME).png --out $(APPNAME).iconset/icon_128x128.png
-	sips -z 256 256 $(APPNAME).png --out $(APPNAME).iconset/icon_128x128@2x.png
-	sips -z 256 256 $(APPNAME).png --out $(APPNAME).iconset/icon_256x256.png
-	sips -z 512 512 $(APPNAME).png --out $(APPNAME).iconset/icon_256x256@2x.png
-	sips -z 512 512 $(APPNAME).png --out $(APPNAME).iconset/icon_512x512.png
+	$(SIPS) -z 16 16   $(APPNAME).png --out $(APPNAME).iconset/icon_16x16.png
+	$(SIPS) -z 32 32   $(APPNAME).png --out $(APPNAME).iconset/icon_16x16@2x.png
+	$(SIPS) -z 32 32   $(APPNAME).png --out $(APPNAME).iconset/icon_32x32.png
+	$(SIPS) -z 64 64   $(APPNAME).png --out $(APPNAME).iconset/icon_32x32@2x.png
+	$(SIPS) -z 128 128 $(APPNAME).png --out $(APPNAME).iconset/icon_128x128.png
+	$(SIPS) -z 256 256 $(APPNAME).png --out $(APPNAME).iconset/icon_128x128@2x.png
+	$(SIPS) -z 256 256 $(APPNAME).png --out $(APPNAME).iconset/icon_256x256.png
+	$(SIPS) -z 512 512 $(APPNAME).png --out $(APPNAME).iconset/icon_256x256@2x.png
+	$(SIPS) -z 512 512 $(APPNAME).png --out $(APPNAME).iconset/icon_512x512.png
 	$(CP) $(APPNAME).png $(APPNAME).iconset/icon_512x512@2x.png
 	iconutil -c icns -o $(APPNAME).icns $(APPNAME).iconset
 	$(RM) -r $(APPNAME).iconset
-</pre>
+
+```
 
 This compiles the code, makes an icon file from an image and builds the app structure. The reason for the `-Wno-deprecated-declarations` is that this app was first written on OSX 10.4 using Carbon and I&#8217;m compiling for 10.6. You need two other text files `Info,plist` and `PkgInfo`.
 
-<pre>
+```xml
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
+&lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
   &lt;dict&gt;
     &lt;key&gt;CFBundleDevelopmentRegion&lt;/key&gt;
     &lt;string&gt;English&lt;/string&gt;
@@ -110,7 +113,8 @@ This compiles the code, makes an icon file from an image and builds the app stru
     &lt;string&gt;public.app-category.utilities&lt;/string&gt;
   &lt;/dict&gt;
 &lt;/plist&gt;
-</pre>
+
+```
 
 The PkgInfo file is just one line, the package type and the app signature concatenated.
 
