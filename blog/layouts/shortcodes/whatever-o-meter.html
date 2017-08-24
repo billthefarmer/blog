@@ -1,6 +1,12 @@
 <!-- Whatever-o-meter shortcode -->
 <!-- Check for questions -->
-{{ if isset .Page.Params "question" }}
+{{ if not (isset .Page.Params "question") }}
+<!-- No questions -->
+<p>
+  No whatever-o-meter questions defined, you need to define some
+  custom fields.
+</p>
+{{ else }}
 <!-- whatever-o-meter html -->
 <br />
 <div id="whatever-o-meter"  style="text-align: center;">
@@ -62,22 +68,19 @@
     <input type="button" value="Start" class="start" id="start" />
   </div>
   {{ $questions := .Page.Params.question }}
-  {{ $left_texts := .Page.Params.left }}
-  {{ $centre_texts := default .Page.Params.centre .Page.Params.center }}
-  {{ $right_texts := .Page.Params.right }}
+  {{ $left_texts := default (slice "No") .Page.Params.left }}
+  {{ $centre_texts := default (slice "-") (default .Page.Params.centre .Page.Params.center) }}
+  {{ $right_texts := default (slice "Yes") .Page.Params.right }}
   {{ $last_index := sub (len $questions) 1 }}
   {{ range $index, $question := $questions }}
   {{ $left := default "No" (index $left_texts $index) }}
-  {{ with $centre_texts }}
-  {{ .Scratch.Set "centre" (default "-" (index . $index)) }}
-  {{ end }}
+  {{ $centre := default "-" (index $centre_texts $index) }}
   {{ $right := default "Yes" (index $right_texts $index) }}
-  {{ $centre := .Scratch.Get "centre" }}
   <div id="panel-{{ add $index 1 }}" style="display: none; text-align: center">
     <h5>{{ $question }}</h5>
     <div class="slider" id="value-{{ add $index 1 }}"></div>
     <div>
-      {{ if ne  $centre "-" }}
+      {{ if ne $centre "-" }}
       <div class="left"
 	   style="text-align: left; float: left; width: 33%">{{ $left }}</div>
       <div class="centre" 
@@ -109,7 +112,7 @@
     <input type="button" value="Again" class="again" id="again" />
     {{ if .Page.Params.more }}
     <br />
-    <a href="{{ index .Page.Params.more 0 }}"><input type="button" value="Find Out More" id="more" class="more" /></a>
+    <a href="{{ .Page.Params.more }}"><input type="button" value="Find Out More" id="more" class="more" /></a>
     {{ end }}
   </div>
 </div>
@@ -133,10 +136,4 @@
   var whatever_data = {{ safeJS (jsonify $json) }};
 </script>
 {{ end }}
-{{ else }}
-<!-- No questions -->
-<p>
-  No whatever-o-meter questions defined, you need to define some
-  custom fields.
-</p>
 {{ end }}

@@ -3,7 +3,6 @@
     overwrite this empty template and put custom code into the <head>
     section.
   -->
-
 <style>
 .callout.large {
     background-image: url({{ absURL $.Site.Params.header_background }});
@@ -11,10 +10,11 @@
     background-position: center center;
     background-repeat: no-repeat;
 }
+.callout.large a, .callout.large p {
+    color: white;
+}
 </style>
-
 {{ if isset .Params "question" }}
-
 <!-- Whatever-o-meter css -->
 <link href="{{ absURL "css/jquery-ui.min.css" }}" rel="stylesheet">
 
@@ -26,6 +26,5 @@
 <script type="text/javascript"
         src="{{ absURL "js/jquery.rotate.min.js" }}"></script>
 <script type="text/javascript"
-        src="{{ absURL "js/whatever-o-meter.js" }}"></script>
-
+        src="{{ absURL "js/whatever-o-meter.min.js" }}"></script>
 {{ end }}

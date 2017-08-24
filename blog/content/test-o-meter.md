@@ -35,7 +35,7 @@ centre:
   - "-"
   - "-"
   - So so
-more: http://billthefarmer.users.sourceforge.net/wordpress/morris-o-meter/
+more: https://billthefarmer.github.io/blog/morris-o-meter
 
 ---
 
@@ -43,8 +43,3 @@ Some long winded explanation of what it all means, the meaning of life
 and which way is up.
 
 {{< whatever-o-meter >}}
-
-##### This doesn't work properly because I have to fathom out how to make the [Whatever-o-meter][1] work in [Hugo][2].
-
- [1]: whatever-o-meter
- [2]: http://gohugo.io

@@ -31,8 +31,7 @@ result:
   - "You got %d%. Perhaps you'll get a different squire next year"
   - You got %d%. Are you up for squire next year?
 colours: lightskyblue,darkblue,black,black
-more:
-  - http://billthefarmer.users.sourceforge.net/buccaneers
+more: http://billthefarmer.users.sourceforge.net/buccaneers
 
 ---
 <h2 style="text-align: center;">
@@ -40,9 +39,3 @@ more:
 </h2>
 
 {{< whatever-o-meter >}}
-
-This doesn't do anything because I have to fathom out how to make the
-[Whatever-o-meter][1] work in [Hugo][2].
-
- [1]: whatever-o-meter
- [2]: http://gohugo.io
