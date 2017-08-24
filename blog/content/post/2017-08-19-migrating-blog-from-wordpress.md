@@ -78,7 +78,6 @@ to run [Python][18] utilities in, so installing the prerequisites for
 So now I've got a config file which does what I want it to do:
 
 ```yaml
----
 baseURL: http://billthefarmer.github.io/blog/
 languageCode: en-gb
 title: Bill Farmer's Blog

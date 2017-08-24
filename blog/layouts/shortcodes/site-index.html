@@ -1,7 +1,19 @@
 <!--
     Site index shortcut from categories
   -->
-
+{{ if .Get 0 }}
+{{ $category := .Get 0 }}
+<section>
+  <h3>{{ title $category }}</h3>
+  <ul>
+    {{ with (index .Site.Taxonomies.categories $category) }}
+    {{ range .Pages.ByTitle }}
+    <li><a href="{{ .Permalink }}">{{ safeHTML .LinkTitle }}</a></li>
+    {{ end }}
+    {{ end }}
+  </ul>
+</section>
+{{ else }}
 <section>
   {{ range $key, $value := .Site.Taxonomies.categories }}
   <h3>{{ title $key }}</h3>
@@ -12,3 +24,4 @@
   </ul>
   {{ end }}
 </section>
+{{ end }}

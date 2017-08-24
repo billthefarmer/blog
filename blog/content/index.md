@@ -7,4 +7,6 @@ url: /index/
 
 ---
 
-{{< site-index >}}
+{{< site-index  "recipes" >}}
+{{< site-index  "hacking" >}}
+{{< site-index  "diy" >}}

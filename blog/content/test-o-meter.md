@@ -14,7 +14,7 @@ question:
   - Your boss wants to send you on a team building weekend with the rest of your department. How do you feel?
 result:
   - '%d percent, Perhaps you should consider emigration.'
-  - '%d%,<br />Consider taking a long holiday somewhere far away.'
+  - '%d%, Consider taking a long holiday somewhere far away.'
   - "%d%, Perhaps it's not so bad after all"
   - '%d%, With a bit more effort you could make it even better'
   - '%d%, Why are you considering moving?'
