@@ -22,13 +22,13 @@
 	    stroke="black" stroke-width="6" />
       <line class="ticks" x1="0" y1="-108" x2="0" y2="-138"
 	    stroke="black" stroke-width="4" />
-      {{ range $i := seq 28 28 140 }}
+      {{ range $i := seq 30 30 160 }}
       <g transform="rotate({{ $i }})">
 	<line class="ticks" x1="0" y1="-212" x2="0" y2="-272"
 	      stroke="black" stroke-width="6" />
 	<line class="ticks" x1="0" y1="-108" x2="0" y2="-138"
 	      stroke="black" stroke-width="4" />
-	{{ range $j := seq 7 7 28 }}
+	{{ range $j := seq 6 6 30 }}
 	<line class="ticks" x1="0" y1="-242" x2="0" y2="-272"
 	      stroke="black" stroke-width="2" transform="rotate(-{{ $j }})" />
         {{ end }}
@@ -38,7 +38,7 @@
 	      stroke="black" stroke-width="6" />
 	<line class="ticks" x1="0" y1="-108" x2="0" y2="-138"
 	      stroke="black" stroke-width="4" />
-	{{ range $j := seq 7 7 28 }}
+	{{ range $j := seq 6 6 30 }}
 	<line class="ticks" x1="0" y1="-242" x2="0" y2="-272"
 	      stroke="black" stroke-width="2" transform="rotate({{ $j }})" />
         {{ end }}
