@@ -10,17 +10,17 @@ categories:
 ---
 ## Introduction
 
-Whatever-o-meter is a WordPress plugin that shows a tachometer-like dial with a pointer, asks a series of predefined questions which are answered by moving a slider, shows one of several predefined results, and moves the tacho pointer to a position determined by the value of the result. The project is on [Github](https://github.com/billthefarmer/whatever-o-meter").
+Whatever-o-meter is a WordPress and Hugo plugin that shows a tachometer-like dial with a pointer, asks a series of predefined questions which are answered by moving a slider, shows one of several predefined results, and moves the tacho pointer to a position determined by the value of the result. The project is on [Github](https://github.com/billthefarmer/whatever-o-meter").
 
 ## Documentation
 
-Whatever-o-meter uses the shortcode [**whateverometer**] or [**whatever-o-meter**] to insert the whatever-o-meter display into the page. Other page content above and below the shortcode will appear on the page as normal. Do not use more than one whatever-o-meter shortcode on the page, only the first one is likely to work. If the shortcode is used on a page with no questions defined, the code will be replaced with the message:
+Whatever-o-meter uses the shortcode [**whatever-o-meter**] or {{</***whatever-o-meter***/>}} to insert the whatever-o-meter display into the page. Other page content above and below the shortcode will appear on the page as normal. Do not use more than one whatever-o-meter shortcode on the page, only the first one is likely to work. If the shortcode is used on a page with no questions defined, the code will be replaced with the message:
 
 {{< whatever-o-meter >}}
 
 I&#8217;ve called the parts of the page that slide up and down panels, because calling them divs, which is what they are, is too technical.
 
-To define the initial intro panel, the questions, and the results you need to define quite a few custom fields on the page. They are:
+To define the initial intro panel, the questions, and the results you need to define quite a few custom fields or front matter parameters on the page. In Hugo parameters with a single value are shown as one item, parameters with multiple values are shown as an array. They are:
 
   * **intro ** The initial text that will appear on the panel below the tacho dial and above the start button.
   * **question**  Each question has it&#8217;s own entry, as many as required within reason. They will be asked in the order given.
