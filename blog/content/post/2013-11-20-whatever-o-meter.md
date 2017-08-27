@@ -8,6 +8,8 @@ categories:
   - Hacking
 
 ---
+![Whatever][6]
+
 ## Introduction
 
 Whatever-o-meter is a WordPress and Hugo plugin that shows a tachometer-like dial with a pointer, asks a series of predefined questions which are answered by moving a slider, shows one of several predefined results, and moves the tacho pointer to a position determined by the value of the result. The project is on [Github](https://github.com/billthefarmer/whatever-o-meter").
@@ -56,3 +58,4 @@ The result panel will slide up showing the result text and an again button. The 
  [3]: https://developers.facebook.com/apps
  [4]: http://wordpress.org/plugins/addthis
  [5]: http://www.w3.org/TR/css3-color/#svg-color
+ [6]: images/2013/11/Whatever.png
