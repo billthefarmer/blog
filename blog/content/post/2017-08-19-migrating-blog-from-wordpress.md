@@ -36,14 +36,14 @@ old version of PHP. So I looked at the PHP code, and found it was
 using square brackets for an array, which I'd found an annoyance while
 writing a Wordpress plugin.
 
-```php
+```PHP
         if (in_array($post->post_status, ['draft', 'private'])) {
 ```
 
 So I changed it to the old style syntax, and found that was it, it
 just worked. So change one line to make it work with old PHP versions.
 
-```php
+```PHP
         if (in_array($post->post_status, array('draft', 'private'))) {
 ```
 

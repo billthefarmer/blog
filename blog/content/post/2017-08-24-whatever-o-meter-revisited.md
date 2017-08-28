@@ -38,7 +38,7 @@ The javascript part should just work as it is, the PHP plugin needs
 re-implementing as a hugo shortcode. The first part of the plugin just
 outputs svg code to draw the dial and pointer, that was fairly easy to
 implement, it just has some iteration in it. I had to change the ticks
-slightly as Hugo doesn't appear to support floating point arithmatic
+slightly as Hugo doesn't appear to support floating point arithmetic
 in templates.
 
 The really difficult part was reading the page parameters, as most of
@@ -118,6 +118,6 @@ were passed by Hugo as an array of strings, to be interpreted as numbers.
         {
             value += $("#value-" + panel).slider("value") *
 	        weights[index];
-            total += weights[index] * 1;
+            total += +weights[index];
         }
 ```
