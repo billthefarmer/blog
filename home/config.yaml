@@ -1,7 +1,6 @@
 baseURL: https://billthefarmer.github.io/
 languageCode: en-gb
 title: Bill Farmer
-copyright: Copyright &copy; 2017 Bill Farmer
 theme: hugo-strata-theme
 publishDir: d:/billthefarmer.github.io/
 
@@ -9,19 +8,27 @@ menu:
   main:
     - name: Old Shoreham Buccaneers
       url: http://billthefarmer.users.sourceforge.net/buccaneers
+      weight: 10
     - name: Will Duke workshop
       url: http://myweb.tiscali.co.uk/williamjfarmer/workshop
+      weight: 9
     - name: Sussex Tune Book
       url: http://myweb.tiscali.co.uk/williamjfarmer/stb
+      weight: 8
     - name: What-o-Clock
       url: http://billthefarmer.users.sourceforge.net/what-o-clock
+      weight: 7
     - name: Sourceforge
       url: http://sourceforge.net/users/billthefarmer
+      weight: 6
     - name: Blog
       url: https://billthefarmer.github.io/blog
+      weight: 5
 
 params:
   date_format: Monday January 2nd 2006
+  avatar:
+    hide: true
   custom_css:
     - css/sidebar.css
 
@@ -40,49 +47,57 @@ params:
   about:
     hide: false
     title: Bill Farmer
-    content: "![Bill Farmer][1]\n\n
-    * [Android Diary][2]\n
-    * [Android Tuner][3]\n
-    * [Android Crossword][4]\n
-    * [Android Currency][5]\n
-    * [Android Accordion][6]\n
-    * [Android Melodeon][7]\n
-    * [Android Mididriver][8]\n
-    * [Android Oscilloscope][9]\n
-    * [Android Signal Generator][10]\n
-    * [Android Custom Calendar View][11]\n
-    * [Android Intent Radio Shortcut creator][12]\n
-    * [Android FFTS (Fastest Fourier Transform in the South)][13]\n
-    * [Genealogy pdf chart creation][14]\n
-    * [Tuner, Windows and Mac][15]\n
-    * [Accordion, Windows and Mac][16]\n
-    * [Melodeon, Windows and Mac][17]\n
-    * [Audio Tools, Windows and Mac][18]\n
-    * [Whatever-o-Meter][19]\n
-    * [What-o-Clock][20]\n
-    [1]: /images/20131726.jpg\n
-    [2]: https://github.com/billthefarmer/diary\n
-    [3]: https://github.com/billthefarmer/tuner\n
-    [4]: https://github.com/billthefarmer/crossword\n
-    [5]: https://github.com/billthefarmer/currency\n
-    [6]: https://github.com/billthefarmer/accordion\n
-    [7]: https://github.com/billthefarmer/melodeon\n
-    [8]: https://github.com/billthefarmer/mididriver\n
-    [9]: https://github.com/billthefarmer/scope\n
-    [10]: https://github.com/billthefarmer/sig-gen\n
-    [11]: https://github.com/billthefarmer/customcalendarview\n
-    [12]: https://github.com/billthefarmer/shorty\n
-    [13]: https://github.com/billthefarmer/ffts-android\n
-    [14]: https://github.com/billthefarmer/gpdf\n
-    [15]: https://github.com/billthefarmer/c-tuner\n
-    [16]: https://github.com/billthefarmer/c-accordion\n
-    [17]: https://github.com/billthefarmer/c-melodeon\n
-    [18]: https://github.com/billthefarmer/audiotools\n
-    [19]: https://github.com/billthefarmer/whatever-o-meter\n
-    [20]: https://github.com/billthefarmer/what-o-clock"
+    image: /images/20131726.jpg
+    content: "I am retired, a morris musician and an itinerant
+    developer. I was a chartered electrical engineer until I stopped
+    paying for a journal I couldn’t understand. Over the course of a
+    long career working for the local electrick light company I
+    developed various bits and pieces of software in so many different
+    languages I can no longer remember them all."
 
   portfolio:
-    hide: true
+    hide: false
+    title: Recent projects
+    links:
+    - title: Diary
+      url: https://github.com/billthefarmer/diary
+      description: Android diary
+    - title: Tuner
+      url: https://github.com/billthefarmer/tuner
+      description: Android tuner
+    - title: Currency
+      url: https://github.com/billthefarmer/currency
+      description: Android currency converter
+    - title: Crossword
+      url: https://github.com/billthefarmer/crossword
+      description: Android crossword solver
+    - title: Melodeon
+      url: https://github.com/billthefarmer/melodeon
+      description: Android melodeon
+    - title: Accordion
+      url: https://github.com/billthefarmer/accordion
+      description: Android accordion
+    - title: Mididriver
+      url: https://github.com/billthefarmer/mididriver
+      description: Android mididriver
+    - title: Oscilloscope
+      url: https://github.com/billthefarmer/scope
+      description: Android oscilloscope
+    - title: Signal Generator
+      url: https://github.com/billthefarmer/sig-gen
+      description: Android signal generator
+    - title: Custom Calendar View
+      url: https://github.com/billthefarmer/customcalendarview
+      description: Android custom calendar view
+    - title: Intent Radio Shortcut creator
+      url: https://github.com/billthefarmer/shorty
+      description: Android intent radio shortcut creator
+    - title: FFTS
+      url: https://github.com/billthefarmer/ffts-android
+      description: Android FFTS (Fastest Fourier Transform in the South)
+    - title: GPDF
+      url: https://github.com/billthefarmer/gpdf
+      description: Genealogy pdf chart creation
 
   recentposts:
     hide: true
