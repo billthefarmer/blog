@@ -4,8 +4,8 @@
   {{ with .Site.Params.portfolio.links }}
   <ul>
     {{ range . }}
-    <li><a href="{{ .url }}">{{ .title | markdownify }} &ndash; {{ .description | markdownify }}</a></li>
-    {{end }}
+    <li><a href="{{ .url | absURL }}" target="_blank">{{ .title | markdownify }}</a> &ndash; {{ .description | markdownify }}</li>
+    {{ end }}
   </ul>
   {{ end }}
   {{ with .Site.Params.portfolio.gallery }}
@@ -14,11 +14,7 @@
     <article class="6u 12u$(xsmall) work-item">
       <a href="{{ $.Site.BaseURL }}images/{{ .image }}" class="image fit thumb">
         <img src="{{ $.Site.BaseURL }}images/{{ .thumb }}" alt="" /></a>
-      {{ if .url }}
-      <h3><a href="{{ .url }}">{{ .title | markdownify }}</a></h3>
-      {{ else }}
       <h3>{{ .title | markdownify }}</h3>
-      {{ end }}
       <p>{{ .description | markdownify }}</p>
     </article>
     {{ end }}
