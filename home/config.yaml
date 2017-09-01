@@ -65,6 +65,9 @@ params:
     - title: Tuner
       url: https://github.com/billthefarmer/tuner
       description: Android tuner
+    - title: Editor
+      url: https://github.com/billthefarmer/editor
+      description: Android text editor
     - title: Currency
       url: https://github.com/billthefarmer/currency
       description: Android currency converter
