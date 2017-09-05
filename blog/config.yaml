@@ -5,6 +5,7 @@ title: Bill Farmer’s Blog
 copyright: Copyright &copy; 2017 Bill Farmer
 theme: theme-hugo-foundation6
 publishDir: d:/billthefarmer.github.io/blog/
+metaDataFormat: yaml
 pygmentscodefences: true
 pygmentsStyle: default
 
