@@ -1,7 +1,7 @@
 ---
 baseURL: https://billthefarmer.github.io/blog/
 languageCode: en-gb
-title: Bill Farmer’s Blog
+title: Bill Farmer
 copyright: Copyright &copy; 2017 Bill Farmer
 theme: theme-hugo-foundation6
 publishDir: d:/billthefarmer.github.io/blog/
@@ -16,13 +16,9 @@ taxonomies:
   category: categories
   # tag: tags
 
-# permalinks:
-#   page: /:slug/
-#   post: /:year/:month/:title/
-
 menu:
   sidebar:
-    - name: Bill Farmer
+    - name: Home page
       url: http://billthefarmer.github.io
     - name: Github
       url: https://github.com/billthefarmer
