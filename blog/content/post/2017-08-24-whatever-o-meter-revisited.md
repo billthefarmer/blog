@@ -34,7 +34,7 @@ centre:
 more: https://billthefarmer.github.io/blog/morris-o-meter
 ```
 
-The javascript part should just work as it is, the PHP plugin needs
+The javascript part should just work as it is, the PHP plugin needed
 re-implementing as a hugo shortcode. The first part of the plugin just
 outputs svg code to draw the dial and pointer, that was fairly easy to
 implement, it just has some iteration in it. I had to change the ticks
@@ -48,15 +48,14 @@ Hugo I had to make a great deal of use of `default` and `slice` to
 create default values.
 
 ```html
-  {{ $intro := .Page.Params.intro }}
   <div id="first" style="text-align: center">
-    <h4>{{ $intro }}</h4>
+    <h4>{{ .intro }}</h4>
     <input type="button" value="Start" class="start" id="start" />
   </div>
-  {{ $questions := .Page.Params.question }}
-  {{ $left_texts := default (slice "No") .Page.Params.left }}
-  {{ $centre_texts := default (slice "-") (default .Page.Params.centre .Page.Params.center) }}
-  {{ $right_texts := default (slice "Yes") .Page.Params.right }}
+  {{ $questions := .question }}
+  {{ $left_texts := default (slice "No") .left }}
+  {{ $centre_texts := default (slice "-") (default .centre .center) }}
+  {{ $right_texts := default (slice "Yes") .right }}
   {{ $last_index := sub (len $questions) 1 }}
   {{ range $index, $question := $questions }}
   {{ $left := default "No" (index $left_texts $index) }}
@@ -70,23 +69,24 @@ save values. Luckily `Scratch.Get` returns `null` if the key doesn't
 exist.
 
 ```html
-{{ if .Page.Params.result }}
-{{ .Scratch.Set "results" .Page.Params.result }}
-{{ if (default .Page.Params.colors .Page.Params.colours) }}
-{{ .Scratch.Set "colours" (split (default .Page.Params.colors .Page.Params.colours) ",") }}
+{{ with .result }}
+{{ $.Scratch.Set "results" . }}
 {{ end }}
-{{ if .Page.Params.weights }}
-{{ .Scratch.Set "weights" (split .Page.Params.weights ",") }}
+{{ with (default .colors .colours) }}
+{{ $.Scratch.Set "colours" (split . ",") }}
 {{ end }}
-{{ if .Page.Params.duration }}
-{{ .Scratch.Set "duration" .Page.Params.duration }}
+{{ with .weights }}
+{{ $.Scratch.Set "weights" (split . ",") }}
 {{ end }}
-{{ if .Page.Params.easing }}
-{{ .Scratch.Set "easing" .Page.Params.easing }}
+{{ with .duration }}
+{{ $.Scratch.Set "duration" . }}
 {{ end }}
-{{ $json := dict "results" (.Scratch.Get "results") "colours"
-(.Scratch.Get "colours") "weights" (.Scratch.Get "weights") "duration"
-(.Scratch.Get "duration") "easing" (.Scratch.Get "easing") }}
+{{ with .easing }}
+{{ $.Scratch.Set "easing" . }}
+{{ end }}
+{{ $json := dict "results" ($.Scratch.Get "results") "colours" ($.Scratch.Get "colours")
+                 "weights" ($.Scratch.Get "weights") "duration" ($.Scratch.Get "duration")
+                 "easing" ($.Scratch.Get "easing") }}
 <script type="text/javascript">
   var whatever_data = {{ safeJS (jsonify $json) }};
 </script>
@@ -99,7 +99,7 @@ So the generated json looks like this, with nulls for the missing keys.
 <script type="text/javascript">
 var whatever_data =
   {"colours":null,"duration":null,"easing":null,"results":["%d percent,
-   Perhaps you should consider emigration.",...],"weights":["2","1","1","1","1"]};
+    Perhaps you should consider emigration.",...],"weights":["2","1","1","1","1"]};
 </script>
 ```
 
