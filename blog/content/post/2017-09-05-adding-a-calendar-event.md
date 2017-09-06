@@ -9,13 +9,13 @@ categories:
 ---
 
 The android docs for the [Calendar Provider][1] are quite useful, but
-include a reference to [AsyncQueryHandler][2] for querying or adding
-to calendars in an asynchronous thread. However the
+recommend the use of an [AsyncQueryHandler][2] for querying or adding
+events to calendars in an asynchronous thread. However the
 `AsyncQueryHandler` docs don't include much guidance as to how to use
 it.
 
 To add an entry to an android calendar you first have to find out the
-calendar id using a query.
+calendar id using an asynchronous query on the calendars table.
 
 ```java
 // QueryHandler
@@ -59,6 +59,7 @@ public class QueryHandler extends AsyncQueryHandler
         queryHandler.startQuery(0, values, Calendars.CONTENT_URI,
                                 CALENDAR_PROJECTION, null, null, null);
     }
+
 ```
 
 This method is called from an app activity.
@@ -66,13 +67,15 @@ This method is called from an app activity.
 ```java
         QueryHandler.insertEvent(this, startTime.getTimeInMillis(),
                                  endTime.getTimeInMillis(), title);
+
 ```
 
-The `insertEvent()` method creates a new `QueryHandler` which is
+The `insertEvent()` method first creates a new `QueryHandler` which is
 subsequently reused. The start time, end time and title of the event
 are added to a `ContentValues` object and passed to the `startQuery()`
-method. This starts an asynchronous query on the Calendars table. The
-result and the values are passed to the `onQueryComplete()` method.
+method. This starts an asynchronous query on the Calendars table to
+find the first calendar id. A database cursor and the values are
+passed to the `onQueryComplete()` method.
 
 ```java
     // onQueryComplete
@@ -91,10 +94,13 @@ result and the values are passed to the `onQueryComplete()` method.
 
         startInsert(0, null, Events.CONTENT_URI, values);
     }
+
 ```
 
 This gets the calendar id from the cursor and adds it to the values
-along with the timezone. The `startInsert()` method inserts the event
+along with the timezone. It's probably not necessary to query the
+first calendar id because the value seems to be one, but there may be
+instances where it isn't. The `startInsert()` method inserts the event
 asynchronously and the result is passed to the `onInsertComplete()`
 method.
 
@@ -104,16 +110,18 @@ method.
     {
         Log.d(TAG, "Event insert complete " + uri);
     }
+
 ```
 
 All the `AsyncQueryHandler` asynchronous methods include an integer
 and an `Object` in the argument list which are passed to the
-`onComplete()` methods. This is useful for passing parameters to be
+`onComplete()` methods. This is useful for passing on parameters to be
 used later.
 
 ```shell
 09-05 15:47:19.228 28492 28492 D QueryHandler: Event insert start
 09-05 15:47:19.992 28492 28492 D QueryHandler: Event insert complete content://com.android.calendar/events/84
+
 ```
 
 Android takes a while to add the event as can be seen from the log.

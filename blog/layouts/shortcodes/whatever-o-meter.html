@@ -1,6 +1,7 @@
 <!-- Whatever-o-meter shortcode -->
 <!-- Check for questions -->
-{{ if not (isset .Page.Params "question") }}
+{{ with .Page.Params }}
+{{ if not .question }}
 <!-- No questions -->
 <p>
   No whatever-o-meter questions defined, you need to define some
@@ -62,22 +63,21 @@
 
     </g>
   </svg>
-  {{ $intro := .Page.Params.intro }}
   <div id="first" style="text-align: center">
-    <h4>{{ $intro }}</h4>
+    <h4>{{ .intro }}</h4>
     <input type="button" value="Start" class="start" id="start" />
   </div>
-  {{ $questions := .Page.Params.question }}
-  {{ $left_texts := default (slice "No") .Page.Params.left }}
-  {{ $centre_texts := default (slice "-") (default .Page.Params.centre .Page.Params.center) }}
-  {{ $right_texts := default (slice "Yes") .Page.Params.right }}
+  {{ $questions := .question }}
+  {{ $left_texts := default (slice "No") .left }}
+  {{ $centre_texts := default (slice "-") (default .centre .center) }}
+  {{ $right_texts := default (slice "Yes") .right }}
   {{ $last_index := sub (len $questions) 1 }}
   {{ range $index, $question := $questions }}
   {{ $left := default "No" (index $left_texts $index) }}
   {{ $centre := default "-" (index $centre_texts $index) }}
   {{ $right := default "Yes" (index $right_texts $index) }}
   <div id="panel-{{ add $index 1 }}" style="display: none; text-align: center">
-    <h5>{{ $question }}</h5>
+    <h4>{{ $question }}</h4>
     <div class="slider" id="value-{{ add $index 1 }}"></div>
     <div>
       {{ if ne $centre "-" }}
@@ -108,30 +108,31 @@
   {{ end }}
   {{ end }}
   <div id="last" style="display: none; text-align: center;">
-    <h3 id="answer"></h3>
+    <h4 id="answer"></h4>
     <input type="button" value="Again" class="again" id="again" />
-    {{ if .Page.Params.more }}
+    {{ if .more }}
     <br />
-    <a href="{{ .Page.Params.more }}"><input type="button" value="Find Out More" id="more" class="more" /></a>
+    <a href="{{ .more }}"><input type="button" value="Find Out More" id="more" class="more" /></a>
     {{ end }}
   </div>
 </div>
 <br />
-{{ if .Page.Params.result }}
-{{ .Scratch.Set "results" .Page.Params.result }}
-{{ if (default .Page.Params.colors .Page.Params.colours) }}
-{{ .Scratch.Set "colours" (split (default .Page.Params.colors .Page.Params.colours) ",") }}
+{{ with .result }}
+{{ $.Scratch.Set "results" . }}
 {{ end }}
-{{ if .Page.Params.weights }}
-{{ .Scratch.Set "weights" (split .Page.Params.weights ",") }}
+{{ with (default .colors .colours) }}
+{{ $.Scratch.Set "colours" (split . ",") }}
 {{ end }}
-{{ if .Page.Params.duration }}
-{{ .Scratch.Set "duration" .Page.Params.duration }}
+{{ with .weights }}
+{{ $.Scratch.Set "weights" (split . ",") }}
 {{ end }}
-{{ if .Page.Params.easing }}
-{{ .Scratch.Set "easing" .Page.Params.easing }}
+{{ with .duration }}
+{{ $.Scratch.Set "duration" . }}
 {{ end }}
-{{ $json := dict "results" (.Scratch.Get "results") "colours" (.Scratch.Get "colours") "weights" (.Scratch.Get "weights") "duration" (.Scratch.Get "duration") "easing" (.Scratch.Get "easing") }}
+{{ with .easing }}
+{{ $.Scratch.Set "easing" . }}
+{{ end }}
+{{ $json := dict "results" ($.Scratch.Get "results") "colours" ($.Scratch.Get "colours") "weights" ($.Scratch.Get "weights") "duration" ($.Scratch.Get "duration") "easing" ($.Scratch.Get "easing") }}
 <script type="text/javascript">
   var whatever_data = {{ safeJS (jsonify $json) }};
 </script>
