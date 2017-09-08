@@ -23,6 +23,9 @@ public class QueryHandler extends AsyncQueryHandler
 {
     private static final String TAG = "QueryHandler";
 
+    private static final String REMINDER_SELECT =
+        "((" + Reminders.EVENT_ID + "=?) AND (" + Reminders.METHOD + "=?))";
+
     // Projection arrays
     private static final String[] CALENDAR_PROJECTION = new String[]
         {
@@ -30,7 +33,13 @@ public class QueryHandler extends AsyncQueryHandler
         };
 
     // The indices for the projection array above.
-    private static final int PROJECTION_ID_INDEX = 0;
+    private static final int CALENDAR_ID_INDEX = 0;
+
+    private static final int CALENDAR = 0;
+    private static final int EVENT    = 1;
+    private static final int REMINDER = 2;
+
+    private static final int REMINDER_MESSAGE = -2;
 
     private static QueryHandler queryHandler;
 
@@ -56,7 +65,7 @@ public class QueryHandler extends AsyncQueryHandler
 
         Log.d(TAG, "Event insert start");
 
-        queryHandler.startQuery(0, values, Calendars.CONTENT_URI,
+        queryHandler.startQuery(CALENDAR, values, Calendars.CONTENT_URI,
                                 CALENDAR_PROJECTION, null, null, null);
     }
 
@@ -79,22 +88,22 @@ passed to the `onQueryComplete()` method.
 
 ```java
     // onQueryComplete
+    @Override
     public void onQueryComplete(int token, Object cookie, Cursor cursor)
     {
         // Use the cursor to move through the returned records
         cursor.moveToFirst();
 
         // Get the field values
-        long calendarID = cursor.getLong(PROJECTION_ID_INDEX);
+        long calendarID = cursor.getLong(CALENDAR_ID_INDEX);
 
         ContentValues values = (ContentValues) cookie;
         values.put(Events.CALENDAR_ID, calendarID);
         values.put(Events.EVENT_TIMEZONE,
                    TimeZone.getDefault().getDisplayName());
 
-        startInsert(0, null, Events.CONTENT_URI, values);
+        startInsert(EVENT, null, Events.CONTENT_URI, values);
     }
-
 ```
 
 This gets the calendar id from the cursor and adds it to the values
@@ -106,11 +115,57 @@ method.
 
 ```java
     // onInsertComplete
+    @Override
     public void onInsertComplete(int token, Object cookie, Uri uri)
     {
-        Log.d(TAG, "Event insert complete " + uri);
-    }
+        Log.d(TAG, "Event insert complete " + uri.getLastPathSegment());
 
+        Message msg =
+            obtainMessage(REMINDER_MESSAGE, uri.getLastPathSegment());
+        sendMessageDelayed(msg, 60000);
+    }
+```
+
+The inserted event has two reminders added after a delay, an alert and
+an email reminder. The email reminder is annoying, so it is removed by
+the `onInsertComplete()` method sending a delayed message with the
+reminder id. The `AsyncQueryHandler` uses messages internally, so the
+`handleMessage()` method passes on unrecognised messages.
+
+```java
+    // handleMessage
+    @Override
+    public void handleMessage(Message msg)
+    {
+        switch (msg.what)
+        {
+        case REMINDER_MESSAGE:
+            Log.d(TAG, "Reminder delete start");
+
+            String selectionArgs[] = 
+                {(String) msg.obj, String.valueOf(Reminders.METHOD_EMAIL)};
+
+            startDelete(REMINDER, null, Reminders.CONTENT_URI,
+                        REMINDER_SELECT, selectionArgs);
+            break;
+
+        default:
+            super.handleMessage(msg);
+        }
+    }
+```
+
+The `startDelete()` method in the message handler deletes the reminder
+asynchronously and the result is passed to the `onDeleteComplete()`
+method.
+
+```java
+    // onDeleteComplete
+    @Override
+    public void onDeleteComplete(int token, Object object, int result)
+    {
+        Log.d(TAG, "Reminder delete complete " + result);
+    }
 ```
 
 All the `AsyncQueryHandler` asynchronous methods include an integer
@@ -121,7 +176,6 @@ used later.
 ```shell
 09-05 15:47:19.228 28492 28492 D QueryHandler: Event insert start
 09-05 15:47:19.992 28492 28492 D QueryHandler: Event insert complete content://com.android.calendar/events/84
-
 ```
 
 Android takes a while to add the event as can be seen from the log.

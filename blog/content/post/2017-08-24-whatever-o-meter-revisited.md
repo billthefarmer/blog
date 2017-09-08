@@ -64,7 +64,7 @@ create default values.
 ```
 
 The other difficult part was extracting optional parameters to pass as
-json to the javascript. I had to use `Scratch` inside if blocks to
+json to the javascript. I had to use `Scratch` inside with blocks to
 save values. Luckily `Scratch.Get` returns `null` if the key doesn't
 exist.
 
