@@ -23,9 +23,6 @@ public class QueryHandler extends AsyncQueryHandler
 {
     private static final String TAG = "QueryHandler";
 
-    private static final String REMINDER_SELECT =
-        "((" + Reminders.EVENT_ID + "=?) AND (" + Reminders.METHOD + "=?))";
-
     // Projection arrays
     private static final String[] CALENDAR_PROJECTION = new String[]
         {
@@ -38,8 +35,6 @@ public class QueryHandler extends AsyncQueryHandler
     private static final int CALENDAR = 0;
     private static final int EVENT    = 1;
     private static final int REMINDER = 2;
-
-    private static final int REMINDER_MESSAGE = -2;
 
     private static QueryHandler queryHandler;
 
@@ -63,7 +58,8 @@ public class QueryHandler extends AsyncQueryHandler
         values.put(Events.DTEND, endTime);
         values.put(Events.TITLE, title);
 
-        Log.d(TAG, "Event insert start");
+        if (BuildConfig.DEBUG)
+            Log.d(TAG, "Calendar query start");
 
         queryHandler.startQuery(CALENDAR, values, Calendars.CONTENT_URI,
                                 CALENDAR_PROJECTION, null, null, null);
@@ -89,7 +85,7 @@ passed to the `onQueryComplete()` method.
 ```java
     // onQueryComplete
     @Override
-    public void onQueryComplete(int token, Object cookie, Cursor cursor)
+    public void onQueryComplete(int token, Object object, Cursor cursor)
     {
         // Use the cursor to move through the returned records
         cursor.moveToFirst();
@@ -97,7 +93,10 @@ passed to the `onQueryComplete()` method.
         // Get the field values
         long calendarID = cursor.getLong(CALENDAR_ID_INDEX);
 
-        ContentValues values = (ContentValues) cookie;
+        if (BuildConfig.DEBUG)
+            Log.d(TAG, "Calendar query complete " + calendarID);
+
+        ContentValues values = (ContentValues) object;
         values.put(Events.CALENDAR_ID, calendarID);
         values.put(Events.EVENT_TIMEZONE,
                    TimeZone.getDefault().getDisplayName());
@@ -116,66 +115,38 @@ method.
 ```java
     // onInsertComplete
     @Override
-    public void onInsertComplete(int token, Object cookie, Uri uri)
+    public void onInsertComplete(int token, Object object, Uri uri)
     {
-        Log.d(TAG, "Event insert complete " + uri.getLastPathSegment());
-
-        Message msg =
-            obtainMessage(REMINDER_MESSAGE, uri.getLastPathSegment());
-        sendMessageDelayed(msg, 60000);
-    }
-```
-
-The inserted event has two reminders added after a delay, an alert and
-an email reminder. The email reminder is annoying, so it is removed by
-the `onInsertComplete()` method sending a delayed message with the
-reminder id. The `AsyncQueryHandler` uses messages internally, so the
-`handleMessage()` method passes on unrecognised messages.
-
-```java
-    // handleMessage
-    @Override
-    public void handleMessage(Message msg)
-    {
-        switch (msg.what)
+        if (uri != null)
         {
-        case REMINDER_MESSAGE:
-            Log.d(TAG, "Reminder delete start");
+            if (BuildConfig.DEBUG)
+                Log.d(TAG, "Insert complete " + uri.getLastPathSegment());
 
-            String selectionArgs[] = 
-                {(String) msg.obj, String.valueOf(Reminders.METHOD_EMAIL)};
-
-            startDelete(REMINDER, null, Reminders.CONTENT_URI,
-                        REMINDER_SELECT, selectionArgs);
-            break;
-
-        default:
-            super.handleMessage(msg);
+            switch (token)
+            {
+            case EVENT:
+                long eventID = Long.parseLong(uri.getLastPathSegment());
+                ContentValues values = new ContentValues();
+                values.put(Reminders.MINUTES, 10);
+                values.put(Reminders.EVENT_ID, eventID);
+                values.put(Reminders.METHOD, Reminders.METHOD_ALERT);
+                startInsert(REMINDER, null, Reminders.CONTENT_URI, values);
+                break;
+            }
         }
     }
 ```
 
-The `startDelete()` method in the message handler deletes the reminder
-asynchronously and the result is passed to the `onDeleteComplete()`
-method.
-
-```java
-    // onDeleteComplete
-    @Override
-    public void onDeleteComplete(int token, Object object, int result)
-    {
-        Log.d(TAG, "Reminder delete complete " + result);
-    }
-```
-
-All the `AsyncQueryHandler` asynchronous methods include an integer
-and an `Object` in the argument list which are passed to the
-`onComplete()` methods. This is useful for passing on parameters to be
-used later.
+This gets the event id and inserts a 10 minute reminder. All the
+`AsyncQueryHandler` asynchronous methods include an integer and an
+`Object` in the argument list which are passed to the `onComplete()`
+methods. This is useful for passing on parameters to be used later.
 
 ```shell
-09-05 15:47:19.228 28492 28492 D QueryHandler: Event insert start
-09-05 15:47:19.992 28492 28492 D QueryHandler: Event insert complete content://com.android.calendar/events/84
+09-11 10:27:56.518  9808  9808 D QueryHandler: Calendar query start
+09-11 10:27:56.687  9808  9808 D QueryHandler: Calendar query complete 1
+09-11 10:27:56.801  9808  9808 D QueryHandler: Insert complete 112
+09-11 10:27:56.944  9808  9808 D QueryHandler: Insert complete 1
 ```
 
 Android takes a while to add the event as can be seen from the log.
