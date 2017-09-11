@@ -48,6 +48,7 @@ Hugo I had to make a great deal of use of `default` and `slice` to
 create default values.
 
 ```html
+{{ with .Page.Params }}
   <div id="first" style="text-align: center">
     <h4>{{ .intro }}</h4>
     <input type="button" value="Start" class="start" id="start" />
