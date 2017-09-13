@@ -5,7 +5,12 @@ date: 2017-08-24T11:47:00+01:00
 url: /whatever-o-meter-revisited/
 categories:
   - Hacking
-
+keywords:
+  - hugo
+  - wordpress
+  - plugin
+  - javascript
+  - whatever-o-meter
 ---
 
 I wrote the whatever-o-meter about five years ago in PHP and

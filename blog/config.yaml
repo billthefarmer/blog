@@ -14,7 +14,16 @@ paginate: 5
 
 taxonomies:
   category: categories
-  # tag: tags
+
+related:
+  threshold: 10
+  toLower: true
+  indices:
+    - name: keywords
+      weight: 150
+    - name: date
+      pattern: '2006'
+      weight: 10
 
 menu:
   sidebar:

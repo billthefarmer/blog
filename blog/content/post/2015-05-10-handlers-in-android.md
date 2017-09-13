@@ -6,7 +6,11 @@ date: 2015-05-10T15:51:40+00:00
 url: /handlers-in-android/
 categories:
   - Hacking
-
+keywords:
+  - android
+  - handler
+  - thread
+  - message
 ---
 ### Using a handler to return results from a worker thread
 

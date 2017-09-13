@@ -5,7 +5,12 @@ date: 2017-09-05T14:54:25+01:00
 url: /adding-a-calendar-event/
 categories:
   - Hacking
-
+keywords:
+  - android
+  - calendar
+  - event
+  - reminder
+  - asynchronous
 ---
 
 The android docs for the [Calendar Provider][1] are quite useful, but

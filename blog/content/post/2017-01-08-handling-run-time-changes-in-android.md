@@ -6,8 +6,13 @@ date: 2017-01-08T18:49:31+00:00
 url: /handling-run-time-changes-in-android/
 categories:
   - Hacking
-
+keywords:
+  - android
+  - configuration
+  - fragment
+  - singleton
 ---
+
 Two articles, [Handling Configuration Changes][1] and [Handling Configuration Changes with Fragments][2] recommend the use of fragments to retain data and background tasks in Android during the life of an app. There are two problems with this:
 
   * An android fragment is quite a complex heavyweight object to use just for retaining data and possibly a background task, and the fragment management is not simple.

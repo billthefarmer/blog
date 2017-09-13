@@ -6,7 +6,13 @@ date: 2017-08-19T14:30:00+00:00
 url: /migrating-blog-from-wordpress/
 categories:
   - Hacking
-
+keywords:
+  - wordpress
+  - hugo
+  - export
+  - yaml
+  - toml
+  - php
 ---
 
 I have got fed up with [Wordpress][1]. It required constant updates,

@@ -6,7 +6,11 @@ date: 2017-07-23T10:48:17+00:00
 url: /resolving-content-uris-in-android/
 categories:
   - Hacking
-
+keywords:
+  - android
+  - content
+  - uri
+  - file
 ---
 If you write an android app that handles images or any other sort of file your app may be required to deal with &#8216;content&#8217; uris (`content://`). There is a very useful utility which resolves these into &#8216;file&#8217; uris (`file:///`) [FileUtils.java][1]. This contains one external reference to [LocalStorageProvider][2], which can be resolved by replacing the reference with a string.
 

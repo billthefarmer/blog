@@ -6,7 +6,11 @@ date: 2013-11-20T18:55:54+00:00
 url: /whatever-o-meter/
 categories:
   - Hacking
-
+keywords:
+  - hugo
+  - wordpress
+  - plugin
+  - whatever-o-meter
 ---
 ![Whatever][6]
 
