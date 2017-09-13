@@ -6,7 +6,14 @@ date: 2016-01-26T11:36:38+00:00
 url: /install-osx-el-capitan-on-a-pc-mbr/
 categories:
   - Hacking
-
+keywords:
+  - hackintosh
+  - el capitan
+  - osx
+  - usb
+  - mbr
+  - gpt
+  - clover
 ---
 ![OSX El Capitan][1]
 

@@ -6,11 +6,15 @@ date: 2015-04-28T11:54:45+00:00
 url: /chorizo-egg-and-tomato-toasted-sandwich/
 categories:
   - Recipes
-
+keywords:
+  - eggs
+  - chorizo
+  - tomato
+  - cheese
 ---
 This is a nice snack for two.
 
-## Ingredients
+### Ingredients
 
   * Two eggs
   * Sliced chorizo or crispy bacon
@@ -18,7 +22,7 @@ This is a nice snack for two.
   * Tomato thinly sliced
   * Cheese sliced
 
-## Method
+### Method
 
   1. Toast two slices of bread and fry two eggs
   2. Meanwhile slice the tomato thinly

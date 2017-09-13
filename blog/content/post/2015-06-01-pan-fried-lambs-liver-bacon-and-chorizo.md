@@ -6,7 +6,11 @@ date: 2015-06-01T17:21:02+00:00
 url: /pan-fried-lambs-liver-bacon-and-chorizo/
 categories:
   - Recipes
-
+keywords:
+  - lambs liver
+  - bacon
+  - chorizo
+  - onion
 ---
 Back in the mid 70&#8217;s, I had to do some work at Kingston upon Thames Power Station. When I stopped for lunch, I found a little Greek restaurant opposite in a parade of shops and restaurants. That whole area, including the power station has since been redeveloped, and bears no resemblance. I had their lunch time offer of pan fried kidneys, probably with rice.
 
@@ -14,7 +18,7 @@ When I got home, I mentioned this to she who did most of the cooking at that tim
 
 I looked for some lamb&#8217;s kidneys in the co-op today, but ended up with liver instead. A tasty meal for two.
 
-## Ingredients
+### Ingredients
 
   * Approx 240g sliced lamb&#8217;s liver
   * A couple of rashers of streaky or cooking bacon
@@ -22,7 +26,7 @@ I looked for some lamb&#8217;s kidneys in the co-op today, but ended up with liv
   * An onion, sliced
   * Olive oil for cooking
 
-## Method
+### Method
 
   1. Cover the bottom of a large skillet or frying pan with oil and place onion slices in the pan.
   2. Cook on a low heat until softened and starting to brown and turn over.

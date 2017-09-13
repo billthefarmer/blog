@@ -6,7 +6,14 @@ date: 2015-02-25T18:00:34+00:00
 url: /sausages-with-green-lentils/
 categories:
   - Recipes
-
+keywords:
+  - italy unpacked
+  - sausages
+  - lentils
+  - celery
+  - garlic
+  - onions
+  - passata
 ---
 This recipe is based on the sausages with lentils in this episode of [Italy Unpacked][1] on BBC 2. This is enough for three or four, depending on the number of sausages. You will need a medium sized pan to cook the lentils, and a large deep pan for the sausages, onions, and everything else.
 
@@ -20,7 +27,7 @@ This recipe is based on the sausages with lentils in this episode of [Italy Unpa
   * 500g carton passata
   * Olive oil
 
-## Method
+### Method
 
   1. Put lentils, chopped celery and garlic in a pot, cover with water, boil for five minutes, then simmer for about 30 minutes until tender. Add more water if necessary. The idea is for the lentils to absorb all the water.
   2. Fry sausages in a deep pan until nearly done.

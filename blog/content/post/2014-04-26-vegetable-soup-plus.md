@@ -6,15 +6,25 @@ date: 2014-04-26T17:33:36+00:00
 url: /vegetable-soup-plus/
 categories:
   - Recipes
-
+keywords:
+  - soup
+  - vegetable
+  - onion
+  - potato
+  - garlic
+  - chilli
+  - chorizo
 ---
-<header>A vegetable soup with a bit of meat that’s full of flavour. Similar to leek and potato soup recipe. Make it into a meal with plenty of bread and butter. Enough for two, double the recipe for four.</header> 
 
-### Ingredients
+A vegetable soup with a bit of meat that’s full of flavour. Similar to
+leek and potato soup recipe. Make it into a meal with plenty of bread
+and butter. Enough for two, double the recipe for four.
+
+#### Ingredients
 
   * 1 tbsp olive oil
   * 1 onion, chopped
-  * 1 small potatoe, cubed
+  * 1 small potato, cubed
   * 1 clove garlic, crushed
   * 1/2 a fresh chilli, if desired
   * Additional vegetables as available: grated carrot, leek, courgette, cabbage, etc
@@ -22,7 +32,7 @@ categories:
   * Freshly ground black pepper
   * Milk
 
-## Method
+### Method
 
   1. Heat the oil in a large pan and add the vegetables and sausage. Cook for 3-4 minutes until starting to soften.
   2. Grind over some black pepper.

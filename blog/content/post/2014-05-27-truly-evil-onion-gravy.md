@@ -6,11 +6,13 @@ date: 2014-05-27T18:38:50+00:00
 url: /truly-evil-onion-gravy/
 categories:
   - Recipes
-
+keywords:
+  - onion
+  - gravy
 ---
 Black onion gravy to go with faggots, sausages or whatever takes your fancy.
 
-## Ingredients
+### Ingredients
 
   * 3 medium onions, sliced
   * 1 tablespoon plain flour or cornmeal (polenta)
@@ -18,7 +20,7 @@ Black onion gravy to go with faggots, sausages or whatever takes your fancy.
   * Boiling water or cooking water from vegetables
   * Vegetable oil
 
-## Method
+### Method
 
   1. Cover the bottom of a small pan with oil and place on medium heat.
   2. Put the onions in the pan and cook, stirring with a fork until reduced to brown/black sludge.

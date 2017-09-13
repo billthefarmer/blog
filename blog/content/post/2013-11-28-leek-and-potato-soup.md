@@ -6,11 +6,15 @@ date: 2013-11-28T17:33:42+00:00
 url: /leek-and-potato-soup/
 categories:
   - Recipes
-
+keywords:
+  - leek
+  - potato
+  - soup
+  - vegetable
 ---
 A vegetable soup that’s full of flavour. Make it into a meal with plenty of bread and butter. Enough for two, double the recipe for four.
 
-### Ingredients
+#### Ingredients
 
   * 1 tbsp olive oil
   * 1 onion, chopped

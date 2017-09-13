@@ -6,11 +6,20 @@ date: 2014-05-23T16:50:32+00:00
 url: /fabada-asturiana/
 categories:
   - Recipes
-
+keywords:
+  - fabada
+  - asturian
+  - belly pork
+  - gammon hock
+  - bacon
+  - chorizo
+  - paprika
+  - turmuric
+  - butter beans
 ---
 A highly flavoured Asturian version of pork and beans. Enough for four or more.
 
-## Ingredients
+### Ingredients
 
   * 375g or thereabouts packet of dried butter beans
   * 4-500g belly pork with or without skin, cut into chunks
@@ -25,7 +34,7 @@ A highly flavoured Asturian version of pork and beans. Enough for four or more.
   * Olive oil
   * Water
 
-## Method
+### Method
 
   1. Soak the beans overnight in plenty of water.
   2. Cover the bottom of a large pan with a few glugs of olive oil and place on a lowish heat.

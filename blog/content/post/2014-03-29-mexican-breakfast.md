@@ -6,11 +6,19 @@ date: 2014-03-29T09:59:46+00:00
 url: /mexican-breakfast/
 categories:
   - Recipes
-
+keywords:
+  - mexican
+  - breakfast
+  - potato
+  - onion
+  - chili
+  - chorizo
+  - tomato
+  - eggs
 ---
 This is an adaptation of a recipe I saw recently in the [Metro][1]. Not Huevos Rancheros, but something else. The original recipe was most insistent that the black pepper be added to the pan, not the eggs, and the eggs should be stirred, not beaten.
 
-## Ingredients
+### Ingredients
 
   * Small potato, chopped
   * Small onion, chopped
@@ -21,7 +29,7 @@ This is an adaptation of a recipe I saw recently in the [Metro][1]. Not Huevos R
   * 2 eggs
   * Oil
 
-## Method
+### Method
 
   1. Put some oil in a medium sized skillet or frying pan and warm up.
   2. Add the potatoes, chili, onion, and chorizo, put a lid on, and allow to cook gently until the potatoes and onion are cooked through.

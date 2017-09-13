@@ -17,13 +17,10 @@ taxonomies:
 
 related:
   threshold: 10
-  toLower: true
+  includeNewer: true
   indices:
     - name: keywords
-      weight: 150
-    - name: date
-      pattern: '2006'
-      weight: 10
+      weight: 80
 
 menu:
   sidebar:

@@ -6,11 +6,16 @@ date: 2013-12-11T14:43:34+00:00
 url: /pasta-picante/
 categories:
   - Recipes
-
+keywords:
+  - pasta
+  - picante
+  - onion
+  - chilli
+  - garlic
 ---
 We ate this in the Restaurante Terraza del Mar along the coast path from Puerto de la Cruz in Tenerife. This is my adaptation. Light lunch for two.
 
-## Ingredients
+### Ingredients
 
   * Pasta for 2, whatever you like
   * Small fresh chilli
@@ -21,7 +26,7 @@ We ate this in the Restaurante Terraza del Mar along the coast path from Puerto 
   * Olive oil
   * Anything else you fancy, we put some grated carrot in ours
 
-## Method
+### Method
 
   1. Cook the pasta in boiling water and drain when done.
   2. Meanwhile warm up a large skillet or frying pan with a small amount of olive oil in it.

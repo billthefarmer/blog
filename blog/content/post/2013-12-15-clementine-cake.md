@@ -6,11 +6,13 @@ date: 2013-12-15T13:46:57+00:00
 url: /clementine-cake/
 categories:
   - Recipes
-
+keywords:
+  - clementine
+  - cake
 ---
 This is an adaptation of a Marguerite Patten recipe dated 1963. As adapted by She-who-shall-be-ignored, with additional chutney technique.
 
-## Ingredients
+### Ingredients
 
 ### Cake
 
@@ -26,7 +28,7 @@ This is an adaptation of a Marguerite Patten recipe dated 1963. As adapted by Sh
   * 3oz Icing sugar
   * 2oz margarine or butter
 
-## Method
+### Method
 
   1. Put the sugar and the chopped clementines in a small saucepan on a gentle heat. stir occasionally until you have a thick marmalade.
   2. Turn on the oven, about 175 degrees.

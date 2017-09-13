@@ -6,11 +6,14 @@ date: 2017-04-26T10:09:36+00:00
 url: /slow-cooked-ox-cheek/
 categories:
   - Recipes
-
+keywords:
+  - ox cheek
+  - onion
+  - carrot
 ---
 Ox cheek is a tasty cut of beef, but it contains tough connective tissue which melts away when slow cooked.
 
-## Ingredients
+### Ingredients
 
   * Ox cheek
   * 4-6 chopped onions
@@ -19,7 +22,7 @@ Ox cheek is a tasty cut of beef, but it contains tough connective tissue which m
   * Black pepper
   * Bay leaves
 
-## Method
+### Method
 
   1. Put ox cheek in slow cooker and set to high heat
   2. Put a couple of bay leaves in the pot, grind black pepper over the meat and pour some olive oil over it

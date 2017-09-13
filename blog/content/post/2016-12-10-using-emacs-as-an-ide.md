@@ -6,7 +6,13 @@ date: 2016-12-10T13:59:22+00:00
 url: /using-emacs-as-an-ide/
 categories:
   - Hacking
-
+keywords:
+  - emacs
+  - ide
+  - android
+  - java
+  - xml
+  - html
 ---
 I had to learn Emacs on Unix many years ago as it was at that time the only development environment for Smallworld Magik. Having learnt it, I have stuck with it as it provides a consistent platform for editing source code and building applications in as many computer languages and platforms as I have used and many more I haven&#8217;t. It is the only source code editor I have used that always gets the indentation and syntax highlighting right.
 

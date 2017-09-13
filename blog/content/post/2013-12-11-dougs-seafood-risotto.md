@@ -6,11 +6,18 @@ date: 2013-12-11T18:12:24+00:00
 url: /dougs-seafood-risotto/
 categories:
   - Recipes
-
+keywords:
+  - risotto
+  - seafood
+  - mushrooms
+  - onion
+  - garlic
+  - peppers
+  - oregano
 ---
 This is my interpretation of my brother&#8217;s risotto. This is in no way a conventional risotto recipe, but it works nicely. Hearty dinner for four.
 
-## Ingredients
+### Ingredients
 
   * 2 cups of risotto rice
   * Three or four onions, depending on size
@@ -25,7 +32,7 @@ This is my interpretation of my brother&#8217;s risotto. This is in no way a con
   * Water
   * Olive oil
 
-## Method
+### Method
 
   1.  Warm up a large saucepan with a good glug of olive oil in it.
   2. Chop up the vegetables and add to the pan.

@@ -6,9 +6,16 @@ date: 2016-04-21T15:09:15+00:00
 url: /venison-and-chorizo-casserole/
 categories:
   - Recipes
-
+keywords:
+  - venison
+  - chorizo
+  - onion
+  - garlic
+  - peppers
+  - tomato
+  - paprika
 ---
-## Ingredients
+### Ingredients
 
   * 300g diced venison
   * 75g chorizo, chopped
@@ -23,7 +30,7 @@ categories:
   * Red wine
   * Stock or stock cube and boiling water
 
-## Method
+### Method
 
   1. Add some olive oil to a casserole and put on a low heat
   2. Toss the venison pieces in flour and brown all over in the casserole

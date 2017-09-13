@@ -6,7 +6,14 @@ date: 2016-02-27T19:58:47+00:00
 url: /resurrecting-a-netbook-as-a-web-server/
 categories:
   - Hacking
-
+keywords:
+  - netbook
+  - linux
+  - mint
+  - webtrees
+  - apache
+  - php
+  - mysql
 ---
 When I got fed up with Windows XP on my netbook, I tried windows 7 on it, but it was barely usable. So I tried Windows 7 Starter which was better. I upgraded it to Home Premium, which was OK at first, but slowed down as it got clagged up with updates.
 

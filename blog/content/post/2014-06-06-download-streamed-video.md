@@ -6,7 +6,10 @@ date: 2014-06-06T16:03:16+00:00
 url: /download-streamed-video/
 categories:
   - Hacking
-
+keywords:
+  - streamed
+  - video
+  - download
 ---
 Online video providers tend to stream the video to a javascript player, so making it extremely difficult to capture the video. [This blog][1] explains a method using Chrome to spoof the user agent string, pretending to be an iPad. Unfortunately, this doesn&#8217;t seem to work any more in the latest version of Chrome.
 

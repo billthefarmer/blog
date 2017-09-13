@@ -6,7 +6,11 @@ date: 2016-02-02T16:59:51+00:00
 url: /read-ibook-books-on-an-android-tablet/
 categories:
   - Hacking
-
+keywords:
+  - calibre
+  - epub
+  - ibooks
+  - itunes
 ---
 You will need to install [Calibre][1] to make the books usable, and the books must be DRM free.
 

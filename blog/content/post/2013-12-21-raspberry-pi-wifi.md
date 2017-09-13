@@ -6,7 +6,13 @@ date: 2013-12-21T20:16:37+00:00
 url: /raspberry-pi-wifi/
 categories:
   - Hacking
-
+keywords:
+  - raspberry
+  - pi
+  - wifi
+  - wpa_supplicant
+  - wifi-menu
+  - netctl
 ---
 When I got my Pi some months ago I bought a wifi adapter for it, as you do. But I couldn&#8217;t get it to work reliably in Raspbian, and I didn&#8217;t even try in Arch Linux. So I tested the adapter on my windoze box, and it worked just fine, and I tried it with Linux and it worked just fine, so I put it in the &#8216;too hard&#8217; box.
 

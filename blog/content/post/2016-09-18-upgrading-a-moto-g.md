@@ -6,7 +6,9 @@ date: 2016-09-18T20:27:57+00:00
 url: /upgrading-a-moto-g/
 categories:
   - Hacking
-
+keywords:
+  - moto g
+  - cyanogenmod
 ---
 ![Moto G][1]
 

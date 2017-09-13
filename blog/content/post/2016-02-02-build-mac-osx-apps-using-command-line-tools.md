@@ -6,7 +6,14 @@ date: 2016-02-02T17:59:09+00:00
 url: /build-mac-osx-apps-using-command-line-tools/
 categories:
   - Hacking
-
+keywords:
+  - xcode
+  - tools
+  - llvm
+  - framework
+  - version
+  - sips
+  - emacs
 ---
 You will need to install the Xcode command line tools, you don&#8217;t need the Xcode app. The easiest way to do this is to attempt to build an app like emacs by typing `./configure` on the command line. A dialog box will pop up asking if you want to download and install the tools.
 

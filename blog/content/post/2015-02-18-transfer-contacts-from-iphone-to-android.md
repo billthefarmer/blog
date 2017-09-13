@@ -6,7 +6,13 @@ date: 2015-02-18T17:45:54+00:00
 url: /transfer-contacts-from-iphone-to-android/
 categories:
   - Hacking
-
+keywords:
+  - iphone
+  - android
+  - contacts
+  - hackintosh
+  - itunes
+  - vcard
 ---
 I&#8217;ve been using an old iPhone 3G, and I&#8217;ve got myself a new Android phone. First off, I ~~googled~~ [DuckDuckGo][1]&#8216;d how to transfer my contacts and found lots of suggestions. First, I tried [My Contacts Backup][2], but it wouldn&#8217;t install on the iPhone.
 

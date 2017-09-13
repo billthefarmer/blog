@@ -6,11 +6,22 @@ date: 2016-03-27T15:17:14+00:00
 url: /shoreham-fish-chowder/
 categories:
   - Recipes
-
+keywords:
+  - garlic
+  - onion
+  - potato
+  - mushrooms
+  - spinach
+  - tomatoe
+  - haddock
+  - salmon
+  - prawns
+  - paprika
+  - turmeric
 ---
 Hearty meal for four, use whatever fish is available.
 
-## Ingredients
+### Ingredients
 
   * Olive oil
   * Two or three garlic cloves, chopped
@@ -26,7 +37,7 @@ Hearty meal for four, use whatever fish is available.
   * 1 tsp turmeric
   * Milk
 
-## Method
+### Method
 
   1. Cover the bottom of a large pan with olive oil and put on a low heat
   2. Add the garlic, onions, potatoes, mushrooms, spinach and tomatoes, tearing up any big spinach leaves

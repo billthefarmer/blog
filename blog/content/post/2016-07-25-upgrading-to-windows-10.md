@@ -6,7 +6,8 @@ date: 2016-07-25T19:46:29+00:00
 url: /upgrading-to-windows-10/
 categories:
   - Hacking
-
+keywords:
+  - windows 10
 ---
 I didn&#8217;t like the Windows 10 preview, I thought it was a pain in the backside, so I have delayed upgrading from Windows 7 until the last minute when I got the countdown notification. I have been running a slightly dodgy copy of Windows 7 for a long time, so I was somewhat surprised when, out of the goodness of their hearts, Microsoft said I could have an activated copy of Windows 10 for free.
 

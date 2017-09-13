@@ -6,11 +6,15 @@ date: 2013-11-30T12:51:47+00:00
 url: /spanish-omelette/
 categories:
   - Recipes
-
+keywords:
+  - omelette
+  - potato
+  - onion
+  - chorizo
 ---
 A nice tasty potato and onion omelette for breakfast.
 
-### Ingredients
+#### Ingredients
 
   * 2 eggs
   * medium sized potato, cubed
@@ -19,7 +23,7 @@ A nice tasty potato and onion omelette for breakfast.
   * Fresh ground black pepper
   * vegetable oil
 
-### Method
+#### Method
 
   1. Warm up a medium sized cast iron skillet, or omelette pan with a smidgeon of oil in it. Tilt the pan to make sure the oil covers the bottom and sides
   2. While the pan is warming up, chop the potato and onions.

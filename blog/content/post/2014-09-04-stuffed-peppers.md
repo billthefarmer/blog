@@ -6,11 +6,18 @@ date: 2014-09-04T12:16:58+00:00
 url: /stuffed-peppers/
 categories:
   - Recipes
-
+keywords:
+  - peppers
+  - cous cous
+  - chorizo
+  - garlic
+  - onion
+  - paprika
+  - oregano
 ---
 Lunch for two.
 
-## Ingredients
+### Ingredients
 
   * 4 bell peppers
   * 1/2 cup cous cous
@@ -23,7 +30,7 @@ Lunch for two.
   * boiling water
   * olive oil
 
-## Method
+### Method
 
   1. Trim the stems of the peppers, cut the tops off, and remove the seeds and pulp from inside.
   2. Cover the bottom of a small pan with oil and add the garlic, onion, chorizo, paprika and oregano, place on a gentle heat and cook until the onions are transparent.

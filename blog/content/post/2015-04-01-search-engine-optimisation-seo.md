@@ -6,7 +6,9 @@ date: 2015-04-01T18:17:07+00:00
 url: /search-engine-optimisation-seo/
 categories:
   - Hacking
-
+keywords:
+  - seo
+  - content
 ---
 I haven&#8217;t worried too much about search engines since I set this site up. I registered it with Google initially, and after a few days it appeared in the results, so that was good enough for me. If you search for Old Shoreham Buccaneers, or a subset of that, the Buccaneers site appears high in the results, job done.
 

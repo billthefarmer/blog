@@ -6,13 +6,20 @@ date: 2015-04-17T11:10:42+00:00
 url: /slow-cooked-lamb/
 categories:
   - Recipes
-
+keywords:
+  - italy unpacked
+  - lamb
+  - chilli
+  - tomato
+  - onion
+  - rocket
+  - pecorino
 ---
 This recipe is based on the mutton in a pot in this episode of [Italy Unpacked][1]. I have converted it to a slow cooker recipe, but it could be done in a casserole in the oven or in a earthenware pot next to a wood fire. Some of the ingredients are a compromise, for example Giorgio bought a kilo of rocket in the market. I couldn&#8217;t have got all that in the pot. Not all those tomatoes or chillies either.
 
 ![](images/2015/04/P1020034.jpg)
 
-## Ingredients
+### Ingredients
 
   * 800g or so stewing lamb or shoulder or shanks
   * 120g or so Italian sausage or chorizo, sliced
@@ -26,7 +33,7 @@ This recipe is based on the mutton in a pot in this episode of [Italy Unpacked][
 
 ![](images/2015/04/P1020035.jpg)
 
-## Method
+### Method
 
   1. Remove any large lumps of fat from the lamb.
   2. Layer the ingredients in the pot, adding a lump of lamb, some slices of sausage, then a handful each of the rest of the ingredients.

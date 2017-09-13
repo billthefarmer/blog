@@ -6,11 +6,20 @@ date: 2015-09-19T10:07:59+00:00
 url: /catalan-slow-cooked-chicken/
 categories:
   - Recipes
-
+keywords:
+  - chicken
+  - catalan
+  - onion
+  - garlic
+  - peppers
+  - tomato
+  - paprika
+  - turmeric
+  - oregano
 ---
 This is based on a recipe in Asda magazine.
 
-## Ingredients
+### Ingredients
 
   * Chicken pieces &#8211; drumsticks, thighs, legs &#8211; whatever
   * 3 onions, chopped
@@ -24,7 +33,7 @@ This is based on a recipe in Asda magazine.
   * Chicken stock pot
   * Olive oil
 
-## Method
+### Method
 
   1. Put the chicken pieces in a slow cooker with bay leaves and turn on full to warm up.
   2. Fry the chopped onions, peppers and garlic in olive oil until soft.

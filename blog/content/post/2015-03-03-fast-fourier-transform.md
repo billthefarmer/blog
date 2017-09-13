@@ -6,7 +6,11 @@ date: 2015-03-03T12:44:13+00:00
 url: /fast-fourier-transform/
 categories:
   - Hacking
-
+keywords:
+  - fft
+  - java
+  - android
+  - ffts
 ---
 I wrote a java tuner app a few years ago, so I needed a [Fast Fourier Transform][1] to do the frequency detection. I found a fairly simple implementation in java on the web somewhere, can&#8217;t remember where, tried it, and it worked fine. The frequency detection algorithm comes from [The Dsp Dimension][2].
 

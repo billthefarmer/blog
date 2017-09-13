@@ -6,7 +6,9 @@ date: 2016-07-31T15:46:48+00:00
 url: /replacing-micro-bore-radiators/
 categories:
   - DIY
-
+keywords:
+  - microbore
+  - radiators
 ---
 My heating system uses 1/4&#8243; copper pipe, which I think was called micro-bore at the time. Both pipes went to a valve at one end of the radiator. There were a variety of valves fitted, but most of them were like this one.
 

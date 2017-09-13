@@ -14,11 +14,11 @@ keywords:
 ---
 ![Whatever][6]
 
-## Introduction
+### Introduction
 
 Whatever-o-meter is a WordPress and Hugo plugin that shows a tachometer-like dial with a pointer, asks a series of predefined questions which are answered by moving a slider, shows one of several predefined results, and moves the tacho pointer to a position determined by the value of the result. The project is on [Github](https://github.com/billthefarmer/whatever-o-meter").
 
-## Documentation
+### Documentation
 
 Whatever-o-meter uses the shortcode [**whatever-o-meter**] or {{</***whatever-o-meter***/>}} to insert the whatever-o-meter display into the page. Other page content above and below the shortcode will appear on the page as normal. Do not use more than one whatever-o-meter shortcode on the page, only the first one is likely to work. If the shortcode is used on a page with no questions defined, the code will be replaced with the message:
 
@@ -49,7 +49,7 @@ To define the initial intro panel, the questions, and the results you need to de
   * **colours ** The colours you would like to appear in the dial and buttons. Optional, should be a comma delimited list of five colours. The colours are the dial background colour, ticks, digits,  pointer, buttons, any colour format in the [CSS standard][5] should work: #abc, #abcdef, goldenrod, rgb(r,g,b). Defaults to palegoldenrod, black, black, black, palegoldenrod.
   * **debug ** Causes the plugin to show the values of the custom fields below the whatever-o-meter for debugging if defined.
 
-## Specification
+### Specification
 
 The whatever-o-meter initial display will show the tacho dial with the initial panel with the intro text and the start button below. Any other content on the page will appear above and below.
 

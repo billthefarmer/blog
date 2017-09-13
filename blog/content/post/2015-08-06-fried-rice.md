@@ -6,11 +6,19 @@ date: 2015-08-06T14:52:37+00:00
 url: /fried-rice/
 categories:
   - Recipes
-
+keywords:
+  - rice
+  - onion
+  - garlic
+  - carrot
+  - cabbage
+  - ham
+  - prawns
+  - peas
 ---
 This is our version of Chinese take-away fried rice. Use whatever meat and vegetables are in the larder. Tasty meal for four
 
-## Ingredients
+### Ingredients
 
   * 2 onions, chopped
   * 2 cloves of garlic, chopped
@@ -23,7 +31,7 @@ This is our version of Chinese take-away fried rice. Use whatever meat and veget
   * 1 3/4 cups water or stock
   * Vegetable oil
 
-## Method
+### Method
 
   1. Put a large dollop of oil into a large skillet or wok.
   2. Add the onions, garlic, cabbage and carrots and place on a medium heat.

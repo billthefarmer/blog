@@ -6,11 +6,15 @@ date: 2013-12-11T16:13:17+00:00
 url: /spanish-frittata/
 categories:
   - Recipes
-
+keywords:
+  - frittata
+  - chorizo
+  - onion
+  - cheese
 ---
 Another not so light lunch for two.
 
-## Ingredients
+### Ingredients
 
   * Two largish onions
   * Four or five eggs, depending on size
@@ -19,7 +23,7 @@ Another not so light lunch for two.
   * Freshly ground black pepper
   * Oil for cooking
 
-## Method
+### Method
 
   1. Warm up a large skillet or frying pan with some cooking oil in it.
   2. While the pan is warming slice the onions into rings and place in the pan.
