@@ -28,7 +28,7 @@ There are four parts - you need to create a new partial template in
 <h3>See Also</h3>
 <ul>
   {{ range . }}
-  <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+  <li><a href="{{ .RelPermalink }}">{{ safeHTML .Title }}</a></li>
   {{ end }}
 </ul>
 {{ end }}
@@ -49,9 +49,6 @@ related:
   indices:
     - name: keywords
       weight: 150
-    - name: date
-      pattern: '2006'
-      weight: 10
 ```
 
 You need to add some keywords to the front matter of your posts. I
