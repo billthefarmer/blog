@@ -6,8 +6,8 @@ copyright: Copyright &copy; 2017 Bill Farmer
 theme: theme-hugo-foundation6
 publishDir: d:/billthefarmer.github.io/blog/
 metaDataFormat: yaml
-pygmentscodefences: true
-pygmentsStyle: default
+pygmentsCodeFences: true
+pygmentsStyle: emacs
 
 # number of posts to show on home/category/tag pages (Default: 10)
 paginate: 5
