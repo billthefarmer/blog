@@ -101,6 +101,24 @@ params:
     - title: GPDF
       url: https://github.com/billthefarmer/gpdf
       description: Genealogy pdf chart creation
+    - title: Tuner
+      url: https://github.com/billthefarmer/c-tuner
+      description: Tuner for Windows and Mac
+    - title: Audio Tools
+      url: https://github.com/billthefarmer/audiotools
+      description: Scope, Sig Gen, LMS and SLMS for Windows and Mac
+    - title: Accordion
+      url: https://github.com/billthefarmer/c-accordion
+      description: Accordion for Windows and Mac
+    - title: Melodeon
+      url: https://github.com/billthefarmer/c-melodeon
+      description: Melodeon for Windows and Mac
+    - title: What-o-Clock
+      url: https://github.com/billthefarmer/what-o-clock
+      description: Extremely useful clock display
+    - title: Whatever-o-Meter
+      url: https://github.com/billthefarmer/whatever-o-meter
+      description: Wordpress and Hugo plugin for creating a whatever-o-meter
 
   recentposts:
     hide: true
