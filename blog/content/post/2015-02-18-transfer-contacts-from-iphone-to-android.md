@@ -14,7 +14,7 @@ keywords:
   - itunes
   - vcard
 ---
-I&rsquo;ve been using an old iPhone 3G, and I&rsquo;ve got myself a new Android phone. First off, I ~~googled~~ [DuckDuckGo][1]&lsquo;d how to transfer my contacts and found lots of suggestions. First, I tried [My Contacts Backup][2], but it wouldn&rsquo;t install on the iPhone.
+I&rsquo;ve been using an old iPhone 3G, and I&rsquo;ve got myself a new Android phone. First off, I ~~googled~~ [DuckDuckGo][1]&rsquo;d how to transfer my contacts and found lots of suggestions. First, I tried [My Contacts Backup][2], but it wouldn&rsquo;t install on the iPhone.
 
 So I synced the contacts with my [Hackintosh][3] using iTunes, exported the contacts to a [vCard][4] file, transferred it to the phone by email and imported the file to the Contacts app on the phone. You need to ensure that all the contacts are selected when you export them. And delete the one for Apple that got in there at some stage.
 
