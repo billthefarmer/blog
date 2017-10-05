@@ -12,7 +12,7 @@ keywords:
   - uri
   - file
 ---
-If you write an android app that handles images or any other sort of file your app may be required to deal with &#8216;content&#8217; uris (`content://`). There is a very useful utility which resolves these into &#8216;file&#8217; uris (`file:///`) [FileUtils.java][1]. This contains one external reference to [LocalStorageProvider][2], which can be resolved by replacing the reference with a string.
+If you write an android app that handles images or any other sort of file your app may be required to deal with &lsquo;content&rsquo; uris (`content://`). There is a very useful utility which resolves these into &lsquo;file&rsquo; uris (`file:///`) [FileUtils.java][1]. This contains one external reference to [LocalStorageProvider][2], which can be resolved by removing the function `isLocalStorageDocument()` and references to it.
 
 ```java
     // import com.ianhanniballake.localstorage.LocalStorageProvider;
@@ -23,14 +23,11 @@ If you write an android app that handles images or any other sort of file your a
          * @author paulburke
          */
         public static boolean isLocalStorageDocument(Uri uri) {
-            // return LocalStorageProvider.AUTHORITY.equals(uri.getAuthority());
-            return "com.ianhanniballake.localstorage.documents"
-                .equals(uri.getAuthority());
-    
+            return LocalStorageProvider.AUTHORITY.equals(uri.getAuthority());
         }
 ```
 
-Alternatively, you could just comment out this function and references to it. Having done that, you can then resolve &#8216;content&#8217; uris
+Having done that, you can then resolve &lsquo;content&rsquo; uris
 
 ```java
     public final static String CONTENT = "content";
@@ -52,7 +49,61 @@ Alternatively, you could just comment out this function and references to it. Ha
         }
 ```
 
-This may not always work, but I haven&#8217;t been able to defeat it.
+This may not always work, but I haven&rsquo;t been able to defeat it. Later versions of android have added a &lsquo;Documents&rsquo; folder, which is encoded as &lsquo;home&rsquo;, so some additional code is required to resolve it.
+
+```java
+    /**
+     * Get a file path from a Uri. This will get the the path for
+     * Storage Access Framework Documents, as well as the _data field
+     * for the MediaStore and other file-based ContentProviders.<br>
+     * <br>
+     * Callers should check whether the path is local before assuming
+     * it represents a local file.
+     *
+     * @param context The context.
+     * @param uri The Uri to query.
+     * @see #isLocal(String)
+     * @see #getFile(Context, Uri)
+     * @author paulburke
+     */
+    @TargetApi(19)
+    public static String getPath(final Context context, final Uri uri)
+    {
+        // ...
+        final boolean isKitKat =
+            Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT;
+
+        // DocumentProvider
+        if (isKitKat && DocumentsContract.isDocumentUri(context, uri))
+        {
+            // ExternalStorageProvider
+            if (isExternalStorageDocument(uri))
+            {
+                final String docId = DocumentsContract.getDocumentId(uri);
+                final String[] split = docId.split(":");
+                final String type = split[0];
+
+                // /
+                if ("primary".equalsIgnoreCase(type))
+                {
+                    return Environment
+                        .getExternalStorageDirectory() + "/" + split[1];
+                }
+
+                // /Documents
+                else if ("home".equalsIgnoreCase(type))
+                {
+                    return Environment
+                        .getExternalStorageDirectory() + "/Documents/" +
+                        split[1];
+                }
+                // TODO handle non-primary volumes
+            }
+        // ...
+        }
+    // ...
+    }
+```
 
  [1]: https://github.com/iPaulPro/aFileChooser/blob/master/aFileChooser/src/com/ipaulpro/afilechooser/utils/FileUtils.java
  [2]: https://github.com/iPaulPro/aFileChooser/blob/master/aFileChooser/src/com/ianhanniballake/localstorage/LocalStorageProvider.java

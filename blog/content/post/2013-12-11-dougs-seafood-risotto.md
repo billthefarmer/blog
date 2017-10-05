@@ -1,5 +1,5 @@
 ---
-title: 'Doug&#8217;s Seafood Risotto'
+title: 'Doug&rsquo;s Seafood Risotto'
 author: Bill Farmer
 type: post
 date: 2013-12-11T18:12:24+00:00
@@ -15,7 +15,7 @@ keywords:
   - peppers
   - oregano
 ---
-This is my interpretation of my brother&#8217;s risotto. This is in no way a conventional risotto recipe, but it works nicely. Hearty dinner for four.
+This is my interpretation of my brother&rsquo;s risotto. This is in no way a conventional risotto recipe, but it works nicely. Hearty dinner for four.
 
 ### Ingredients
 

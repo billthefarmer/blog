@@ -21,7 +21,7 @@ I used gnuparted to copy the partition from one disk to another. The standard me
 #grub-install --boot-directory=/mnt/boot /dev/sdc
 ```
 
-However, because grub2 uses partition uuids to identify partitions, and because the new partition kept it&#8217;s uuid, it just booted the old location. So I created a new uuid and tried again:
+However, because grub2 uses partition uuids to identify partitions, and because the new partition kept it&rsquo;s uuid, it just booted the old location. So I created a new uuid and tried again:
 
 ```shell
 #uuidgen
@@ -31,6 +31,6 @@ However, because grub2 uses partition uuids to identify partitions, and because 
 #grub-install --boot-directory=/mnt/boot /dev/sdc
 ```
 
-That didn&#8217;t work either as grub-install wouldn&#8217;t change the uuids in grub.cfg so the new partition would boot.
+That didn&rsquo;t work either as grub-install wouldn&rsquo;t change the uuids in grub.cfg so the new partition would boot.
 
 So I got evil, I used emacs to do a global search and replace on the old and new uuids in grub.cfg. That worked. Once the new partition had booted I did another grub-install to correct the hacked grub.cfg. What interests me &#8211; Is there a less evil way of doing this with grub2?

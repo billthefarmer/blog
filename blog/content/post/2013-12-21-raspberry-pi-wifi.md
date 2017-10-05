@@ -14,7 +14,7 @@ keywords:
   - wifi-menu
   - netctl
 ---
-When I got my Pi some months ago I bought a wifi adapter for it, as you do. But I couldn&#8217;t get it to work reliably in Raspbian, and I didn&#8217;t even try in Arch Linux. So I tested the adapter on my windoze box, and it worked just fine, and I tried it with Linux and it worked just fine, so I put it in the &#8216;too hard&#8217; box.
+When I got my Pi some months ago I bought a wifi adapter for it, as you do. But I couldn&rsquo;t get it to work reliably in Raspbian, and I didn&rsquo;t even try in Arch Linux. So I tested the adapter on my windoze box, and it worked just fine, and I tried it with Linux and it worked just fine, so I put it in the &lsquo;too hard&rsquo; box.
 
 I dug it out again the other day because I wanted to hear just how good the [Sonivox EAS library][1] I ported to the Pi sounded when hooked up to the hifi with some decent speakers. After extensive googling, and putting together various bits and pieces of info from various blog posts, and wikis, I came up with sort-of working configs for Raspbian and Arch Linux.
 

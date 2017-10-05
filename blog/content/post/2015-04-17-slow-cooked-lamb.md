@@ -15,7 +15,7 @@ keywords:
   - rocket
   - pecorino
 ---
-This recipe is based on the mutton in a pot in this episode of [Italy Unpacked][1]. I have converted it to a slow cooker recipe, but it could be done in a casserole in the oven or in a earthenware pot next to a wood fire. Some of the ingredients are a compromise, for example Giorgio bought a kilo of rocket in the market. I couldn&#8217;t have got all that in the pot. Not all those tomatoes or chillies either.
+This recipe is based on the mutton in a pot in this episode of [Italy Unpacked][1]. I have converted it to a slow cooker recipe, but it could be done in a casserole in the oven or in a earthenware pot next to a wood fire. Some of the ingredients are a compromise, for example Giorgio bought a kilo of rocket in the market. I couldn&rsquo;t have got all that in the pot. Not all those tomatoes or chillies either.
 
 ![](images/2015/04/P1020034.jpg)
 
@@ -41,6 +41,6 @@ This recipe is based on the mutton in a pot in this episode of [Italy Unpacked][
   4. Pour some olive oil over the top.
   5. Put on a slow heat for three hours or so, longer if using a slow cooker.
 
-The type of rocket Gorgio bought in the market doesn&#8217;t seem to be available from UK supermarkets. Spring greens could be substituted.
+The type of rocket Gorgio bought in the market doesn&rsquo;t seem to be available from UK supermarkets. Spring greens could be substituted.
 
  [1]: http://www.bbc.co.uk/iplayer/episode/b052sht5/italy-unpacked-series-3-1-from-the-stones-to-the-stars

@@ -15,7 +15,7 @@ keywords:
   - sips
   - emacs
 ---
-You will need to install the Xcode command line tools, you don&#8217;t need the Xcode app. The easiest way to do this is to attempt to build an app like emacs by typing `./configure` on the command line. A dialog box will pop up asking if you want to download and install the tools.
+You will need to install the Xcode command line tools, you don&rsquo;t need the Xcode app. The easiest way to do this is to attempt to build an app like emacs by typing `./configure` on the command line. A dialog box will pop up asking if you want to download and install the tools.
 
 Xcode now uses the LLVM CLang compiler and documentation is exceedingly hard to find. You can type `gcc -help` or `clang -help` on the command line to get some info. I found two web pages with more useful info: http://clang.llvm.org/docs/CommandGuide/clang.html and https://developer.apple.com/library/prerelease/mac/documentation/Porting/Conceptual/PortingUnix/compiling/compiling.html.
 
@@ -87,7 +87,7 @@ $(APPNAME).icns: $(APPNAME).png
 
 ```
 
-This compiles the code, makes an icon file from an image and builds the app structure. The reason for the `-Wno-deprecated-declarations` is that this app was first written on OSX 10.4 using Carbon and I&#8217;m compiling for 10.6. You need two other text files `Info,plist` and `PkgInfo`.
+This compiles the code, makes an icon file from an image and builds the app structure. The reason for the `-Wno-deprecated-declarations` is that this app was first written on OSX 10.4 using Carbon and I&rsquo;m compiling for 10.6. You need two other text files `Info,plist` and `PkgInfo`.
 
 ```xml
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;

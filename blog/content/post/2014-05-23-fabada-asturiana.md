@@ -23,7 +23,7 @@ A highly flavoured Asturian version of pork and beans. Enough for four or more.
 
   * 375g or thereabouts packet of dried butter beans
   * 4-500g belly pork with or without skin, cut into chunks
-  * Smoked gammon hock, or 4-500g cooking bacon. If lucky, it&#8217;s possible to find a packet of cooking bacon that is just one big chunk of unsliced bacon by rooting through the supermarket shelf.
+  * Smoked gammon hock, or 4-500g cooking bacon. If lucky, it&rsquo;s possible to find a packet of cooking bacon that is just one big chunk of unsliced bacon by rooting through the supermarket shelf.
   * 100-125g picante chorizo, cut into chunks
   * Crushed black peppercorns
   * Heaped teaspoon paprika

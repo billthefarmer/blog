@@ -35,7 +35,7 @@ This is an adaptation of a Marguerite Patten recipe dated 1963. As adapted by Sh
   3. Meanwhile, sieve the flour on to a plate with the baking powder, beat the eggs in a bowl, and weigh out the margarine.
   4. Zizz up the marmalade with a blender until the peel is incorporated. Keep some back for the icing.
   5. Beat the margarine and most of the blended marmalade together with a little flour in a mixing bowl.
-  6. Add about a dessert spoonful of flour, and about half an egg&#8217;s worth of whipped egg mixture to the mixing bowl, Then add another dessert spoonful of flour and mix it up.
+  6. Add about a dessert spoonful of flour, and about half an egg&rsquo;s worth of whipped egg mixture to the mixing bowl, Then add another dessert spoonful of flour and mix it up.
   7. Keep doing this until you have incorporated all the whipped egg.
   8. Add about half the remaining flour to the mixing bowl, and incorporate gently with a spoon.
   9. Repeat with the rest of the flour.

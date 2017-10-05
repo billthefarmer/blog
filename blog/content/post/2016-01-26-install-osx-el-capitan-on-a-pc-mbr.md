@@ -43,7 +43,7 @@ Copy the kexts you used to build the USB stick to the new El Capitan partition i
 
 ![Screenshot][3]
 
-The problem with creating a GPT partitioned disk and installing on it is that you end up with a bios boot menu item &#8216;Mac OSX&#8217; which you can&#8217;t delete, even using the Clover EFI shell or the linux utility efibootmgr. I&#8217;ve got two flavours of linux and efibootmgr refuses to work on both of them. It may be possible to get around this by installing on a USB drive.
+The problem with creating a GPT partitioned disk and installing on it is that you end up with a bios boot menu item &lsquo;Mac OSX&rsquo; which you can&rsquo;t delete, even using the Clover EFI shell or the linux utility efibootmgr. I&rsquo;ve got two flavours of linux and efibootmgr refuses to work on both of them. It may be possible to get around this by installing on a USB drive.
 
 I have since found you need to run the Clover EFI shell while doing a UEFI boot to get access to the bios boot menu items.
 

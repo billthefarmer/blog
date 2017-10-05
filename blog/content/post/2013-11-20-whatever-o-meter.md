@@ -24,20 +24,20 @@ Whatever-o-meter uses the shortcode [**whatever-o-meter**] or {{</***whatever-o-
 
 {{< whatever-o-meter >}}
 
-I&#8217;ve called the parts of the page that slide up and down panels, because calling them divs, which is what they are, is too technical.
+I&rsquo;ve called the parts of the page that slide up and down panels, because calling them divs, which is what they are, is too technical.
 
 To define the initial intro panel, the questions, and the results you need to define quite a few custom fields or front matter parameters on the page. In Hugo parameters with a single value are shown as one item, parameters with multiple values are shown as an array. They are:
 
   * **intro ** The initial text that will appear on the panel below the tacho dial and above the start button.
-  * **question**  Each question has it&#8217;s own entry, as many as required within reason. They will be asked in the order given.
-  * **left**  Each text has it&#8217;s own entry, as many as required. It will appear on the left below the slider. They will be displayed in the order given. There may be up to the same number of entries as questions. Optional, if not defined &#8216;No&#8217; will appear
-  * **center ** Alternative spelling for them as can&#8217;t spell.
-  * **centre ** Each text has it&#8217;s own entry, as many as required. It will appear in the centre below the slider. They will be displayed in the order given. There may be up to the same number of entries as questions. Optional, if not defined no centre text will appear. If an entry contains a single dash (-), no centre text will appear, allowing a centre text for following questions.
-  * **right**  Each text has it&#8217;s own entry, as many as required. It will appear on the right below the slider. They will be displayed in the order given. There may be up to the same number of entries as questions. Optional, if not defined &#8216;Yes&#8217; will appear
-  * **result**  Each result has it&#8217;s own entry, as many as required. The results will be distributed equally around the tacho dial. If the result text contains _%d%_, the result percentage will be substituted. If five results are used, they will correspond roughly with the tacho dial segments.
+  * **question**  Each question has it&rsquo;s own entry, as many as required within reason. They will be asked in the order given.
+  * **left**  Each text has it&rsquo;s own entry, as many as required. It will appear on the left below the slider. They will be displayed in the order given. There may be up to the same number of entries as questions. Optional, if not defined &lsquo;No&rsquo; will appear
+  * **center ** Alternative spelling for them as can&rsquo;t spell.
+  * **centre ** Each text has it&rsquo;s own entry, as many as required. It will appear in the centre below the slider. They will be displayed in the order given. There may be up to the same number of entries as questions. Optional, if not defined no centre text will appear. If an entry contains a single dash (-), no centre text will appear, allowing a centre text for following questions.
+  * **right**  Each text has it&rsquo;s own entry, as many as required. It will appear on the right below the slider. They will be displayed in the order given. There may be up to the same number of entries as questions. Optional, if not defined &lsquo;Yes&rsquo; will appear
+  * **result**  Each result has it&rsquo;s own entry, as many as required. The results will be distributed equally around the tacho dial. If the result text contains _%d%_, the result percentage will be substituted. If five results are used, they will correspond roughly with the tacho dial segments.
   * **weights**  A comma delimited list of weighting values for the questions. If provided, there may be up to the same number of values as questions. Optional, if not provided the weighting value for questions will default to 1.
   * **duration**  The duration of the animation in milliseconds. Optional, defaults to 2000. See [JQuery][1] docs.
-  * **easing**  The easing function to be used for the dynamics of the tacho dial pointer. Optional, defaults to &#8216;easeOutQuad&#8217;. See [JQuery UI][2] docs.
+  * **easing**  The easing function to be used for the dynamics of the tacho dial pointer. Optional, defaults to &lsquo;easeOutQuad&rsquo;. See [JQuery UI][2] docs.
   * **more**  Optional, if this field is defined a Find Out More button will appear on the results panel. The field should contain a valid URL.
   * **fb-appid ** Optional**,** if this field is defined a Facebook button will appear on the results panel which will show a Facebook feed dialog if clicked. The id must relate to an app defined on the [Facebook App Dashboard][3] for your site.
   * **fb-caption**  Optional, the caption you want to appear on the feed dialog. If not defined this will default to the page title.
@@ -45,7 +45,7 @@ To define the initial intro panel, the questions, and the results you need to de
   * **fb-picture ** Optional, the picture you want to appear in the feed dialog. If not defined, Facebook will substitute an image from your site.
   * **addthis ** Optional, If this variable id set to _above_ and the [AddThis plugin][4] is installed, an Addthis toolbox with standard Facebook, Twitter, Pinterest, Google+ and share buttons will appear above the whatever-o-meter. If it is set to _below_, the toolbox will appear below.
   * ** fb-like**  Optional, if this is set to _above_ standard Facebook like and share buttons will appear above the whatever-o-meter. If it is set to _below_, the buttons will appear below. The like and share buttons are a standard Facebook plugin and will not use information from the fields above.
-  * **colors**  Alternative spelling for them as can&#8217;t spell.
+  * **colors**  Alternative spelling for them as can&rsquo;t spell.
   * **colours ** The colours you would like to appear in the dial and buttons. Optional, should be a comma delimited list of five colours. The colours are the dial background colour, ticks, digits,  pointer, buttons, any colour format in the [CSS standard][5] should work: #abc, #abcdef, goldenrod, rgb(r,g,b). Defaults to palegoldenrod, black, black, black, palegoldenrod.
   * **debug ** Causes the plugin to show the values of the custom fields below the whatever-o-meter for debugging if defined.
 

@@ -10,9 +10,9 @@ keywords:
   - seo
   - content
 ---
-I haven&#8217;t worried too much about search engines since I set this site up. I registered it with Google initially, and after a few days it appeared in the results, so that was good enough for me. If you search for Old Shoreham Buccaneers, or a subset of that, the Buccaneers site appears high in the results, job done.
+I haven&rsquo;t worried too much about search engines since I set this site up. I registered it with Google initially, and after a few days it appeared in the results, so that was good enough for me. If you search for Old Shoreham Buccaneers, or a subset of that, the Buccaneers site appears high in the results, job done.
 
-Since I published a [recipe][1] based on the BBC TV programme [Italy Unpacked][2] about a month ago, I have been getting a lot of hits on the [Recipes][3] page. When I finally got around to checking I found that this is due to it being the only actual recipe directly attributed to the show in the search results. It&#8217;s ~~currently fourth~~ now second in the listing if you search for [sausage and lentils recipe Italy Unpacked][4] on Google.
+Since I published a [recipe][1] based on the BBC TV programme [Italy Unpacked][2] about a month ago, I have been getting a lot of hits on the [Recipes][3] page. When I finally got around to checking I found that this is due to it being the only actual recipe directly attributed to the show in the search results. It&rsquo;s ~~currently fourth~~ now second in the listing if you search for [sausage and lentils recipe Italy Unpacked][4] on Google.
 
 What that says to me is: **Content Content Content**.
 

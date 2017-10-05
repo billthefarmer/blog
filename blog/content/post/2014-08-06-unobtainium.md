@@ -26,4 +26,4 @@ An unrelated aspect of this is the long list of useful ingredients that the loca
   * Easy cook Italian rice. Tasty plump grains, very good for paella
   * Easy cook Italian brown rice, same as above, but brown
 
-We make periodic pilgrimages to a large Asian supermarket to get the paprika and the lentils. References to the Italian rice can be found if you Google it, but there is no stock. We haven&#8217;t managed to find any low fat cream crackers.
+We make periodic pilgrimages to a large Asian supermarket to get the paprika and the lentils. References to the Italian rice can be found if you Google it, but there is no stock. We haven&rsquo;t managed to find any low fat cream crackers.

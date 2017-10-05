@@ -220,7 +220,7 @@ it capitalised. I found `upper` and `lower`, tried searching for
 'capital' and got nothing useful. Eventually I found it somewhere in
 the template docs as a throw away reference: [`title`][22]. Wordpress
 put curly quote characters in my posts and post titles and they were
-showing up as `&#8217;` in the post titles in the index. I found
+showing up as `&rsquo;` in the post titles in the index. I found
 `safeHTML` in the same place which tidied that up.
 
  [1]: https://wordpress.org

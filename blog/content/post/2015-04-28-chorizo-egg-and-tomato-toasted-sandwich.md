@@ -26,7 +26,7 @@ This is a nice snack for two.
 
   1. Toast two slices of bread and fry two eggs
   2. Meanwhile slice the tomato thinly
-  3. Flip the eggs, otherwise the tomato won&#8217;t stay on top
+  3. Flip the eggs, otherwise the tomato won&rsquo;t stay on top
   4. Layer chorizo slices, egg, tomato slices and cheese slices on each piece of toast
   5. Put the toast slices on heatproof plates and put under a hot grill to melt the cheese
   6. Toast the other two slices of bread

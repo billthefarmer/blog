@@ -22,4 +22,4 @@ This is from a transport caff near the village of Pissouri, Cyprus many years ag
   2. Add a glug of olive oil, cover and place on a low heat for about 10 minutes or so
   3. The pods will become soft and possibly brown a little depending on the heat
 
-The transport caff served a bowl of these as a meal in it&#8217;s own right. Absolutely delicious, the white pith in the pods completely dissolves.
+The transport caff served a bowl of these as a meal in it&rsquo;s own right. Absolutely delicious, the white pith in the pods completely dissolves.
