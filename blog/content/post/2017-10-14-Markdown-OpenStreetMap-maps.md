@@ -79,6 +79,23 @@ I have replaced the '`%2C`'s with commas, and changed the dimensions
 slightly, which seems to work OK. The android Java code to do this is
 
 ```java
+    // loadMarkdown
+    private void loadMarkdown(String text)
+    {
+        markdownView.loadMarkdown(getBaseUrl(), markdownCheck(text),
+                                  getStyles());
+    }
+
+    // markdownCheck
+    private String markdownCheck(String text)
+    {
+        // Check for media
+        text = mediaCheck(text);
+
+        // Check for map
+        return mapCheck(text);
+    }
+
     // mapCheck
     private String mapCheck(String text)
     {
