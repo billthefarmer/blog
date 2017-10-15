@@ -57,22 +57,24 @@ that looks like the above. The obvious tool in android Java is the
 expressions. The regular expression for the pattern is
 
 ```
-    "\\[(\\d+[,.]\\d+)[,;](\\d+[,.]\\d+)\\]"
+    "\\[(?:osm:)?(-?\\d+[,.]\\d+)[,;](-?\\d+[,.]\\d+)\\]"
 ```
 
 The double backslashes are because it's a string, so one of them will
 be removed before the matcher gets to see it. I also have to deal with
-European locales which use different conventions for co-ordinates. The
-template for the iframe is
+European locales which use different conventions for co-ordinates. I
+added the option to have a prefix '`osm:`', as using prefixes seems to
+be a markdown convention. It also allows for having different
+maps. The template for the iframe is
 
 ```html
-    "<iframe width=\"560\" height=\"420\" src=\"http://www.openstreetmap.org/export/embed.html?
+    "<iframe width=\"560\" height=\"420\"
+    src=\"http://www.openstreetmap.org/export/embed.html?
     bbox=%f,%f,%f,%f&amp;layer=mapnik\"
     style=\"border: 1px solid black\">
     </iframe><br/>
-    <small>
-    <a href=\"http://www.openstreetmap.org/#map=16/%f/%f\">View Larger Map</a>
-    </small>\n"
+    <small><a href=\"http://www.openstreetmap.org/#map=16/%f/%f\">
+    View Larger Map</a></small>\n"
 ```
 
 I have replaced the '`%2C`'s with commas, and changed the dimensions
