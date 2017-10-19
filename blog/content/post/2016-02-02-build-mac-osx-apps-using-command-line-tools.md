@@ -135,7 +135,7 @@ The PkgInfo file is just one line, the package type and the app signature concat
 
 This can be extended to build [Swift][3] apps using a similar
 Makefile. You need to add the swift compiler and a list of your source
-files and compiler flags.
+files and compiler flags. Xcode needs to be installed to use Swift.
 
 ```makefile
   SWIFTC=swiftc
