@@ -2,7 +2,7 @@
 title: "Using Emacs in Android Development"
 author: Bill Farmer
 type: post
-date: 2017-10-19T15:51:28+01:00
+date: 2017-10-18T15:51:28+01:00
 url: /using-emacs-in-android-development/
 categories:
   - Hacking
