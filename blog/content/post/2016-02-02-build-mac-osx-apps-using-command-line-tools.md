@@ -14,7 +14,9 @@ keywords:
   - version
   - sips
   - emacs
+  - swift
 ---
+
 You will need to install the Xcode command line tools, you don&rsquo;t need the Xcode app. The easiest way to do this is to attempt to build an app like emacs by typing `./configure` on the command line. A dialog box will pop up asking if you want to download and install the tools.
 
 Xcode now uses the LLVM CLang compiler and documentation is exceedingly hard to find. You can type `gcc -help` or `clang -help` on the command line to get some info. I found two web pages with more useful info: http://clang.llvm.org/docs/CommandGuide/clang.html and https://developer.apple.com/library/prerelease/mac/documentation/Porting/Conceptual/PortingUnix/compiling/compiling.html.
@@ -129,5 +131,30 @@ The PkgInfo file is just one line, the package type and the app signature concat
 
 ![Emacs][2]
 
+### Swift Apps
+
+This can be extended to build [Swift][3] apps using a similar
+Makefile. You need to add the swift compiler and a list of your source
+files and compiler flags.
+
+```makefile
+  SWIFTC=swiftc
+  SOURCES=AppDelegate.swift, <rest of source files>
+  FLAGS=-mmacosx-version-min=10.9
+```
+
+You don't seem to need `-framework` as Swift seems to sort that out
+itself from the import statements in the source files. The
+`-mmacosx-version-min=10.9` may be redundant as well. The compile
+lines are
+
+```makefile
+$(APPNAME): $(SOURCES)
+	$(SWIFTC) $(SOURCES) -o $(APPNAME) $(FLAGS)
+```
+
+The app and icon building part is identical.
+
  [1]: href="https://developer.apple.com/library/prerelease/mac/documentation/DeveloperTools/Conceptual/cross_development/Introduction/Introduction.html#//apple_ref/doc/uid/10000163i
  [2]: images/2016/02/Emacs.png
+ [3]: https://www.apple.com/uk/swift
