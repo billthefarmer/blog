@@ -151,6 +151,16 @@ dots for decimal points. The [appendReplacement][6] and
 [appendTail][7] Java methods are ready made for this pattern matching
 and replacement.
 
+#### Update
+
+After I had implemented this It was suggested that perhaps I should be
+using a geo Uri (`![](geo:<lat,<lng>)`) for the map markdown syntax. I
+hadn't thought of that, and it raises the possibility of receiving a
+geo Uri and turning it into a map. So I decided to convert existing
+`[<lat>,<lng>]` markdown to `![osm](geo:<lat>,<lng>)` markdown, and
+convert that to an iframe as before. The code to do that is very
+similar to the above with updated templates.
+
  [1]: https://github.com/marcoM32
  [2]: http://www.openstreetmap.org
  [3]: https://github.com/billthefarmer/diary
