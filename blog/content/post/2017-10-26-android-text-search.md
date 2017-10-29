@@ -65,6 +65,8 @@ called by the [SearchView][4].
         private BackgroundColorSpan span = new
             BackgroundColorSpan(Color.YELLOW);
         private Editable editable;
+        private Pattern pattern;
+        private Matcher matcher;
         private String text;
         private int index;
         private int height;
@@ -78,13 +80,12 @@ called by the [SearchView][4].
             if (shown)
                 markdownView.findAll(newText);
 
-            // Use string search and spannable for highlighting
+            // Use regex search and spannable for highlighting
             else
             {
                 height = scrollView.getHeight();
                 editable = textView.getEditableText();
-                text = textView.getText()
-                    .toString().toLowerCase(Locale.getDefault());
+                text = textView.getText().toString();
 
                 // Reset the index and clear highlighting
                 if (newText.length() == 0)
@@ -93,12 +94,18 @@ called by the [SearchView][4].
                     editable.removeSpan(span);
                 }
 
+                // Get pattern
+                pattern = Pattern.compile(newText,
+                                          Pattern.CASE_INSENSITIVE |
+                                          Pattern.LITERAL |
+                                          Pattern.UNICODE_CASE);
                 // Find text
-                index = text
-                    .indexOf(newText
-                             .toLowerCase(Locale.getDefault()), index);
-                if (index >= 0)
+                matcher = pattern.matcher(text);
+                if (matcher.find(index))
                 {
+                    // Get index
+                    index = matcher.start();
+
                     // Get text position
                     int line = textView.getLayout()
                         .getLineForOffset(index);
@@ -127,16 +134,15 @@ called by the [SearchView][4].
             if (shown)
                 markdownView.findNext(true);
 
-            // Use string search and spannable for highlighting
+            // Use regex search and spannable for highlighting
             else
             {
                 // Find next text
-                index = text
-                    .indexOf(query
-                             .toLowerCase(Locale.getDefault()),
-                             index + query.length());
-                if (index >= 0)
+                if (matcher.find())
                 {
+                    // Get index
+                    index = matcher.start();
+
                     // Get text position
                     int line = textView.getLayout()
                         .getLineForOffset(index);
@@ -152,6 +158,10 @@ called by the [SearchView][4].
                                  query.length(),
                                  Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
                 }
+
+                // Reset matcher
+                if (matcher.hitEnd())
+                    matcher.reset();
             }
 
             return true;
@@ -163,17 +173,18 @@ This implementation searches both a [WebView][5], and a
 [TextView][6]. The search is interactive, the highlighting and scroll
 position moves as the user types. The search button on the keyboard
 provides the 'find next' function. The web view search functionality
-is built in, all the developer has to do is call the relevent methods,
-[findAll][8] and [findNext][7]. The method `findAll` is deprecated as
-of android 16, but this code is supporting android 14, which is the
-reason for the `@SuppressWarnings("deprecation")`.
+is built in, all the developer has to do is call the relevant methods,
+[findAll()][8] and [findNext()][7]. The method `findAll()` is
+deprecated as of android 16, but this code is supporting android 14,
+which is the reason for the `@SuppressWarnings("deprecation")`.
 
 To provide nearly identical functionality in a text view requires the
-use of string search, and highlighting using a spannable char
-sequence. The text and search text are both converted to lower case so
-the search is case insensitive. The current search index is provided
-to the string `indexOf` method so the search stays in position if the
-user deletes search text, duplicating web view functionality.
+use of regular expression search, and highlighting using a spannable
+char sequence. The pattern uses the `CASE_INSENSITIVE`, `LITERAL` and
+`UNICODE_CASE` flags so the search is case insensitive. The current
+search index is provided to the matcher `find()` method so the search
+stays in position if the user deletes search text, duplicating web
+view functionality.
 
 ### Interactive Regular Expression Search
 
@@ -326,6 +337,100 @@ If the highlight isn't removed when the user does something via the
 menu, like loading another file, it won't go away, so it is removed
 before that happens. Collapsing the search view clears the search
 text, so the callback removes the highlight.
+
+### Find text in files
+
+```java
+
+    // findAll
+    public void findAll()
+    {
+        // Get search string
+        final String search = searchView.getQuery().toString();
+
+        Pattern pattern = Pattern.compile(search,
+                                          Pattern.CASE_INSENSITIVE |
+                                          Pattern.LITERAL |
+                                          Pattern.UNICODE_CASE);
+
+        // Get entry list
+        List<Calendar> entries = getEntries();
+
+        // Create a list of matches
+        List<String> matches = new ArrayList<String>();
+
+        // Check the entries
+        for (Calendar entry: entries)
+        {
+            File file = getDay(entry.get(Calendar.YEAR),
+                               entry.get(Calendar.MONTH),
+                               entry.get(Calendar.DATE));
+
+            Matcher matcher = pattern.matcher(read(file));
+            if (matcher.find())
+                matches.add(DateFormat.getDateInstance(DateFormat.MEDIUM)
+                         .format(entry.getTime()));
+        }
+
+        // If found pop up a dialog
+        if (!matches.isEmpty())
+        {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle(R.string.findAll);
+            final String[] choices = matches.toArray(new String[0]);
+            builder.setItems(choices, new DialogInterface.OnClickListener()
+                {
+                    public void onClick (DialogInterface dialog, 
+                                         int which)
+                    {
+                        String choice = choices[which];
+                        DateFormat format =
+                            DateFormat.getDateInstance(DateFormat.MEDIUM);
+
+                        // Get the entry chosen
+                        try
+                        {
+                            Date date = format.parse(choice);
+                            Calendar entry = Calendar.getInstance();
+                            entry.setTime(date);
+                            changeDate(entry);
+
+                            // Put the search text back - why it
+                            // disappears I have no idea or why I have
+                            // to do it after a delay
+                            searchView.postDelayed(new Runnable()
+                                {
+                                    // run
+                                    @Override
+                                    public void run()
+                                    {
+                                        searchView.setQuery(search, false);
+                                    }
+                                }, FIND_DELAY);
+                        }
+
+                        catch (Exception e) {}
+                    }
+                });
+            builder.setNegativeButton(android.R.string.cancel, null);
+            builder.show();
+        }
+    }
+```
+
+In this application the method `getEntries()` returns a list of
+`Calendar` objects corresponding to stored files. The method
+`getDay()` returns a `File` object for the file corresponding to that
+date and the method `read()` returns the text in the file. The code
+builds a list of strings corresponding the the matching files to
+present to the user.
+
+If the list isn't empty an `AlertDialog` is built to display the
+list. The `OnClickListener` parses the date and changes the app date
+to the selected entry. For reasons best known to whoever wrote the
+android `SearchView` code, the search text disappears while all this
+is going on, so it is put back after a delay, otherwise it doesn't
+work.
 
 [1]: https://developer.android.com/guide/topics/search/index.html
  [2]: https://developer.android.com/guide/topics/search/search-dialog.html#SearchDialog
