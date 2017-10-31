@@ -49,11 +49,18 @@ called by the [SearchView][4].
         searchView = (SearchView) searchItem.getActionView();
 
         if (searchView != null)
+        {
+            searchView.setSubmitButtonEnabled(true);
+            searchView.setImeOptions(EditorInfo.IME_ACTION_GO);
             searchView.setOnQueryTextListener(new QueryTextListener());
+        }
 
         return true;
     }
 ```
+
+Get an extra submit button in the toolbar, change the keyboard button
+to a right arrow, and set the listener
 
 ### Interactive Case Insensitive Search
 
