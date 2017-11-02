@@ -126,7 +126,7 @@ slightly, which seems to work OK. The android Java code to do this is
 
             // Create replacement iframe
             String replace =
-                String.format(new Locale("en"), MAP_TEMPLATE,
+                String.format(Locale.ENGLISH, MAP_TEMPLATE,
                               lng - 0.005, lat - 0.005,
                               lng + 0.005, lat + 0.005,
                               lat, lng);
@@ -146,7 +146,7 @@ The input string is the markdown code to be parsed, the output is the
 same code with matched template substitutions. I have just added and
 subtracted 0.005 from the given co-ordinates to create a bounding box
 so the given point is in the centre. The API doesn't seem to be too
-fussy. It is important to use the `"en"` locale so the output uses
+fussy. It is important to use the `ENGLISH` locale so the output uses
 dots for decimal points. The [appendReplacement][6] and
 [appendTail][7] Java methods are ready made for this pattern matching
 and replacement.
@@ -159,7 +159,16 @@ hadn't thought of that, and it raises the possibility of receiving a
 geo Uri and turning it into a map. So I decided to convert existing
 `[<lat>,<lng>]` markdown to `![osm](geo:<lat>,<lng>)` markdown, and
 convert that to an iframe as before. The code to do that is very
-similar to the above with updated templates.
+similar to the above with updated patterns and templates.
+
+```
+        "geo:(-?\\d+[.]\\d+), ?(-?\\d+[.]\\d+)"
+
+        "![osm](geo:%f,%f)"
+```
+
+The pattern is just to match a geo Uri, the template is to output a
+geo Uri.
 
  [1]: https://github.com/marcoM32
  [2]: http://www.openstreetmap.org
