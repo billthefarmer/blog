@@ -86,8 +86,8 @@ So now I've got a config file which does what I want it to do:
 ```yaml
 baseURL: http://billthefarmer.github.io/blog/
 languageCode: en-gb
-title: Bill Farmer's Blog
-copyright: Copyright &copy; 2017 Bill Farmer
+title: "Bill Farmer's Blog"
+copyright: "Copyright &amp;copy; 2017 Bill Farmer"
 theme: theme-hugo-foundation6
 publishDir: d:/billthefarmer.github.io/blog/
 pygmentscodefences: true
@@ -115,7 +115,7 @@ params:
   header_background: images/2013/12/cropped-P1010089.jpg
   sidebar:
     # Optional about block for sidebar (can be Markdown)
-    # about: Bill Farmer's Blog
+    # about: "Bill Farmer's Blog"
     num_recent_posts: 5
   sharingicons:
     hide: true
@@ -173,6 +173,23 @@ does, but the style is horrible. I changed it to `default`.
 To get the highlighting working in windows I had to install real
 windows python and install Pygments there.
 
+**Update** - this is no longer necessary because later versions of
+Hugo include [Chroma][22], a port of Pygments. But I did have to
+change the `pygmentsStyle` to `emacs` and comment out entries in the
+`static/css/app.css` file.
+
+```css
+code {
+/*  padding: 0.125rem 0.3125rem 0.0625rem;
+    border: 1px solid #cacaca;
+    background-color: #e6e6e6; */
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  font-weight: normal;
+  color: #0a0a0a; }
+```
+
+This is part of the theme, so not part of Hugo itself.
+
 I found a template on the [Taxonomy Variables][21] page to generate a
 list of blog pages.
 
@@ -218,8 +235,8 @@ There were a couple of extra tweaks that took a long time to find in
 the docs. The `key` for each category is in lower case, and I wanted
 it capitalised. I found `upper` and `lower`, tried searching for
 'capital' and got nothing useful. Eventually I found it somewhere in
-the template docs as a throw away reference: [`title`][22]. Wordpress
-put curly quote characters in my posts and post titles and they were
+the template docs as a throw away reference: `title`. Wordpress put
+curly quote characters in my posts and post titles and they were
 showing up as `&rsquo;` in the post titles in the index. I found
 `safeHTML` in the same place which tidied that up.
 
@@ -244,4 +261,5 @@ showing up as `&rsquo;` in the post titles in the index. I found
  [19]: http://pygments.org
  [20]: http://gohugo.io/variables
  [21]: https://gohugo.io/variables/taxonomy
- [22]: https://gohugo.io/functions/title
+ [22]: https://github.com/alecthomas/chroma
+ 
