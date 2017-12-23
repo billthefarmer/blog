@@ -86,7 +86,8 @@ old entries.
     }
 ```
 
-
+The list of file names is ordered by the last modified date and the
+old ones are added to the remove list.
 
 ```java
 
