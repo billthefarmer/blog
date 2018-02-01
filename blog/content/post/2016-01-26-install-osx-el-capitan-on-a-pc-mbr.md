@@ -47,6 +47,9 @@ The problem with creating a GPT partitioned disk and installing on it is that yo
 
 I have since found you need to run the Clover EFI shell while doing a UEFI boot to get access to the bios boot menu items.
 
+### Later releases
+I couldn't get this to work on Sierra and High Sierra because the installer automagically creates a recovery partition which doesn't get transferred. So I have converted to UEFI, which works fine using the USB stick method.
+
  [1]: images/2016/01/El-Capitan.png
  [2]: images/2016/01/Clover.png
  [3]: images/2016/01/Screenshot.png

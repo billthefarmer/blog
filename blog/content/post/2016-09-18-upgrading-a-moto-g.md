@@ -45,6 +45,8 @@ This worked fine and the phone booted up into Lollipop ok. Having done that, I w
 
 ![Screenshot][9]
 
+I have since upgraded the phone to [LineageOS][10] (lineage-14.1-20171226-nightly-falcon-signed.zip), Android 7.1, which works fine. You have to reinstall the MotoCamera app when you upgrade.
+
  [1]: images/2016/09/Moto_g.jpg
  [2]: http://www.cyanogenmod.org
  [3]: https://wiki.cyanogenmod.org/w/Install_CM_for_falcon
@@ -54,3 +56,4 @@ This worked fine and the phone booted up into Lollipop ok. Having done that, I w
  [7]: http://forum.xda-developers.com/devdb/project/dl/?id=15250
  [8]: http://forum.xda-developers.com/showthread.php?t=2548530
  [9]: images/2016/09/Screenshot_2016-09-18-21-23-45.png
+ [10]: https://lineageos.org

@@ -18,7 +18,7 @@ A few years later I ported it to windows, added a few gizmos for tuning accordio
 
 Later still, I ported it to Android, on [GitHub][5], also on [FDroid][6], and the FFT still worked fine in Java on Android. Then I had a request to add a spectrum display to my [Oscilloscope][7] app, also on [FDroid][8]. When I tried this on my Moto G phone, the spectrum obviously had a problem. When I checked, the problem was the simplistic FFT I have been using. So I did another [web search][9] and discovered [FFTS][10], the allegedly Fastest Fourier Transform in the South. I couldn&rsquo;t get this to build for Android using the script provided, so I did a fork on [Github][11] which I rearranged so it will build with the Android build tools. I also built a test app which does the tests shipped with the library. The FFTS library uses dynamic code which modifies itself, and also makes use of the [ARM NEON][12] engine if it is present. All three Android devices we have have NEON support in the processor.
 
-I haven&rsquo;t got to testing it on the spectrum app yet.
+I didn't use this for the spectrum, the FFT buffer size was unnecessarily high, so reducing it solved the problem.
 
  [1]: https://en.wikipedia.org/wiki/Fast_Fourier_transform
  [2]: http://www.dspdimension.com/admin/pitch-shifting-using-the-ft
