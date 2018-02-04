@@ -25,9 +25,11 @@ Ox cheek is a tasty cut of beef, but it contains tough connective tissue which m
 ### Method
 
   1. Put ox cheek in slow cooker and set to high heat
-  2. Put a couple of bay leaves in the pot, grind black pepper over the meat and pour some olive oil over it
+  2. Put a couple of bay leaves in the pot, grind black pepper over
+     the meat and pour some olive oil over it
   3. Surround the meat with chopped onions and chopped carrots
   4. Put on the lid and allow to cook for a while
-  5. When bubbling melted down onion and meat juices become visible around the meat, turn the heat down to low
+  5. When bubbling melted down onion and meat juices become visible
+     around the meat, turn the heat down to low
   6. Allow to cook for 4-5 hours
   7. Enjoy with potatoes and green veg
