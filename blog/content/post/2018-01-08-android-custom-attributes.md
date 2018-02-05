@@ -22,7 +22,7 @@ theme.
 ### Calendar custom styles
 
 The custom calendar has a list of styles that are customisable in a
-`attrs.xml` file. The `name` value appears to be ignored.
+`attrs.xml` file.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -43,10 +43,30 @@ The custom calendar has a list of styles that are customisable in a
 </resources>
 ```
 
+The `CustomCalendarView` value is used in the sources to reference the
+attributes.
+
+```java
+    // getAttributes
+    private void getAttributes(AttributeSet attrs)
+    {
+        Resources resources = getResources();
+
+        final TypedArray typedArray =
+            context.obtainStyledAttributes(attrs, R.styleable
+                                           .CustomCalendarView, 0, 0);
+        calendarBackgroundColor =
+            typedArray.getColor(R.styleable
+                                .CustomCalendarView_calendarBackgroundColor,
+                                resources.getColor(R.color.white));
+        // ...
+    }
+```
+
 These styles revert to a default value defined in the code if they are
 not referenced externally. To revert to the current style defined
 values, some of them need to be redefined to attribute values from the
-style system. Again the `library` value appears to be arbitrary.
+style system.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
