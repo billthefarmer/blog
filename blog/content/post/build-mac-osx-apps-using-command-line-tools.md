@@ -92,36 +92,36 @@ $(APPNAME).icns: $(APPNAME).png
 This compiles the code, makes an icon file from an image and builds the app structure. The reason for the `-Wno-deprecated-declarations` is that this app was first written on OSX 10.4 using Carbon and I&rsquo;m compiling for 10.6. You need two other text files `Info,plist` and `PkgInfo`.
 
 ```xml
-&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
-  "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
-  &lt;dict&gt;
-    &lt;key&gt;CFBundleDevelopmentRegion&lt;/key&gt;
-    &lt;string&gt;English&lt;/string&gt;
-    &lt;key&gt;CFBundleExecutable&lt;/key&gt;
-    &lt;string&gt;LMS&lt;/string&gt;
-    &lt;key&gt;CFBundleGetInfoString&lt;/key&gt;
-    &lt;string&gt;Copyright 2011 Bill Farmer&lt;/string&gt;
-    &lt;key&gt;CFBundleIconFile&lt;/key&gt;
-    &lt;string&gt;LMS&lt;/string&gt;
-    &lt;key&gt;CFBundleIdentifier&lt;/key&gt;
-    &lt;string&gt;com.billthefarmer.LMS&lt;/string&gt;
-    &lt;key&gt;CFBundleInfoDictionaryVersion&lt;/key&gt;
-    &lt;string&gt;6.0&lt;/string&gt;
-    &lt;key&gt;CFBundleName&lt;/key&gt;
-    &lt;string&gt;LMS&lt;/string&gt;
-    &lt;key&gt;CFBundlePackageType&lt;/key&gt;
-    &lt;string&gt;APPL&lt;/string&gt;
-    &lt;key&gt;CFBundleShortVersionString&lt;/key&gt;
-    &lt;string&gt;1.0&lt;/string&gt;
-    &lt;key&gt;CFBundleSignature&lt;/key&gt;
-    &lt;string&gt;LMS &lt;/string&gt;
-    &lt;key&gt;CFBundleVersion&lt;/key&gt;
-    &lt;string&gt;Version 1.0&lt;/string&gt;
-    &lt;key&gt;LSApplicationCategoryType&lt;/key&gt;
-    &lt;string&gt;public.app-category.utilities&lt;/string&gt;
-  &lt;/dict&gt;
-&lt;/plist&gt;
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+  <dict>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>English</string>
+    <key>CFBundleExecutable</key>
+    <string>LMS</string>
+    <key>CFBundleGetInfoString</key>
+    <string>Copyright 2011 Bill Farmer</string>
+    <key>CFBundleIconFile</key>
+    <string>LMS</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.billthefarmer.LMS</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>CFBundleName</key>
+    <string>LMS</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0</string>
+    <key>CFBundleSignature</key>
+    <string>LMS </string>
+    <key>CFBundleVersion</key>
+    <string>Version 1.0</string>
+    <key>LSApplicationCategoryType</key>
+    <string>public.app-category.utilities</string>
+  </dict>
+</plist>
 
 ```
 
