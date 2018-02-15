@@ -55,7 +55,7 @@ dynamically resizeable. This is done using a [NSStackView][5].
 ```
 
 The audio code is similar to the C version with extra declarations
-needed to deal with the changes in the API and the swift requirement
+needed to deal with the changes in the API and the Swift requirement
 for argument labels.
 
 ```C
@@ -80,6 +80,35 @@ becomes
         // Find an output unit
         let cp = AudioComponentFindNext(nil, &dc)
 ```
+
+Defining the callback procedure to process the audio input.
+
+```c
+    // Callback struct
+    AURenderCallbackStruct input =
+	    {InputProc, &audio.output};
+
+    // Set callback
+    status = AudioUnitSetProperty(audio.output,
+				  kAudioOutputUnitProperty_SetInputCallback,
+				  kAudioUnitScope_Global, 0,
+				  &input, sizeof(input));
+```
+
+becomes
+
+```swift
+        // Callback struct
+        var input =
+          AURenderCallbackStruct(inputProc: InputProc,
+                                 inputProcRefCon: output!);
+        // Set callback
+        status = AudioUnitSetProperty(output!,
+				      kAudioOutputUnitProperty_SetInputCallback,
+				      kAudioUnitScope_Global, 0,
+				      &input, UInt32(MemoryLayout.size(ofValue: input)));
+```
+
  [1]: https://en.wikipedia.org/wiki/Carbon_(API)
  [2]: https://en.wikipedia.org/wiki/Mac_OS_X_Tiger
  [3]: https://developer.apple.com/documentation/coreaudio
