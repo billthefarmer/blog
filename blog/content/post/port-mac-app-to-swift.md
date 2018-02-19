@@ -4,6 +4,7 @@ author: Bill Farmer
 type: post
 date: 2018-02-14T13:56:14Z
 url: /port-mac-osx-app-to-swift/
+draft: true
 categories:
   - Hacking
 keywords:

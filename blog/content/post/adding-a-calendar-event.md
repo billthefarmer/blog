@@ -1,5 +1,5 @@
 ---
-title: "Adding a calendar event in android"
+title: Adding a calendar event in android
 author: Bill Farmer
 date: 2017-09-05T14:54:25+01:00
 url: /adding-a-calendar-event/
