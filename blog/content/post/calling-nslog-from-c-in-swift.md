@@ -3,6 +3,7 @@ title: Calling NSLog from C in Swift App
 author: Bill Farmer
 date: 2018-02-18T16:10:25Z
 url: /calling-nslog-from-c-in-swift/
+draft: true
 categories:
   - Hacking
 keywords:
