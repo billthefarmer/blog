@@ -1,4 +1,3 @@
----
 baseURL: https://billthefarmer.github.io/blog/
 languageCode: en-gb
 title: Bill Farmer
@@ -24,10 +23,12 @@ related:
 
 menu:
   sidebar:
-    - name: Home page
+    - name: Home
       url: http://billthefarmer.github.io
     - name: Github
       url: https://github.com/billthefarmer
+    - name: Gitlab
+      url: https://gitlab.com/williamjfarmer
 
 params:
   description: Random thoughts on random subjects
@@ -39,4 +40,3 @@ params:
     num_recent_posts: 10
   sharingicons:
     hide: true
-...
