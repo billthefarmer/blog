@@ -9,6 +9,8 @@ keywords:
   - resizing
   - windows
   - c++
+  - macOS
+  - swift
 ---
 
 I have a windows app where I want the app window to maintain it's
