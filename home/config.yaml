@@ -39,7 +39,7 @@ params:
     github: billthefarmer
     gitlab: williamjfarmer
     copyright:
-      - Copyright &copy; 2017 Bill Farmer
+      - Copyright &copy; 2018 Bill Farmer
 
   sharingicons:
     hide: true
