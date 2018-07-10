@@ -3,6 +3,7 @@
     overwrite this empty template and put custom code into the <head>
     section.
   -->
+
 <style>
 .callout.large {
     background-image: url({{ absURL $.Site.Params.header_background }});
@@ -13,7 +14,16 @@
 .callout.large a, .callout.large p {
     color: white;
 }
+code {
+    /*  padding: 0.125rem 0.3125rem 0.0625rem;
+    border: 1px solid #cacaca;
+    background-color: #e6e6e6; */
+    font-family: Consolas, "Liberation Mono", Courier, monospace;
+    font-weight: normal;
+    color: #0a0a0a;
+}
 </style>
+
 {{ if isset .Params "question" }}
 <!-- Whatever-o-meter css -->
 <link href="{{ absURL "css/jquery-ui.min.css" }}" rel="stylesheet">
