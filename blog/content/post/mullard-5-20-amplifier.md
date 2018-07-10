@@ -12,13 +12,13 @@ keywords:
 ---
 
 Many years ago one of my brothers' friends brought me a faulty
-military surplus valve amplifier which used [807][0] valves for the
+military surplus valve amplifier which used [807][1] valves for the
 output. It appeared to have suffered a flashover which had destroyed
 much of the wiring and components inside the chassis, but the
 tagboards appeared to be reusable.
 
-I had a copy of a Mullard amplifier book, [Mullard Circuits for Audio
-Amplifiers][1] at the time, which I subsequently lent so someone who never
+I had a copy of a Mullard amplifier book, Mullard Circuits for Audio
+Amplifiers at the time, which I subsequently lent so someone who never
 returned it. Just recently I found a copy [online][2].
 
 So I stripped the amplifier and decided to rebuild it using the
@@ -34,8 +34,7 @@ The mains transformer and output transformer had no markings, but I
 was able to identify the connections by injecting from a 6.3V filament
 transformer and connect them correctly. 
 
- [0]: https://en.wikipedia.org/wiki/807_(vacuum_tube)
- [1]: pdf/Mullard-Circuits-for-Audio-Amplifiers.pdf
+ [1]: https://en.wikipedia.org/wiki/807_(vacuum_tube)
  [2]: http://www.sowter.co.uk/pdf/Mullard-Circuits-for-Audio-Amplifiers.pdf
  [3]: http://www.r-type.org/articles/art-003d.htm
  [4]: http://www.r-type.org/exhib/aad0108.htm
