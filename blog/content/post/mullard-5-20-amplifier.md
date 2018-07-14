@@ -22,11 +22,11 @@ Amplifiers at the time, which I subsequently lent so someone who never
 returned it. Just recently I found a copy [online][2].
 
 So I stripped the amplifier and decided to rebuild it using the
-[Mullard 5-20][3] design. There were the two [807][0] tetrode output
-valves in push-pull, an [EF37A][4] pentode with a top cap for the
-grid, an [ECC34][5] double triode, and a double diode rectifier
-valve. Apart from the 807s this lined up with the Mullard design with
-older octal valves instead of the newer B9A ones.
+[Mullard 5-20][3] design. There were the two 807 tetrode output valves
+in push-pull, an [EF37A][4] pentode with a top cap for the grid, an
+[ECC34][5] double triode, and a double diode rectifier valve. Apart
+from the 807s this lined up with the Mullard design with older octal
+valves instead of the newer B9A ones.
 
 ![Mullard 5-20][6]
 

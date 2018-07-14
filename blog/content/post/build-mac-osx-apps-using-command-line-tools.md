@@ -155,6 +155,6 @@ $(APPNAME): $(SOURCES)
 
 The app and icon building part is identical.
 
- [1]: href="https://developer.apple.com/library/prerelease/mac/documentation/DeveloperTools/Conceptual/cross_development/Introduction/Introduction.html#//apple_ref/doc/uid/10000163i
+ [1]: https://developer.apple.com/library/prerelease/mac/documentation/DeveloperTools/Conceptual/cross_development/Introduction/Introduction.html#//apple_ref/doc/uid/10000163i
  [2]: images/2016/02/Emacs.png
  [3]: https://www.apple.com/uk/swift
