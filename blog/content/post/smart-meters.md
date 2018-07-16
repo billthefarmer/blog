@@ -80,10 +80,10 @@ communicated with the metering processor.
 I did develop several useful gadgets for testing purposes, one was the
 CALMU Super Snooper which had a two line [LCD][8] display and a
 hexadecimal keypad. This allowed interrogating a CALMU by sending a
-query message and displaying the reply. It had a piezo buzzer mounted
-on the pcb which provided audio feedback for the keypad. If you held a
-button down while turning it on it played the tune from Super Trouper
-by Abba.
+query message and displaying the reply. It used the EPROM variant 8051
+processor. It had a piezo buzzer mounted on the pcb which provided
+audio feedback for the keypad. If you held a button down while turning
+it on it played the tune from Super Trouper by Abba.
 
 ![LCD Display][15]
 
@@ -92,20 +92,23 @@ Similar LDC display
 #### BBC Micro receiver
 Another was a radio teleswitch receiver using an 8051 variant which
 was connected to a [BBC Micro][9] digital I/O port. This, in
-conjunction with some software on the BBC Micro, enabled the messages
-to be displayed. The other was an EPROM that turned an [Acorn
-Atom][10] into a serial terminal. The standard keyboard scanner in an
-Atom was horrible to type on, it only registered a key press when you
-released the key. So I wrote my own, included in the EPROM. I can't
-remember why we wanted a serial terminal, but we must have done or I
-wouldn't have had the idea.
+conjunction with some software on the BBC Micro, enabled the radio
+teleswitch messages to be displayed.
+
+#### Acorn Atom terminal
+The other was an EPROM that turned an [Acorn Atom][10] into a serial
+terminal. The standard keyboard scanner in an Atom was horrible to
+type on, it only registered a key press when you released the key. So
+I wrote my own, included in the EPROM. I can't remember why we wanted
+a serial terminal, but we must have done or I wouldn't have had the
+idea.
 
 #### Other projects
 There were other metering projects going on at the time, one used
 broad band communication down the customers' electricity supply cable
 from the nearest substation. This worked during times of low demand on
 the power network, but became unreliable during times of high demand
-due to the noise level.
+due to the high noise level.
 
 #### Kilostream
 The various utilities were all nationalised industries at the time, so
@@ -116,7 +119,7 @@ communication with devices on a customer's premises via the telephone
 line. The prices they wanted for the service were completely out of
 scope for meter reading. So that was the end of that. Since then all
 the utilities have been privatised, so any joint metering projects
-became exceedingly unlikely. They have all done their own thing.
+became exceedingly unlikely. They have since all done their own thing.
 
  [0]: https://www.umsmeters.co.uk/contact-us/manuals-and-downloads/old-pri-meters-kit
  [1]: https://en.wikipedia.org/wiki/Vacuum_fluorescent_display
