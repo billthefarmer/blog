@@ -9,4 +9,5 @@ url: /index/
 
 {{< site-index  "recipes" >}}
 {{< site-index  "hacking" >}}
+{{< site-index  "electronics" >}}
 {{< site-index  "diy" >}}
