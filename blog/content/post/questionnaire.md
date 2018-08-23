@@ -57,6 +57,7 @@ let data =
 ```
 
 The fields are:
+
  * **intro** - Introductory text
  * **questions** - A series of questions with fields:
    * **q** - The question text
@@ -126,6 +127,7 @@ let data =
 ```
 
 The fields are:
+
  * **pages** - Preamble pages with images, with fields:
    * **pageno** - Page number
    * **images** - Array of images with fields:
