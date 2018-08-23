@@ -56,11 +56,20 @@ let data =
     };
 ```
 
+The fields are:
+ * **intro** - Introductory text
+ * **questions** - A series of questions with fields:
+   * **q** - The question text
+   * **t** - The type of question
+   * **a** - The options for answers
+   * **v** - Array of values for answers
+ * **last** - The last question
+ * **matrix** - Object containing possible texts for each type of question
+
 The intro text appears on the first panel together with a start
-button. The questions will appear on subsequent panels. The question
-data has four fields, `q` - the question, `t` - the type of question,
-`a` - an array of possible answers and `v` - an array of the value of
-each answer. The last question triggers a contact panel which prompts for name and email address.
+button. The questions will appear on subsequent panels. The last
+question triggers a contact panel which prompts for name and email
+address.
 
 #### Report data
 ```javascript
@@ -116,6 +125,32 @@ let data =
     }};
 ```
 
+The fields are:
+ * **pages** - Preamble pages with images, with fields:
+   * **pageno** - Page number
+   * **images** - Array of images with fields:
+     * **src** - Path to image file
+     * **type** - Type of image, png or jpeg
+     * **y** - Y coordinate, if -1 bottom edge, optional
+     * **x** - X coordinate, if -1 right edge, optional
+     * **height** - height of image, optional
+     * **width** - width of image, optional. If width and no height,
+       image will be scaled in proportion
+     * **link** - URL of link for image
+   * **text** - Text for page with fields:
+      **size** - Font size in points, optional
+      **type** - Type of font, optional
+      **color** - Text colour, optional
+      **y** Y coordinate, optional
+ * **last** - Last page with images and text, same fields, no pageno
+ * **answers** Paragraphs of text for the report after the preamble
+   with fields:
+   * **Type** - Type of answer with fields:
+     * **desc** - Description of type
+     * **Score** - Value of score for that type with fields:
+       * **type** - Description of result
+       * **text** - Paragraph of explanatory text
+ 
 The report can contain several pages of preamble with images and
 text. Images with no coordinates or dimensions will be placed full
 width at the top of the page. Images with a `y` coordinate of `-1`
