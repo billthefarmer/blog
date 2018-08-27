@@ -158,7 +158,7 @@ text. Images with no coordinates or dimensions will be placed full
 width at the top of the page. Images with a `y` coordinate of `-1`
 will be placed full width at the bottom of the page. Images with an
 `x` coordinate of `-1` will be placed at the right margin of the
-page. All coordinates, sizes and dimensions are in points, 1/12
+page. All coordinates, sizes and dimensions are in points, 1/72
 inch. The fields from the contact panel may be included in text by
 using `~forename~` and `~lastname~`.
 
