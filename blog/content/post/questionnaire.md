@@ -64,7 +64,7 @@ The fields are:
    * **t** - The type of question
    * **a** - The options for answers
    * **v** - Array of values for answers
- * **last** - The last question
+ * **last** - The last question, fields as above
  * **matrix** - Object containing possible texts for each type of question
 
 The intro text appears on the first panel together with a start
@@ -140,10 +140,10 @@ The fields are:
        image will be scaled in proportion
      * **link** - URL of link for image
    * **text** - Text for page with fields:
-      **size** - Font size in points, optional
-      **type** - Type of font, optional
-      **color** - Text colour, optional
-      **y** Y coordinate, optional
+     * **size** - Font size in points, optional
+     * **type** - Type of font, optional
+     * **color** - Text colour, optional
+     * **y** Y coordinate, optional
  * **last** - Last page with images and text, same fields, no pageno
  * **answers** Paragraphs of text for the report after the preamble
    with fields:
