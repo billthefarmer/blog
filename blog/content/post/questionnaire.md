@@ -143,7 +143,7 @@ The fields are:
      * **size** - Font size in points, optional
      * **type** - Type of font, optional
      * **color** - Text colour, optional
-     * **y** Y coordinate, optional
+     * **y** - Y coordinate, optional
  * **last** - Last page with images and text, same fields, no pageno
  * **answers** Paragraphs of text for the report after the preamble
    with fields:
