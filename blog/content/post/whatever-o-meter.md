@@ -11,6 +11,7 @@ keywords:
   - wordpress
   - plugin
   - whatever-o-meter
+  - php
 ---
 ![Whatever][6]
 

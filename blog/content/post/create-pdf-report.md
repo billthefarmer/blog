@@ -10,6 +10,7 @@ keywords:
     - plugin
     - shortcode
     - tcpdf
+    - php
 ---
 
 ### Introduction
@@ -247,6 +248,33 @@ Output the document, and return the path to it.
         // Return file uri
         return plugins_url('report/' . $filename, __FILE__);
 ```
+
+### Creating an email
+
+To send the report, create an email and send it.
+
+```php
+        // Set fields
+        $to = "$username <$usermail>";
+        $from_email = $data->from_email;
+        $from_name = $data->from_name;
+        $from = "$from_name <$from_email>";
+        $subject = str_replace('~forename~', $forename, $data->subject);
+        $message = str_replace('~forename~', $forename, $data->message);
+        $content = "Content-Type: text/html";
+        $headers = ["From: $from",
+                    $content];
+
+        // Get attachment path
+        $path = plugin_dir_path(__FILE__);
+        $attachments = $path . "report/" . $filename;
+
+        // Send mail
+        wp_mail($to, $subject, $message, $headers,
+                $attachments);
+```
+
+
 
 [1]: https://billthefarmer.github.io/blog/post/questionnaire
  [2]: https://tcpdf.org

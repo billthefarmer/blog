@@ -11,6 +11,7 @@ keywords:
   - plugin
   - javascript
   - whatever-o-meter
+  - php
 ---
 
 I wrote the whatever-o-meter about five years ago in PHP and

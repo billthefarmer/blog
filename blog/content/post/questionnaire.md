@@ -10,6 +10,7 @@ keywords:
     - wordpress
     - plugin
     - shortcode
+    - php
 ---
 
 ### Introduction
