@@ -9,12 +9,6 @@ menu:
     - name: Old Shoreham Buccaneers
       url: http://billthefarmer.users.sourceforge.net/buccaneers
       weight: 10
-    - name: Will Duke workshop
-      url: http://myweb.tiscali.co.uk/williamjfarmer/workshop
-      weight: 9
-    - name: Sussex Tune Book
-      url: http://myweb.tiscali.co.uk/williamjfarmer/stb
-      weight: 8
     - name: What-o-Clock
       url: http://billthefarmer.users.sourceforge.net/what-o-clock
       weight: 7
