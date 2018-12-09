@@ -10,8 +10,16 @@ keywords:
   - onion
   - potato
   - carrot
+  - broccoli
+  - cabbage
+  - spinach
 ---
-This method can be used for cooking any selection of vegetables, the trick is to layer them with the slowest cooking, like green beans, carrots, and other root veg at the bottom of the pan, and the faster cooking, like broccoli, cabbage and spinach on top. A layer of sliced onions in the bottom of the pan melts down and steams the veg above.
+
+This method can be used for cooking any selection of vegetables, the
+trick is to layer them with the slowest cooking, like green beans,
+carrots, and other root veg at the bottom of the pan, and the faster
+cooking, like broccoli, cabbage and spinach on top. A layer of sliced
+onions in the bottom of the pan melts down and steams the veg above.
 
 ### Ingredients
 
@@ -26,4 +34,5 @@ This method can be used for cooking any selection of vegetables, the trick is to
   1. Cover the bottom of a medium saucepan with oil
   2. Place a layer of sliced onions on the bottom
   3. Layer sliced carrots, potatoes, and green veg in the pan
-  4. Put on a low heat for about 20 minutes with the lid on until the veg is cooked to taste
+  4. Put on a low heat for about 20 minutes with the lid on until the
+     veg is cooked to taste
