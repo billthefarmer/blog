@@ -20,7 +20,7 @@ keywords:
 This is similar to [Vegetables cooked in olive oil][1], except mashed
 or whipped with a fork. Parsnips are difficult to grate, the softer
 outer part can be peeled off with a vegetable peeler, and the harder
-inner code sliced thinly.
+inner core sliced thinly.
 
 ### Ingredients
 
