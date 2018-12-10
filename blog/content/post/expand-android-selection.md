@@ -36,7 +36,7 @@ for a newline.
 ```java
 
     public final static String PATTERN_CHARS =
-        "[\\(\\)\\[\\]\\{\\}\\<\\>\"'`,;]";
+        "[\\(\\)\\[\\]\\{\\}\\<\\>\"'`]";
     public final static String INVALID_CHARS = "([{<";
 
     // onActionModeStarted
@@ -62,7 +62,7 @@ for a newline.
                 // Get a pattern and a matcher for delimiter
                 // characters
                 Pattern pattern =
-                    Pattern.compile(PATTERN_CHARS, Pattern.MULTILINE);
+                    Pattern.compile(PATTERN_CHARS);
                 Matcher matcher =
                     pattern.matcher(text);
 
@@ -97,18 +97,13 @@ for a newline.
                         case '>':
                             c = '<';
                             break;
-
-                            // Check for semicolon and look for eol
-                        case ';':
-                            c = '\n';
-                            break;
                         }
 
                         // Do reverse search
                         start = text.lastIndexOf(c, start) + 1;
 
                         // Check for included newline
-                        if (start < text.lastIndexOf('\n', end))
+                        if (start > text.lastIndexOf('\n', end))
                             // Update selection
                             textView.setSelection(start, end);
                     }
