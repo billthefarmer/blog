@@ -37,7 +37,7 @@ user@server:~ $ git clone https://github.com/tecnickcom/TCPDF.git tcpdf
 user@server:~ $ cd questionnaire/wordpress
 user@server:~/questionnaire/wordpress $ ln -s ~/tcpdf
 ```
-
+<br>
 The plugin includes code to load TCPDF if it is present and show a
 message if it isn't. Using the path `tcpdf/tcpdf.php` will pick it up
 either from `/usr/share/php`, if installed, or from the symbolic link.
@@ -46,7 +46,7 @@ either from `/usr/share/php`, if installed, or from the symbolic link.
 // Include TCPDF, if present
 $tcpdf_present = include_once 'tcpdf/tcpdf.php';
 ```
-
+<br>
 After more work on this project I needed another library which makes
 use of [composer][3] for dependencies. TCPDF doesn't have any, but you
 can create a `composer.json` in the plugin and load TCPDF.
@@ -54,7 +54,7 @@ can create a `composer.json` in the plugin and load TCPDF.
 ```shell
 user@server:~/questionnaire/wordpress $ php composer.phar require tecnickcom/tcpdf
 ```
-
+<br>
 Using composer, the code to load libraries changes to pick them up
 from the vendor folder.
 
@@ -98,7 +98,7 @@ of the defaults, that isn't necessary.
         $pdf->SetMargins($margin, $margin, $margin);
         $pdf->SetAutoPageBreak(true, $margin);
 ```
-
+<br>
 TCPDF doesn't seem to include a function to move the insertion point
 down a line, you need to nest three functions to get the right result.
 The functions to add text make use of the `MultiCell()` function. Also
@@ -157,7 +157,7 @@ the `SetFont()` function is used to set the font type.
             new_text_line($pdf);
         };
 ```
-
+<br>
 To display images requires a set of rules to place the image on the
 page. If the width is empty or zero, text width, else width. If the
 height is empty or zero, height in proportion to width, else
@@ -182,7 +182,7 @@ else y.
                         $type, $link);
         };
 ```
-
+<br>
 The report starts with a preamble.
 
 ```php
@@ -202,7 +202,7 @@ The report starts with a preamble.
                                  $pageHeight, $pageWidth, $path);
         }
 ```
-
+<br>
 Then the report body. Because each section starts with an image, start
 a new page if near the bottom.
 
@@ -221,7 +221,7 @@ a new page if near the bottom.
             $pdf->AddPage();
     // ...
 ```
-
+<br>
 Then the last page.
 
 ```php
@@ -237,7 +237,7 @@ Then the last page.
             add_image_object($pdf, $image, $margin, $textWidth,
                              $pageHeight, $pageWidth, $path);
 ```
-
+<br>
 Output the document, and return the path to it.
 
 ```php
