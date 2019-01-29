@@ -12,7 +12,7 @@ keywords:
     - tuner
 ---
 
-My tuner app uses equal temperament because that is the current
+My [Tuner app][1] uses equal temperament because that is the current
 standard and it is relatively easy to calculate using double precision
 arithmetic and maths library functions. First, declare some constants.
 
@@ -95,3 +95,5 @@ Adjusting the nearest reference frequency adjusts everything
 calculated following, the cents difference etc. In equal temperament
 the ratios cancel each other out, making no difference. Adding more
 temperaments is then just a matter of adding entries to the table.
+
+ [1]: https://github.com/billthefarmer/tuner
