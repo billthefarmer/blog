@@ -10,8 +10,9 @@ accordions. It has many features intended to help with this.
 
 |   |   |
 | --- | --- |
-|![CTuner][2]| ![Preferences][3]|
+|![CTuner][2]| ![Preferences][3] ![Note filter][4]|
 
  [1]: https://github.com/billthefarmer/ctuner
  [2]: images/Tuner-swift.png
  [3]: images/Tuner-preferences.png
+ [4]: images/Note-filter.png
