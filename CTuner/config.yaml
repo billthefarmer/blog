@@ -1,0 +1,14 @@
+baseURL: https://billthefarmer.github.io/ctuner/
+languageCode: en-gb
+
+title: CTuner
+copyright: Copyright &copy; 2018 Bill Farmer
+theme: kraiklyn
+publishDir: d:/c/github/ctuner/docs
+metaDataFormat: yaml
+
+pygmentsCodeFences: true
+pygmentsStyle: monokailight
+
+params:
+  - sidebarColor: default
