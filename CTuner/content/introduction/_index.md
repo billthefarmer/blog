@@ -6,7 +6,8 @@ weight: 10
 ---
 
 [Tuner][1] is a musical intrument tuner developed for tuning
-accordions. It has many features intended to help with this.
+accordions. It has many features intended to help with this particular
+use case, but may be used to tune any musical instrument.
 
 |   |   |
 | --- | --- |
