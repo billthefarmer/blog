@@ -5,7 +5,7 @@ anchor: options
 weight: 30
 ---
 
-All options may not be implemented on all versions.
+Some options may not be implemented on all versions.
 
  * Low pass filter option for tuning bass reeds
  * Fundamental filter option to remove spurious results

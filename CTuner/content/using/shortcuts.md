@@ -6,7 +6,7 @@ weight: 50
 ---
 
 There are a number of keyboard shortcuts for toggling the
-options. Some options may not be implemented on all versions.
+options. Some may not be implemented on all versions.
 
  * **F** - Low pass filter
  * **L** - Display lock
