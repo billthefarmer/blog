@@ -18,5 +18,5 @@ display may be locked by clicking on it. The displayed values may be
 copied to the clipboard for pasting into another application by typing
 Ctrl-C. The strobe display below shifts left or right according to
 whether the input note is flat or sharp. The alternative staff display
-shows the note on a musical staff. It displays may be switched by
+shows the note on a musical staff. These displays may be switched by
 clicking on them. The meter below shows the deviation in cents.
