@@ -12,7 +12,7 @@ file or the app defaults.
 
 Use a text editor to create a file in `Tuner/Custom.txt` in the user area.
 The file should contain one or more entries formatted as property entries.
-The format is documented [here][1].
+The format is documented in Android Java [Properties][1].
 
 ```shell
 # Custom Temperaments
