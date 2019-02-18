@@ -11,7 +11,7 @@ use case, but may be used to tune any musical instrument. There are
 versions implemented for [Windows][5], [macOS][6] and [Linux][7]. An
 [Android][8] version is also available. Downloads are [here][9] for
 desktop versions, and [here][10] for the Android version, which is
-available from [F-Droid][11].
+also available from [F-Droid][11].
 
 |   |   |
 | --- | --- |
