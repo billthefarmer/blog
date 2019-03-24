@@ -60,7 +60,7 @@ embedded words being highlighted.
 
 Some Javascript libraries can guess the language from the input. Emacs
 relies on the file extension, the [Chroma][2] library used here relies
-on being told the language. My text editor has the file extension, so
+on being told the language. The text editor has the file extension, so
 another regular expression to check file extensions.
 
 ```java

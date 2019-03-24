@@ -22,7 +22,7 @@ arithmetic and maths library functions. First, declare some constants.
     private static final int A_OFFSET = 9;
     private static final int C5_OFFSET = 57;
 ```
-<br />
+
 The calculation first produces the cents relative to the reference,
 usually 440Hz. Then the note number with an added constant because
 octaves start at **C**, not **A**. Then the reference frequency for
@@ -41,7 +41,7 @@ that note, then the cents difference.
     // Cents relative to reference note
     double cents = -12.0 * log2(nearest / frequency) * 100.0;
 ```
-<br />
+
 I have a large lookup table for 32 temperaments, part of which is shown here.
 
 ```java
@@ -63,7 +63,7 @@ I have a large lookup table for 32 temperaments, part of which is shown here.
          1.265625000, 1.333333333, 1.423828125, 1.500000000,
          1.601806641, 1.687500000, 1.777777778, 1.898437500},
 ```
-<br />
+
 Some of the entries use actual frequencies, others use ratios. To
 calculate the adjustment for a given temperament it is necessary to
 calculate the ratio between the current note and **A** for that key,
@@ -90,7 +90,7 @@ Then adjust the reference note frequency for that temperament and key.
     // Reference note frequency
     double nearest = reference * Math.pow(2.0, Math.round(cf) / 12.0) * temperamentAdjust;
 ```
-<br />
+
 Adjusting the nearest reference frequency adjusts everything
 calculated following, the cents difference etc. In equal temperament
 the ratios cancel each other out, making no difference. Adding more

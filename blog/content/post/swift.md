@@ -72,7 +72,7 @@ written in C works fine.
 	    return status
         }
 ```
-<br>
+
 Swift version. This fails to set the input device with an error.
 
 ```c
@@ -112,7 +112,7 @@ Swift version. This fails to set the input device with an error.
         return status;
     }
 ```
-<br>
+
 C version, this works with no error. I asked a question about this on
 the [coreaudio mailing list][5], but apart from being picked up on my
 coarse use of Swift, since fixed, I didn't get an answer. So I decided
@@ -122,7 +122,7 @@ amount of interoperability with Swift. In order for this to work, two
 special include files need to be used. `<AppName>-Bridging-Header.h`
 allows Swift to access C data. It can just include the C include
 file. Use the switch `-import-objc-header` to import this header.
-<br>
+
 ```C
 #include "Audio.h"
 ```
@@ -143,7 +143,7 @@ SFLAGS = -g -target x86_64-apple-macosx10.9 \
 
 CFLAGS = -g -target x86_64-apple-macosx10.9
 ```
-<br>
+
 Extract from `Makefile`.
 
 ### Enums
@@ -171,7 +171,7 @@ enum
     {kRefText = 'RefT',
      kRefStep = 'RefS'};
 ```
-<br>
+
 The enums can then be referenced in Swift.
 
 ```swift
@@ -226,7 +226,7 @@ typedef struct
 } FilterData;
 FilterData filterData;
 ```
-<br>
+
 These arrays appear as [tuples][9] in Swift, which is not very
 useful. I found a workaround using reflection on [Stack Overflow][10],
 but it produces the wrong result.
@@ -248,7 +248,7 @@ but it produces the wrong result.
         return array
     }
 ```
-<br>
+
 So I wrote some access functions in C as a workaround.
 
 ```C

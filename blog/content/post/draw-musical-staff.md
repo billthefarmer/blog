@@ -59,7 +59,7 @@ vertical axis is reversed.
         {16.9f,13.5f}, {14.9f,13.5f}, {14.9f,15}
     };
 ```
-<br>
+
 Both these sets of points are made up of an initial move, followed by
 a series of cubic bezier curves. The bass clef has three sections, the
 symbol, followed by the two dots.
@@ -94,7 +94,7 @@ symbol, followed by the two dots.
                           bc[i + 1][0], bc[i + 1][1],
                           bc[i + 2][0], bc[i + 2][1]);
 ```
-<br>
+
 It is necessary to scale the paths to fit the view they are to be
 drawn in and calculate the line spacing for the staff lines.
 
@@ -120,7 +120,7 @@ drawn in and calculate the line spacing for the staff lines.
         matrix.postTranslate(margin + lineHeight, lineHeight * 5.4f);
         bclef.transform(matrix);
 ```
-<br>
+
 The staff consists of two sets of five lines, closer together than is
 usual to allow for a continuous scale from top to bottom. There are
 also three leger lines to allow for showing notes off the staff lines.
@@ -155,7 +155,7 @@ also three leger lines to allow for showing notes off the staff lines.
         canvas.drawPath(tclef, paint);
         canvas.drawPath(bclef, paint);
 ```
-<br>
+
 The bass and treble clef have been made slightly larger than usual as
 the view can be quite small on a phone.
 
