@@ -257,7 +257,28 @@ dismissing the keyboard.
             });
 ```
 
+Creating a list of HTML tags and making a regular expression is
+similar to creating the C type expression. Creating a list of CSS
+styles produces a rather long list, and the `\\b` word boundary
+doesn't work properly because of the dashes in the styles. So remove
+the dashes and create a list of unique styles which is a much shorter
+list.
 
+```java
+    public final static String HTML_TAGS =
+        "\\b(html|base|head|link|meta|style|title|body|address|article|" +
+        "aside|footer|header|h1|hgroup|main|nav|section|blockquote|dd|" +
+        "dir|div|dl|dt|figcaption|figure|hr|li|main|ol|p|pre|ul|a|abbr|" +
+        "b|bdi|bdo|br|cite|code|data|dfn|em|i|kbd|mark|q|rb|rp|rt|rtc|" +
+    // ...
+
+    public final static String CSS_STYLES =
+        "\\b(action|active|additive|adjust|after|align|all|alternates|" +
+        "animation|annotation|area|areas|as|asian|attachment|attr|" +
+        "auto|backdrop|backface|background|basis|before|behavior|" +
+        "bezier|bidi|blend|block|blur|border|bottom|box|break|" +
+    // ...
+```
 
  [1]: https://github.com/billthefarmer/editor
  [2]: https://github.com/alecthomas/chroma
