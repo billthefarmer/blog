@@ -54,8 +54,8 @@ embedded words being highlighted.
         "volatile|while|with|yield)\\b";
 
     public final static String TYPES =
-        "\\b(bool(ean)?|byte|char|double|float|int(eger)?|long|" +
-        "short|u(byte|char|int|long|short))\\b";
+        "\\b(j?bool(ean)?|(u|j)?(byte|char|double|float|int(eger)?|" +
+        "long|short))\\b";
 ```
 
 Some Javascript libraries can guess the language from the input. Emacs
@@ -77,11 +77,13 @@ removing the previous call.
     // checkHighlight
     private void checkHighlight()
     {
+        // No syntax
+        syntax = NO_SYNTAX;
+
         // Check extension
         if (highlight && file != null)
         {
-            Uri uri = Uri.fromFile(file);
-            String ext = FileUtils.getExtension(uri.toString());
+            String ext = FileUtils.getExtension(file.getName());
             if (ext != null)
             {
                 if (ext.matches(CC_EXT))
@@ -101,7 +103,7 @@ removing the previous call.
                     // Set callback
                     if (updateHighlight == null)
                         updateHighlight = () ->
-                            highlightText(textView.getEditableText());
+                            highlightText();
 
                     textView.removeCallbacks(updateHighlight);
                     textView.postDelayed(updateHighlight, UPDATE_DELAY);
@@ -111,7 +113,14 @@ removing the previous call.
             }
         }
 
-        updateHighlight = null;
+        // Remove highlighting
+        if (updateHighlight != null)
+        {
+            textView.removeCallbacks(updateHighlight);
+            textView.postDelayed(updateHighlight, UPDATE_DELAY);
+
+            updateHighlight = null;
+        }
     }
 ```
 
@@ -123,28 +132,30 @@ scrolling the text, so move the selection if not editing.
 
 ```java
     // highlightText
-    private void highlightText(Editable editable)
+    private void highlightText()
     {
-        Pattern pattern;
-        Matcher matcher;
-
         // Get visible extent
         int top = scrollView.getScrollY();
         int height = scrollView.getHeight();
 
         int line = textView.getLayout().getLineForVertical(top);
-        int start = textView.getLayout().getOffsetForHorizontal(line, 0);
+        int start = textView.getLayout().getLineStart(line);
 
         line = textView.getLayout().getLineForVertical(top + height);
-        int end = textView.getLayout().getOffsetForHorizontal(line, 0);
+        int end = textView.getLayout().getLineEnd(line);
 
-        if (!edit)
+        // Move selection if outside range
+        if (textView.getSelectionStart() < start)
+            textView.setSelection(start, start);
+
+        if (textView.getSelectionStart() > end)
         {
-            // Move selection to centre
-            line = textView.getLayout().getLineForVertical(top + height / 2);
-            int centre = textView.getLayout().getOffsetForHorizontal(line, 0);
-            textView.setSelection(centre, centre);
+            int last = textView.getLayout().getLineStart(line - 1);
+            textView.setSelection(last, last);
         }
+
+        // Get editable
+        Editable editable = textView.getEditableText();
 
         // Get current spans
         ForegroundColorSpan spans[] =
@@ -152,6 +163,9 @@ scrolling the text, so move the selection if not editing.
         // Remove spans
         for (ForegroundColorSpan span: spans)
             editable.removeSpan(span);
+
+        Pattern pattern;
+        Matcher matcher;
 
         switch (syntax)
         {
@@ -233,25 +247,35 @@ detected by checking view sizes. Only trigger the highlight on
 dismissing the keyboard.
 
 ```java
-        scrollView.getViewTreeObserver().addOnGlobalLayoutListener(() ->
+            textView.getViewTreeObserver().addOnGlobalLayoutListener(
+                new ViewTreeObserver.OnGlobalLayoutListener()
             {
-                if (updateHighlight != null)
+                private boolean keyboard;
+
+                // onGlobalLayout
+                @Override
+                public void onGlobalLayout()
                 {
-                    int rootHeight = scrollView.getRootView().getHeight();
-                    int height = scrollView.getHeight();
-
-                    boolean shown = ((rootHeight - height) /
-                                     (double) rootHeight) > KEYBOARD_RATIO;
-
-                    if (shown != keyboard)
+                    if (updateHighlight != null)
                     {
-                        if (!shown)
-                        {
-                            textView.removeCallbacks(updateHighlight);
-                            textView.postDelayed(updateHighlight, UPDATE_DELAY);
-                        }
+                        int rootHeight = scrollView.getRootView().getHeight();
+                        int height = scrollView.getHeight();
 
-                        keyboard = shown;
+                        boolean shown = (((rootHeight - height) /
+                                         (double) rootHeight) >
+                                         KEYBOARD_RATIO);
+
+                        if (shown != keyboard)
+                        {
+                            if (!shown)
+                            {
+                                textView.removeCallbacks(updateHighlight);
+                                textView.postDelayed(updateHighlight,
+                                                     UPDATE_DELAY);
+                            }
+
+                            keyboard = shown;
+                        }
                     }
                 }
             });
@@ -280,8 +304,8 @@ list.
     // ...
 ```
 
- [1]: https://github.com/billthefarmer/editor
- [2]: https://github.com/alecthomas/chroma
- [3]: https://www.gnu.org/software/emacs
- [4]: https://en.wikipedia.org/wiki/Regular_expression
- [5]: https://developer.android.com/reference/android/text/Html.html#fromHtml(java.lang.String)
+ [1]: https://github.com/billthefarmer/editor (https://github.com/billthefarmer/editor)
+ [2]: https://github.com/alecthomas/chroma (https://github.com/alecthomas/chroma)
+ [3]: https://www.gnu.org/software/emacs (https://www.gnu.org/software/emacs)
+ [4]: https://en.wikipedia.org/wiki/Regular_expression (https://en.wikipedia.org/wiki/Regular_expression)
+ [5]: https://developer.android.com/reference/android/text/Html.html#fromHtml(java.lang.String) (https://developer.android.com/reference/android/text/Html.html)
