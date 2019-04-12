@@ -291,7 +291,7 @@ list.
 ```java
     public final static String HTML_TAGS =
         "\\b(html|base|head|link|meta|style|title|body|address|article|" +
-        "aside|footer|header|h1|hgroup|main|nav|section|blockquote|dd|" +
+        "aside|footer|header|h\\d|hgroup|main|nav|section|blockquote|dd|" +
         "dir|div|dl|dt|figcaption|figure|hr|li|main|ol|p|pre|ul|a|abbr|" +
         "b|bdi|bdo|br|cite|code|data|dfn|em|i|kbd|mark|q|rb|rp|rt|rtc|" +
     // ...
