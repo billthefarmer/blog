@@ -23,8 +23,8 @@ with [Html.fromHtml()][5] to produce styled text. This would then be
 loaded back into the editor all while the user is attempting to edit
 the text. I don't think so. So I explored alternatives.
 
-C, C++, Objective C, Java, Javascript, Python and other C-like
-languages share a set of mostly common keywords and type
+C, C++, Objective C, Go, Java, Javascript, Python, Swift and other
+C-like languages share a set of mostly common keywords and type
 identifiers. There is a convention that classes are capitalised. There
 is a convention that constants and macros are all caps. Making use of
 these conventions it is possible to highlight source code without
@@ -39,19 +39,19 @@ embedded words being highlighted.
 
 ```java
     public final static String KEYWORDS =
-        "\\b(abstract|and|any|as|asm|assert|auto|break|case|catch|" +
-        "cin|class|const|constructor|continue|cout|def|default|del|" +
-        "delete|do|elif|else|end|enum|eval|except|extends|extern|" +
-        "false|field|final|finally|for|friend|from|funct|function|" +
-        "getter|global|goto|if|implementation|implements|import|in|" +
-        "inline|instanceof|interface|is|lambda|let|method|native|" +
-        "new|nil|none|nonlocal|not|null|operator|or|override|" +
-        "package|pass|private|protected|protocol|public|raise|real|" +
-        "register|return|selector|setter|signed|sizeof|static|" +
-        "strictfp|string|struct|super|switch|synchronized|template|" +
-        "this|throw|throws|traditional|transient|true|try|type|" +
-        "typedef|typeof|union|unsigned|var|version|virtual|" +
-        "volatile|while|with|yield)\\b";
+        "\\b(abstract|and|any|as|asm|assert|auto|break|case|catch|chan|" +
+        "cin|class|const|const(ructor)?|continue|cout|def|default|" +
+        "defer|del|delete|do|elif|else|end|enum|eval|except|" +
+        "extends|extern|fallthrough|false|field|final|finally|for|" +
+        "friend|from|func(tion)?|getter|global|go|goto|if|" +
+        "implement(ation|s)|import|in(line|stanceof|terface)?|" +
+        "is|lambda|let|map|method|native|new|nil|none|nonlocal|not|" +
+        "null|operator|or|override|package|pass|private|protected|" +
+        "protocol|public|raise|range|real|register|return|select|" +
+        "selector|setter|signed|sizeof|static|strictfp|string|" +
+        "struct|super|switch|synchronized|template|this|throws?|" +
+        "traditional|transient|true|try|type(def|of)|un(ion|signed)|" +
+        "var|version|virtual|volatile|while|with|yield)\\b";
 
     public final static String TYPES =
         "\\b(j?bool(ean)?|(u|j)?(byte|char|double|float|int(eger)?|" +
@@ -65,7 +65,7 @@ another regular expression to check file extensions.
 
 ```java
     public final static String CC_EXT =
-        "\\.(c(c|pp|xx|\\+\\+)?|h|js|java|m|py)";
+        "\\.(c(c|pp|xx|\\+\\+)?|go|h|java|js|m|py|swift)";
 ```
 
 Check highlighting. The app also does HTML and CSS and has a syntax
