@@ -17,13 +17,10 @@
       <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
     {{ end }}
       */}}
-    {{ with .OutputFormats.Get "RSS" }}
-      {{ if .RelPermalink }}
-        {{ "<!-- RSS 2.0 feed -->" | safeHTML }}
-        {{/* <link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-        <link href="{{ .RelPermalink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" /> */}}
-      {{ end }}
-    {{ end }}
+    {{ with .OutputFormats.Get "rss" -}}
+      {{ "<!-- RSS 2.0 feed -->" | safeHTML }}
+      {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{ end -}}
     {{ if .Site.Params.cookie_consent_info_url }}
       {{ partial "cookie-consent.html" . }}
     {{ end }}
