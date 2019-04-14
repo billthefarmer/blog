@@ -8,6 +8,9 @@ metaDataFormat: yaml
 pygmentsCodeFences: true
 pygmentsStyle: emacs
 
+disableKinds:
+  - section
+
 # number of posts to show on home/category/tag pages (Default: 10)
 paginate: 5
 
