@@ -1,0 +1,15 @@
+baseURL: http://example.org/
+languageCode: en-gb
+title: Audiotools
+copyright: Copyright &copy; 2019 Bill Farmer
+theme: kraiklyn
+publishDir: d:/c/github/audiotools/docs
+metaDataFormat: yaml
+
+pygmentsCodeFences: true
+pygmentsStyle: monokailight
+
+params:
+  sidebarColor: cyan
+  customCss:
+      - css/custom.css

@@ -11,11 +11,11 @@ pygmentsStyle: emacs
 disableKinds:
   - section
 
-# number of posts to show on home/category/tag pages (Default: 10)
-paginate: 5
-
 taxonomies:
   category: categories
+
+# number of posts to show on home/category/tag pages (Default: 10)
+paginate: 5
 
 related:
   threshold: 10
