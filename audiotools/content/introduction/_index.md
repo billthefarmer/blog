@@ -6,11 +6,12 @@ weight: 10
 ---
 
 [Audiotools][1] is a set of audio testing tools for use on a Windows
-or Linux PC, Mac or Android device.
+or Linux PC, Mac or Android device. See also [Tuner][3].
 
 ![Screenshot][2]
 
 
- [1]: https://github.com/billthefarmer/audiotools
+ [1]: https://github.com/billthefarmer/audiotools (https://github.com/billthefarmer/audiotools)
  [2]: images/Audiotools.png
+ [3]: https://billthefarmer.github.io/ctuner (https://billthefarmer.github.io/ctuner)
  

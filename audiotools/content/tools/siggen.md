@@ -1,15 +1,14 @@
 ---
-title: "Tools"
-date: 2019-05-21T14:46:23+01:00
-anchor: tools
-weight: 12
+title: "Signal Generator"
+date: 2019-05-22T10:51:50+01:00
+anchor: siggen
+weight: 14
 ---
-
-### Audio Signal Generator
 
 |     |     |
 | --- | --- |
-| ![SigGen][1] | ![SigGen-Swift][2] |
+| ![SigGen][1] | ![SigGen-swift][2] |
+![SigGen-android][3]
 
 * Frequency range 10Hz - 25KHz
 * Level range 0dB - -80dB
@@ -31,3 +30,4 @@ Responds to keyboard navigation keys
 
  [1]: images/SigGen.png
  [2]: images/SigGen-swift.png
+ [3]: images/SigGen-android.png
