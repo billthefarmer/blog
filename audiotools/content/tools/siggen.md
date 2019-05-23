@@ -28,6 +28,11 @@ Responds to keyboard navigation keys
 * Page Up - level up
 * Page Down - level down
 
+### Downloads
+Windows and Mac versions [here][4], Android version [here][5].
+
  [1]: images/SigGen.png
  [2]: images/SigGen-swift.png
  [3]: images/SigGen-android.png
+ [4]: https://github.com/billthefarmer/audiotools/releases (https://github.com/billthefarmer/audiotools/releases)
+ [5]: https://github.com/billthefarmer/sig-gen/releases (https://github.com/billthefarmer/sig-gen/releases)
