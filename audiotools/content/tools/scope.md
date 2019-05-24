@@ -29,6 +29,22 @@ The icons on the toolbar are, from left to right:
  *  **Right** &ndash; Moves the trace to the right
  *  **Start** &ndash; Moves the trace to the start
  *  **End** &ndash; Moves the trace to the end
+ *  **Reset** &ndash; Resets to default settings
+
+### Using
+Use the toolbar buttons to access functionality. Clicking on the left
+Y scale turns on the sync level control.  Clicking on the scope
+display turns on the cursor line, which may be shifted left and right
+using the left and right arrow keys. The cursor line shows the time
+from the start of the trace in current timebase units, and the nominal
+trace value at that point. There is no calibration because of the
+various level controls in the audio system. The move to start and
+reset toolbar buttons clear the sync level and the cursor.
+
+### Downloads
+Windows and Mac versions [here][3], Android version [here][4].
 
  [1]: images/Scope.png
  [2]: images/Scope-android.png
+ [3]: https://github.com/billthefarmer/audiotools/releases (https://github.com/billthefarmer/audiotools/releases)
+ [4]: https://github.com/billthefarmer/scope/releases (https://github.com/billthefarmer/scope/releases)

@@ -19,7 +19,7 @@ weight: 14
 * Mute control
 * Set exact frequency
 
-Responds to keyboard navigation keys
+Keyboard navigation keys
 
 * Left - frequency knob down
 * Right - frequency knob up
@@ -27,6 +27,13 @@ Responds to keyboard navigation keys
 * Down - fine frequency down
 * Page Up - level up
 * Page Down - level down
+
+### Using
+The frequency knob responds to mouse dragging. The fine frequency and
+level sliders allow for fine adjustments of frequency and output
+level. The frequency knob is also adjustable using the left and right
+arrow keys. The fine frequency slider is adjustable using the up and
+down arrow keys, the level slider using the page up and down keys.
 
 ### Downloads
 Windows and Mac versions [here][4], Android version [here][5].

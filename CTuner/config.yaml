@@ -7,9 +7,6 @@ theme: kraiklyn
 publishDir: d:/c/github/ctuner/docs
 metaDataFormat: yaml
 
-pygmentsCodeFences: true
-pygmentsStyle: monokailight
-
 params:
   sidebarColor: cyan
   customCss:
