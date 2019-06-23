@@ -169,7 +169,7 @@ stty: 'standard input': Inappropriate ioctl for device
   [i] Enabling blocking
   [✓] Reloading DNS service
   [✓] Pi-hole Enabled
-  [i] Web Interface password: kE-_ddH2
+  [i] Web Interface password: ********
   [i] This can be changed using 'pihole -a -p'
 
   [i] View the web interface at http://pi.hole/admin or http://192.168.1.252/admin
@@ -197,6 +197,39 @@ latest version of [cloudflared][8] downloaded from their
 looked at the cloudflared issues on [GitHub][10], others have had this
 problem and used an older version which did work on an early Pi.
 
+I couldn't find any links to earlier versions, so I installed the
+[Go][11] compiler on the Pi and attempted to build the latest version
+of the cloudflared. This failed, and having looked again at the
+cloudflared issues, I found I needed a later version of the compiler
+than came with Rasbian. So I downloaded the latest version of the
+compiler from the [Go Downloads][12] page, installed it and
+successfully built cloudflared.
+
+This version stopped working after a day due to running out of file
+handles. I looked at the `Makefile` that came with the cloudflared
+sources and decided to build the latest released version.
+
+```shell
+pi@jennifer:~ $ cd gocode/src/github.com/cloudflare/cloudflared/
+pi@jennifer:~/gocode/src/github.com/cloudflare/cloudflared $ git checkout 2019.5.0
+Note: checking out '2019.5.0'.
+...
+HEAD is now at 4bff1ef... Release 2019.5.0
+pi@jennifer:~/gocode/src/github.com/cloudflare/cloudflared $ export PATH=$PATH:/usr/local/go/bin
+pi@jennifer:~/gocode/src/github.com/cloudflare/cloudflared $ export GOPATH=~/gocode
+pi@jennifer:~/gocode/src/github.com/cloudflare/cloudflared $ go clean
+pi@jennifer:~/gocode/src/github.com/cloudflare/cloudflared $ make cloudflared
+go build -v -ldflags='-X "main.Version=2019.5.0" -X "main.BuildTime=2019-06-03-1717 UTC"' github.com/cloudflare/cloudflared/cmd/cloudflared
+pi@jennifer:~/gocode/src/github.com/cloudflare/cloudflared $ ./cloudflared -v
+cloudflared version 2019.5.0 (built 2019-06-03-1717 UTC)
+```
+
+This version ran for about a week before failing with the same error.
+I used the [Wayback Machine][13] to find an [earlier version][14] of
+cloudflared that might run on the Pi 1B. This turned out to be version
+2018.4.6. I have that version on soak test as third DNS choice in
+Pi-hole, so it may take a while to fail if it is going to.
+
  [1]: https://pi-hole.net
  [2]: https://www.raspberrypi.org/downloads/raspbian
  [3]: https://github.com/pi-hole/pi-hole/#one-step-automated-install
@@ -207,3 +240,8 @@ problem and used an older version which did work on an early Pi.
  [8]: https://developers.cloudflare.com/1.1.1.1/dns-over-https/cloudflared-proxy
  [9]: https://developers.cloudflare.com/argo-tunnel/downloads
  [10]: https://github.com/cloudflare/cloudflared/issues
+ [11]: https://golang.org
+ [12]: https://golang.org/dl
+ [13]: https://web.archive.org/web/20180524132333/https://developers.cloudflare.com/argo-tunnel/downloads
+ [14]: https://web.archive.org/web/20180419005946/https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-linux-arm.tgz
+ 
