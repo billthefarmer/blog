@@ -1,5 +1,5 @@
 ---
-title: "Pi-hole Cloudflare Setup"
+title: "Pi-hole Cloudflare, DNSCrypt, Unbound Setup"
 author: Bill Farmer
 type: post
 date: 2019-06-17T18:30:39+01:00
@@ -13,6 +13,8 @@ keywords:
   - raspberry
   - pi
 ---
+
+### Pi-hole
 
 I came across a reference to [Pi-hole][1] recently, so as my old pi
 has been gathering dust, I thought I would try it out. The pi already
@@ -189,6 +191,8 @@ configuration. I opted to use the ethernet port and use IP address
 DNS configuration, so I changed the default DNS to `192.168.1.252` so
 I don't have to make any changes to DNS configuration elsewhere.
 
+### Cloudflared
+
 There is a mention in the [Pi-hole docs][5] of [Configuring
 DNS-Over-HTTPS on Pi-hole][6] using [Cloudflare][8]. This is useful to
 stop your [ISP][7] from snooping on your browsing habits. However, the
@@ -230,6 +234,23 @@ cloudflared that might run on the Pi 1B. This turned out to be version
 2018.4.6. I have that version on soak test as third DNS choice in
 Pi-hole, so it may take a while to fail if it is going to.
 
+After about a week I made cloudflared the default choice. After a
+while there started to be problems with missing images in web sites
+and having to refresh the browser to get a web site to load.
+
+### DNSCrypt
+
+Next I tried [DNSCrypt][15]. After following the installation
+instructions for Pi-hole, I tried this for a while. I got the same
+sort of symptoms as cloudflared above. It does periodically write an
+interesting list of DNS resolvers and response times to the syslog.
+
+### Unbound
+
+So I tried [unbound][16]. This gives a recursive DNS resolver and
+works very well. It has now been running as the default DNS choice for
+Pi-hole for several days without problems.
+
  [1]: https://pi-hole.net
  [2]: https://www.raspberrypi.org/downloads/raspbian
  [3]: https://github.com/pi-hole/pi-hole/#one-step-automated-install
@@ -244,4 +265,5 @@ Pi-hole, so it may take a while to fail if it is going to.
  [12]: https://golang.org/dl
  [13]: https://web.archive.org/web/20180524132333/https://developers.cloudflare.com/argo-tunnel/downloads
  [14]: https://web.archive.org/web/20180419005946/https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-linux-arm.tgz
- 
+ [15]: https://github.com/pi-hole/pi-hole/wiki/DNSCrypt-2.0 
+ [16]: https://docs.pi-hole.net/guides/unbound

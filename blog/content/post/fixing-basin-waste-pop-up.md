@@ -46,7 +46,7 @@ right type, there's more than one.
 
 ![Plug][2]
 
-I have found it asmost impossible to get the correct replacement O
+I have found it almost impossible to get the correct replacement O
 ring type washer for the pop up plug. The only ones I found that might
 be correct cost more than the whole basin waste assembly complete. I
 ended up with some 38mm O rings from [Amazon][4] that weren't quite
