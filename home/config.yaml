@@ -6,9 +6,6 @@ publishDir: d:/billthefarmer.github.io/
 
 menu:
   main:
-    - name: Old Shoreham Buccaneers
-      url: http://billthefarmer.users.sourceforge.net/buccaneers
-      weight: 10
     - name: What-o-Clock
       url: http://billthefarmer.users.sourceforge.net/what-o-clock
       weight: 7
@@ -33,7 +30,7 @@ params:
     github: billthefarmer
     gitlab: williamjfarmer
     copyright:
-      - Copyright &copy; 2018 Bill Farmer
+      - Copyright &copy; 2019 Bill Farmer
 
   sharingicons:
     hide: true
