@@ -37,14 +37,14 @@ embedded map from their map page and customise it.
 
 ```html
 <iframe width="425" height="350"
-        src="http://www.openstreetmap.org/export/embed.html?
+        src="https://www.openstreetmap.org/export/embed.html?
         bbox=3.1528186798095708%2C42.2577141531011%2C3.1886529922485356%2C42.27241862881183&amp;
         layer=mapnik"
         style="border: 1px solid black">
 </iframe>
 <br/>
 <small>
-  <a href="http://www.openstreetmap.org/#map=16/42.2651/3.1707">
+  <a href="https://www.openstreetmap.org/#map=16/42.2651/3.1707">
     View Larger Map
   </a>
 </small>
@@ -69,11 +69,11 @@ maps. The template for the iframe is
 
 ```html
     "<iframe width=\"560\" height=\"420\"
-    src=\"http://www.openstreetmap.org/export/embed.html?
+    src=\"https://www.openstreetmap.org/export/embed.html?
     bbox=%f,%f,%f,%f&amp;layer=mapnik\"
     style=\"border: 1px solid black\">
     </iframe><br/>
-    <small><a href=\"http://www.openstreetmap.org/#map=16/%f/%f\">
+    <small><a href=\"https://www.openstreetmap.org/#map=16/%f/%f\">
     View Larger Map</a></small>\n"
 ```
 
@@ -169,6 +169,15 @@ similar to the above with updated patterns and templates.
 
 The pattern is just to match a geo Uri, the template is to output a
 geo Uri.
+
+In recent versions of android `http://` URLs can be rejected by the
+web view, so I have updated the code to use `https://`. Also, to allow
+the use of `http://` URLs in the markdown, I have added a line to the
+`application` element in the app manifest.
+
+```xml
+      android:usesCleartextTraffic="true"
+```
 
  [1]: https://github.com/marcoM32
  [2]: http://www.openstreetmap.org
