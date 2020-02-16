@@ -2,7 +2,7 @@
 title: Media
 date: 2020-02-15T19:39:29Z
 anchor: media
-weight: 130
+weight: 140
 ---
 
 You may store media in the note storage folder and reference them in

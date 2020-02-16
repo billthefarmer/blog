@@ -2,7 +2,7 @@
 title: Text
 date: 2020-02-15T19:39:20Z
 anchor: text
-weight: 120
+weight: 130
 ---
 
 You may receive text clips from another app. The text will be added at

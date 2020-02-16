@@ -1,10 +1,10 @@
-baseURL: http://example.org/
+baseURL: https://billthefarmer.github.io/notes/
 languageCode: en-gb
 
 title: Notes
 copyright: Copyright &copy; 2020 Bill Farmer
 theme: kraiklyn
-publishDir: d:/c/github/notes/docs
+publishDir: d:/android/notes/docs
 metaDataFormat: yaml
 
 params:
