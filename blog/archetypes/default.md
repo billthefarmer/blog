@@ -1,6 +1,9 @@
 ---
-title: "{{ replace .TranslationBaseName "-" " " | title }}"
+title: {{ replace .Name "-" " " | title }}
+author: Bill Farmer
 date: {{ .Date }}
-draft: true
+url: /{{ .Name }}/
+categories:
+keywords:
 ---
 

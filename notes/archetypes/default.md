@@ -1,6 +1,7 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
+title: {{ replace .Name "-" " " | title }}
 date: {{ .Date }}
-draft: true
+anchor: {{ .Name }}
+weight: 00
 ---
 
