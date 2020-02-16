@@ -34,18 +34,18 @@
     <header class="nav">
       <div class="top-bar">
         <div class="row column">
-          <div class="top-bar-left">
+          <div class="top-bar-left"><!--
             <ul class="menu">
               <li><a href="{{ .Site.BaseURL | absLangURL }}">
                   {{ .Site.Title | safeHTML }}
                 </a></li>
             </ul>
-          </div>
+          </div>-->
           <div class="top-bar-right">
-            <ul class="menu">
+            <ul class="menu"><!--
               <li class="{{ if .IsHome }}active{{ end }}"><a href="{{ .Site.BaseURL | absLangURL }}">
                 {{ i18n "home" }}
-              </a></li>
+              </a></li>-->
               {{ if .Site.Params.custom_navbar }}
                 {{ range .Site.Menus.navbar }}
                   <li><a href="{{.URL | absURL }}">
