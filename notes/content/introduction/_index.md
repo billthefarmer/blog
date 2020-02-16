@@ -9,6 +9,5 @@ weight: 10
 whatever you wish to write about.
 
 ![Notes](images/Notes.png)
-![Settings](images/Notes-settings.png)
 
  [1]: https://github.com/billthefarmer/notes

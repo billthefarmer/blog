@@ -5,3 +5,4 @@ anchor: settings
 weight: 00
 ---
 
+![Settings](images/Notes-settings.png)
