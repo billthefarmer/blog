@@ -1,0 +1,13 @@
+baseURL: http://example.org/
+languageCode: en-gb
+
+title: Diary
+copyright: Copyright &copy; 2020 Bill Farmer
+theme: kraiklyn
+publishDir: d:/android/notes/docs
+metaDataFormat: yaml
+
+params:
+  sidebarColor: cyan
+  customCss:
+      - css/custom.css
