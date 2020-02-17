@@ -8,6 +8,12 @@ publishDir: d:/android/notes/docs
 metaDataFormat: yaml
 
 params:
+  logo: images/Icon.png
+  logoLink: https://github.com/billthefarmer/notes
+  fdroid: https://f-droid.org/wiki/images/c/ca/F-Droid-button_available-on_smaller.png
+  fdroidLink: https://f-droid.org/packages/org.billthefarmer.notes
+  release: https://img.shields.io/github/v/release/billthefarmer/notes.svg?logo=github
+  releaseLink: https://github.com/billthefarmer/notes/releases
   sidebarColor: cyan
   customCss:
       - css/custom.css

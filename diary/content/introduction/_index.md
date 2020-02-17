@@ -5,10 +5,11 @@ anchor: introduction
 weight: 10
 ---
 
-Diary is an innovative app where you could keep your personal notes or
-personal journal.
+[Diary][1] is an android diary which can be used as a diary or journal,
+or any way you choose.
 
-![Diary][1] ![Calendar][2]
+![Diary][2] ![Calendar][3]
 
- [1]: images/Diary-phone.png
- [2]: images/Calendar-phone.png
+ [1]: https://github.com/billthefarmer/diary
+ [2]: images/Diary-phone.png
+ [3]: images/Calendar-phone.png

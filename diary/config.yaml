@@ -1,13 +1,19 @@
-baseURL: http://example.org/
+baseURL: https://billthefarmer.github.io/notes/
 languageCode: en-gb
 
 title: Diary
 copyright: Copyright &copy; 2020 Bill Farmer
 theme: kraiklyn
-publishDir: d:/android/notes/docs
+publishDir: d:/android/diary/docs
 metaDataFormat: yaml
 
 params:
+  logo: images/Icon.png
+  logoLink: https://github.com/billthefarmer/diary
+  fdroid: https://f-droid.org/wiki/images/c/ca/F-Droid-button_available-on_smaller.png
+  fdroidLink: https://f-droid.org/packages/org.billthefarmer.diary
+  release: https://img.shields.io/github/v/release/billthefarmer/diary.svg?logo=github
+  releaseLink: https://github.com/billthefarmer/diary/releases
   sidebarColor: cyan
   customCss:
       - css/custom.css

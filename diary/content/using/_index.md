@@ -5,3 +5,4 @@ anchor: using
 weight: 30
 ---
 
+![Calendar](images/Calendar-landscape.png)
