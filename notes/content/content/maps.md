@@ -2,7 +2,7 @@
 title: Maps
 date: 2020-02-15T19:46:42Z
 anchor: maps
-weight: 170
+weight: 360
 ---
 
 You may put [OpenStreetMap](http://www.openstreetmap.org) maps in

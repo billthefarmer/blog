@@ -2,7 +2,7 @@
 title: Editing
 date: 2020-02-15T19:29:43Z
 anchor: editing
-weight: 80
+weight: 240
 ---
 
 In the formatted view the **Edit** button floating above the page

@@ -2,7 +2,7 @@
 title: Settings
 date: 2020-02-16T15:22:26Z
 anchor: settings
-weight: 260
+weight: 510
 ---
 
 * **Folder** &ndash; Change notes storage folder. Caution &ndash;

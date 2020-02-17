@@ -2,7 +2,7 @@
 title: Help
 date: 2020-02-15T19:28:52Z
 anchor: help
-weight: 60
+weight: 220
 ---
 
 You may put a link `[Help](file:///android_asset/help.md)` to the help

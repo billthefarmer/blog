@@ -2,7 +2,7 @@
 title: Backup
 date: 2020-02-16T15:21:07Z
 anchor: backup
-weight: 220
+weight: 410
 ---
 
 You may create a backup of all your notes in a zip file. The file

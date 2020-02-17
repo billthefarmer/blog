@@ -1,8 +1,8 @@
 ---
-title: Sd Cards
+title: SD Cards
 date: 2020-02-16T15:22:08Z
 anchor: sd-cards
-weight: 240
+weight: 430
 ---
 
 Android allows removable SD cards to be used like a USB stick or as

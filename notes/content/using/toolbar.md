@@ -2,7 +2,7 @@
 title: Toolbar
 date: 2020-02-15T19:13:22Z
 anchor: toolbar
-weight: 50
+weight: 210
 ---
 
 The toolbar items which won't necessarily all appear at once:

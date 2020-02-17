@@ -2,7 +2,7 @@
 title: Introduction
 date: 2020-02-14T13:05:17Z
 anchor: introduction
-weight: 10
+weight: 100
 ---
 
 [Notes][1] is an android notebook for keeping notes or a journal about

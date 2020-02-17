@@ -2,7 +2,7 @@
 title: Scripts
 date: 2020-02-16T15:17:12Z
 anchor: scripts
-weight: 200
+weight: 390
 ---
 
 You may add custom javascript to be loaded into all notes by placing a

@@ -2,7 +2,7 @@
 title: "Using"
 date: 2020-02-14T13:05:31Z
 anchor: using
-weight: 40
+weight: 200
 ---
 
 [Notes][1] is based on elements from my [Diary][2] and [Editor][3]

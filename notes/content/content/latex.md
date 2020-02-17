@@ -2,7 +2,7 @@
 title: Latex
 date: 2020-02-15T19:46:17Z
 anchor: latex
-weight: 150
+weight: 340
 ---
 
 Notes doesn't support [LaTeX](https://en.wikipedia.org/wiki/LaTeX),
