@@ -2,7 +2,7 @@
 title: Text
 date: 2020-02-16T19:12:44Z
 anchor: text
-weight: 140
+weight: 310
 ---
 
 You may receive text clips from another app. A date picker will pop

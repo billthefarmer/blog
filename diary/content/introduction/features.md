@@ -2,7 +2,7 @@
 title: Features
 date: 2020-02-16T19:09:23Z
 anchor: features
-weight: 20
+weight: 110
 ---
 
 * Entries saved in plain text files

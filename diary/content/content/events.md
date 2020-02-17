@@ -2,7 +2,7 @@
 title: Events
 date: 2020-02-17T09:32:41Z
 anchor: events
-weight: 190
+weight: 360
 ---
 
 You may add an event to the calendar by adding a line to a diary entry

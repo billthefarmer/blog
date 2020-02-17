@@ -2,7 +2,7 @@
 title: Scripts
 date: 2020-02-16T19:12:20Z
 anchor: scripts
-weight: 220
+weight: 390
 ---
 
 You may add custom javascript to be loaded into all diary pages by

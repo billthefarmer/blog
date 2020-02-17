@@ -2,7 +2,7 @@
 title: Media
 date: 2020-02-16T19:12:10Z
 anchor: media
-weight: 150
+weight: 320
 ---
 
 You may store media in the diary storage folders and reference them in

@@ -2,7 +2,7 @@
 title: "Introduction"
 date: 2020-02-16T19:06:23Z
 anchor: introduction
-weight: 10
+weight: 100
 ---
 
 [Diary][1] is an android diary which can be used as a diary or journal,

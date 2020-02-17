@@ -2,7 +2,7 @@
 title: Cursor Position
 date: 2020-02-17T09:36:25Z
 anchor: cursor
-weight: 200
+weight: 370
 ---
 
 You may put a line in an entry to control or remember the edit cursor

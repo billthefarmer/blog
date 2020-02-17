@@ -2,7 +2,7 @@
 title: Sync
 date: 2020-02-17T09:44:17Z
 anchor: sync
-weight: 250
+weight: 420
 ---
 
 Android cloud storage apps when last tested appeared not to be capable

@@ -2,7 +2,7 @@
 title: Editing
 date: 2020-02-16T19:15:38Z
 anchor: editing
-weight: 70
+weight: 240
 ---
 
 In markdown mode the **Edit** button floating above the page allows

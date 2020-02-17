@@ -2,7 +2,7 @@
 title: Styles
 date: 2020-02-16T19:12:37Z
 anchor: styles
-weight: 210
+weight: 380
 ---
 
 You may add custom styles to the markdown formatting by placing a

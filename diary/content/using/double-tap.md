@@ -2,7 +2,7 @@
 title: Double Tap
 date: 2020-02-16T19:15:28Z
 anchor: double-tap
-weight: 60
+weight: 230
 ---
 
 In the formatted view a double tap on the screen will switch to the

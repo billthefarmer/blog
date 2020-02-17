@@ -2,7 +2,7 @@
 title: Latex
 date: 2020-02-16T19:10:57Z
 anchor: latex
-weight: 160
+weight: 330
 ---
 
 Diary doesn't support [LaTeX](https://en.wikipedia.org/wiki/LaTeX),

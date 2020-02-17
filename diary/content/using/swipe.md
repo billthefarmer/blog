@@ -2,7 +2,7 @@
 title: Swipe
 date: 2020-02-16T19:28:32Z
 anchor: swipe
-weight: 50
+weight: 220
 ---
 
 #### Left and right
