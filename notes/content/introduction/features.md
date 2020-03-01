@@ -10,7 +10,7 @@ weight: 110
 * Use markdown formatting
 * Optional note template
 * Display media
-* Display [OpenStreetMap](http://www.openstreetmap.org/) maps
+* Display [OpenStreetMap](https://www.openstreetmap.org/) maps
 * Share notes
 * Add date and time
 * Add media from media providers
