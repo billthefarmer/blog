@@ -42,10 +42,10 @@
             </ul>
           </div>-->
           <div class="top-bar-right">
-            <ul class="menu"><!--
+            <ul class="menu">
               <li class="{{ if .IsHome }}active{{ end }}"><a href="{{ .Site.BaseURL | absLangURL }}">
                 {{ i18n "home" }}
-              </a></li>-->
+              </a></li>
               {{ if .Site.Params.custom_navbar }}
                 {{ range .Site.Menus.navbar }}
                   <li><a href="{{.URL | absURL }}">

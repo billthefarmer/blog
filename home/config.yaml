@@ -50,6 +50,9 @@ params:
     hide: false
     title: Recent projects
     links:
+    - title: Notes
+      url: https://github.com/billthefarmer/notes
+      description: Android notebook
     - title: Diary
       url: https://github.com/billthefarmer/diary
       description: Android diary
