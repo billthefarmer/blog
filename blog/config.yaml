@@ -5,8 +5,10 @@ copyright: Copyright &copy; 2019 Bill Farmer
 theme: theme-hugo-foundation6
 publishDir: d:/billthefarmer.github.io/blog/
 metaDataFormat: yaml
-pygmentsCodeFences: true
-pygmentsStyle: emacs
+markup:
+  highlight:
+    codeFences: true
+    style: emacs
 
 disableKinds:
   - section

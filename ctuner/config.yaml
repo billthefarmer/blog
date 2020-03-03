@@ -6,8 +6,18 @@ copyright: Copyright &copy; 2018 Bill Farmer
 theme: kraiklyn
 publishDir: d:/c/github/ctuner/docs
 metaDataFormat: yaml
+markup:
+  highlight:
+    codeFences: true
+    style: emacs
 
 params:
+  logo: images/Tuner.png
+  logoLink: https://github.com/billthefarmer/ctuner
+  fdroid: https://f-droid.org/wiki/images/c/ca/F-Droid-button_available-on_smaller.png
+  fdroidLink: https://f-droid.org/packages/org.billthefarmer.tuner
+  release: https://img.shields.io/github/v/release/billthefarmer/ctuner.svg?logo=github
+  releaseLink: https://github.com/billthefarmer/ctuner/releases
   sidebarColor: cyan
   customCss:
       - css/custom.css
