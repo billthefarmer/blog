@@ -1,0 +1,19 @@
+baseURL: https://billthefarmer.github.io/currency/
+languageCode: en-gb
+
+title: Currency
+copyright: Copyright &copy; 2020 Bill Farmer
+theme: kraiklyn
+publishDir: d:/android/currency/docs
+metaDataFormat: yaml
+
+params:
+  logo: images/icon.png
+  logoLink: https://github.com/billthefarmer/currency
+  fdroid: https://f-droid.org/wiki/images/c/ca/F-Droid-button_available-on_smaller.png
+  fdroidLink: https://f-droid.org/packages/org.billthefarmer.currency
+  release: https://img.shields.io/github/v/release/billthefarmer/currency.svg?logo=github
+  releaseLink: https://github.com/billthefarmer/currency/releases
+  sidebarColor: cyan
+  customCss:
+      - css/custom.css
