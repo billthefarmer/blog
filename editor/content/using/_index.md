@@ -5,4 +5,4 @@ anchor: using
 weight: 200
 ---
 
-![Syntax](images/Editor-syntax.png)
+![Toolbar](images/Editor-landscape.png)
