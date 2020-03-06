@@ -1,11 +1,11 @@
 <div>
-  <a href="{{ .Site.Params.logoLink }}">
-    <img src="{{ .Site.Params.logo }}" style="max-width: 20%" />
+  {{ with .Site.Params.logo }}
+    {{ range . }}
+  <a href="{{ .link }}" target="_blank" >
+    <img src="{{ .image }}"
+         {{ with .width }} style="max-width: {{ . }}"
+         {{ end }} />
   </a>
-  <a href="{{ .Site.Params.fdroidLink }}">
-    <img src="{{ .Site.Params.fdroid }}" />
-  </a>
-  <a href="{{ .Site.Params.releaseLink }}">
-    <img src="{{ .Site.Params.release }}" />
-  </a>
+    {{ end }}
+  {{ end }}
 </div>

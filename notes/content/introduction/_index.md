@@ -8,6 +8,6 @@ weight: 100
 [Notes][1] is an android notebook for keeping notes or a journal about
 whatever you wish to write about.
 
-![Notes](images/Notes.png)
+![Notes](images/Notes.png) ![Help](images/Notes-help.png)
 
  [1]: https://github.com/billthefarmer/notes
