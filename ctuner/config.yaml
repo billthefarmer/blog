@@ -12,12 +12,14 @@ markup:
     style: emacs
 
 params:
-  logo: images/Tuner.png
-  logoLink: https://github.com/billthefarmer/ctuner
-  fdroid: https://f-droid.org/wiki/images/c/ca/F-Droid-button_available-on_smaller.png
-  fdroidLink: https://f-droid.org/packages/org.billthefarmer.tuner
-  release: https://img.shields.io/github/v/release/billthefarmer/ctuner.svg?logo=github
-  releaseLink: https://github.com/billthefarmer/ctuner/releases
+  logo:
+    - image: images/Tuner.png
+      link: https://github.com/billthefarmer/ctuner
+      width: 25%
+    - image: https://f-droid.org/wiki/images/c/ca/F-Droid-button_available-on_smaller.png
+      link: https://f-droid.org/packages/org.billthefarmer.tuner
+    - image: https://img.shields.io/github/v/release/billthefarmer/ctuner.svg?logo=github
+      link: https://github.com/billthefarmer/ctuner/releases
   sidebarColor: cyan
   customCss:
       - css/custom.css

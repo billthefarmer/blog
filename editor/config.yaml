@@ -8,12 +8,14 @@ publishDir: d:/android/editor/docs
 metaDataFormat: yaml
 
 params:
-  logo: images/icon.png
-  logoLink: https://github.com/billthefarmer/editor
-  fdroid: https://f-droid.org/wiki/images/c/ca/F-Droid-button_available-on_smaller.png
-  fdroidLink: https://f-droid.org/packages/org.billthefarmer.editor
-  release: https://img.shields.io/github/v/release/billthefarmer/editor.svg?logo=github
-  releaseLink: https://github.com/billthefarmer/editor/releases
+  logo:
+    - image: images/icon.png
+      link: https://github.com/billthefarmer/editor
+      width: 25%
+    - image: https://f-droid.org/wiki/images/c/ca/F-Droid-button_available-on_smaller.png
+      link: https://f-droid.org/packages/org.billthefarmer.editor
+    - image: https://img.shields.io/github/v/release/billthefarmer/editor.svg?logo=github
+      link: https://github.com/billthefarmer/editor/releases
   sidebarColor: cyan
   customCss:
       - css/custom.css
