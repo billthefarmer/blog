@@ -20,6 +20,8 @@ params:
   date_format: Monday January 2nd 2006
   avatar:
     hide: true
+  rss:
+    hide: true
   custom_css:
     - css/sidebar.css
 
@@ -30,7 +32,7 @@ params:
     github: billthefarmer
     gitlab: williamjfarmer
     copyright:
-      - Copyright &copy; 2019 Bill Farmer
+      - Copyright &copy; 2020 Bill Farmer
 
   sharingicons:
     hide: true
@@ -39,12 +41,13 @@ params:
     hide: false
     title: Bill Farmer
     image: /images/20131726.jpg
-    content: "I am retired, a morris musician and an itinerant
-    developer. I was a chartered electrical engineer until I stopped
-    paying for a journal I couldn’t understand. Over the course of a
-    long career working for the local electrick light company I
-    developed various bits and pieces of software in so many different
-    languages I can no longer remember them all."
+    content:
+      I am retired, a morris musician and an itinerant developer. I
+      was a chartered electrical engineer until I stopped paying for a
+      journal I couldn’t understand. Over the course of a long career
+      working for the local electrick light company I developed
+      various bits and pieces of software in so many different
+      languages I can no longer remember them all.
 
   portfolio:
     hide: false
