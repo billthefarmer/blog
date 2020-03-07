@@ -34,14 +34,7 @@
     <header class="nav">
       <div class="top-bar">
         <div class="row column">
-          <div class="top-bar-left"><!--
-            <ul class="menu">
-              <li><a href="{{ .Site.BaseURL | absLangURL }}">
-                  {{ .Site.Title | safeHTML }}
-                </a></li>
-            </ul>
-          </div>-->
-          <div class="top-bar-right">
+          <div class="top-bar-left">
             <ul class="menu">
               <li class="{{ if .IsHome }}active{{ end }}"><a href="{{ .Site.BaseURL | absLangURL }}">
                 {{ i18n "home" }}
@@ -53,7 +46,7 @@
                   </a></li>
                 {{ end }}
               {{ else }}
-                {{ range where .Site.Pages "Type" "!=" "post" }}
+                {{ range where (where (where .Site.Pages ".Type" "!=" "post") ".Kind" "!=" "home") ".Kind" "!=" "taxonomyTerm" }}
                   <li><a href="{{ .Permalink }}">
                     {{ .Title }}
                   </a></li>
