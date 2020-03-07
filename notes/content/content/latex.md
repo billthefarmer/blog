@@ -15,3 +15,6 @@ images.
     \sum_{i=1}^{n}x_{i}^{2}
 
 ![Math](images/Latex.png)
+
+If you don't intend to change the image, you can copy it and use that
+instead, which will then work offline.
