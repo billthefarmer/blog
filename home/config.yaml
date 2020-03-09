@@ -6,15 +6,26 @@ publishDir: d:/billthefarmer.github.io/
 
 menu:
   main:
-    - name: What-o-Clock
-      url: http://billthefarmer.users.sourceforge.net/what-o-clock
-      weight: 7
-    - name: Sourceforge
-      url: http://sourceforge.net/users/billthefarmer
-      weight: 6
     - name: Blog
       url: https://billthefarmer.github.io/blog
-      weight: 5
+      weight: 10
+    - name: Audio Tools
+      url: https://billthefarmer.github.io/audiotools
+      weight: 20
+    - name: Currency
+      url: https://billthefarmer.github.io/currency
+      weight: 30
+    - name: Diary
+      url: https://billthefarmer.github.io/diary
+      weight: 40
+    - name: Editor
+      url: https://billthefarmer.github.io/editor
+      weight: 50
+    - name: Notes
+      url: https://billthefarmer.github.io/notes
+      weight: 60
+    - name: Tuner
+      url: https://billthefarmer.github.io/ctuner
 
 params:
   date_format: Monday January 2nd 2006
