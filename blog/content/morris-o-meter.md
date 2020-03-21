@@ -30,12 +30,13 @@ result:
   - You got %d%. Perhaps if you keep at it things might improve
   - "You got %d%. Perhaps you'll get a different squire next year"
   - You got %d%. Are you up for squire next year?
-colours: lightskyblue,darkblue,black,black
+colours: lightgreen,darkgreen,black,black
 more: http://billthefarmer.users.sourceforge.net/buccaneers
 
 ---
+
 <h2 style="text-align: center;">
-  <a id="meter"></a>The <a title="http://billthefarmer.users.sourceforge.net/buccaneers" href="http://billthefarmer.users.sourceforge.net/buccaneers" target="_blank">Old Shoreham Buccaneers</a> very own Morris-o-meter
+  <a id="meter"></a>The <a title="http://billthefarmer.users.sourceforge.net/buccaneers" href="http://www.thakeham-morris.org.uk" target="_blank">Thakeham Morris</a>-o-meter
 </h2>
 
 {{< whatever-o-meter >}}

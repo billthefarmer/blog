@@ -5,4 +5,4 @@ anchor: content
 weight: 300
 ---
 
-![Menu](images/Notes-menu.png)
+![Menu](images/Notes-menu.png) ![Find](images/Notes-find.png)

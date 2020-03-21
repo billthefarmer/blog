@@ -12,7 +12,7 @@ params:
     - image: images/Icon.png
       link: https://github.com/billthefarmer/audiotools
       width: 25%
-    - image: https://img.shields.io/github/v/release/billthefarmer/ctuner.svg?logo=github
+    - image: https://img.shields.io/github/v/release/billthefarmer/audiotools.svg?logo=github
       link: https://github.com/billthefarmer/audiotools/releases
   sidebarColor: cyan
   customCss:

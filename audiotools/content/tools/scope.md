@@ -7,7 +7,8 @@ weight: 16
 
 |     |     |
 | --- | --- |
-| ![Scope][1] | ![Scope-android][2] |
+| ![Scope][1] | ![Scope-swift][2] |
+| ![Scope-android][3] |   |
 
 
   * Timebase 0.1ms &ndash; 0.5sec
@@ -42,9 +43,10 @@ various level controls in the audio system. The move to start and
 reset toolbar buttons clear the sync level and the cursor.
 
 ### Downloads
-Windows and Mac versions [here][3], Android version [here][4].
+Windows and Mac versions [here][4], Android version [here][5].
 
  [1]: images/Scope.png
- [2]: images/Scope-android.png
- [3]: https://github.com/billthefarmer/audiotools/releases (https://github.com/billthefarmer/audiotools/releases)
- [4]: https://github.com/billthefarmer/scope/releases (https://github.com/billthefarmer/scope/releases)
+ [2]: images/Scope-swift.png
+ [3]: images/Scope-android.png
+ [4]: https://github.com/billthefarmer/audiotools/releases (https://github.com/billthefarmer/audiotools/releases)
+ [5]: https://github.com/billthefarmer/scope/releases (https://github.com/billthefarmer/scope/releases)

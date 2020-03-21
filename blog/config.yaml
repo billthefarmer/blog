@@ -9,6 +9,9 @@ markup:
   highlight:
     codeFences: true
     style: emacs
+  goldmark:
+    renderer:
+      unsafe: true
 
 disableKinds:
   - section
