@@ -10,10 +10,6 @@ weight: 310
 * **WiFi** Update while connected on WiFi only
 * **Roaming** Update while roaming
 
-#### Selection
-
-* **Selection** Select all current currency value text when touched.
-
 #### Numbers
 
 * **Fraction digits** Select the number of digits to display after the
