@@ -18,8 +18,9 @@ And on the menu:
 * **Search** &ndash; incremental search of diary entry
 * **Find all** &ndash; find all diary entries containing search text
 * **Share** &ndash; share current diary entry
-* **Add time** &ndash; Add the current time to diary entry
-* **Add events** &ndash; Add calendar events to diary entry
+* **Use template** &ndash; use template for current entry if empty
+* **Add time** &ndash; add the current time to diary entry
+* **Add events** &ndash; add calendar events to diary entry
 * **Add media** &ndash; show a media picker to select media
 * **Edit styles** &ndash; show an editor to edit the custom styles
 * **Edit script** &ndash; show an editor to edit custom javascript

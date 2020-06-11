@@ -2,9 +2,7 @@
   {{ with .Site.Params.logo }}
     {{ range . }}
   <a href="{{ .link }}" target="_blank" >
-    <img src="{{ .image }}"
-         {{ with .width }} style="max-width: {{ . }}"
-         {{ end }} />
+    <img src="{{ .image }}"{{ with .width }} style="max-width: {{ . }}"{{ end }} />
   </a>
     {{ end }}
   {{ end }}

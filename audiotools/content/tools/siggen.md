@@ -5,10 +5,9 @@ anchor: siggen
 weight: 14
 ---
 
-|     |     |
-| --- | --- |
-| ![SigGen][1] | ![SigGen-swift][2] |
-![SigGen-android][3]
+![SigGen][1] ![SigGen-android][3]
+
+![SigGen-swift][2]
 
 * Frequency range 10Hz - 25KHz
 * Level range 0dB - -80dB

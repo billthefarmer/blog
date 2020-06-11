@@ -5,7 +5,7 @@ anchor: slms
 weight: 20
 ---
 
-![SLMS][1]
+![SLMS][1] ![SLMS][2]
 
  * Frequency range 10Hz - 25KHz
  * Level -80dB &ndash; +3dB
@@ -21,7 +21,8 @@ knob, or left and right keys to adjust selected frequency. Input is
 from the currently selected audio input.
 
 ### Downloads
-Windows and Mac versions [here][2].
+Windows and Mac versions [here][3].
 
-[1]: images/SLMS.png
- [2]: https://github.com/billthefarmer/audiotools/releases (https://github.com/billthefarmer/audiotools/releases)
+ [1]: images/SLMS.png
+ [2]: images/SLMS-swift.png
+ [3]: https://github.com/billthefarmer/audiotools/releases (https://github.com/billthefarmer/audiotools/releases)

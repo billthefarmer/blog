@@ -5,7 +5,7 @@ anchor: lms
 weight: 18
 ---
 
-![LMS][1]
+![LMS][1] ![LMS][2]
 
  * Level -80dB &ndash; +3dB
 
@@ -19,7 +19,8 @@ frequency spectrum display. Input is from the currently selected audio
 input.
 
 ### Downloads
-Windows and Mac versions [here][2].
+Windows and Mac versions [here][3].
 
  [1]: images/LMS.png
- [2]: https://github.com/billthefarmer/audiotools/releases (https://github.com/billthefarmer/audiotools/releases)
+ [2]: images/LMS-swift.png
+ [3]: https://github.com/billthefarmer/audiotools/releases (https://github.com/billthefarmer/audiotools/releases)

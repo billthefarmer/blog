@@ -5,11 +5,7 @@ anchor: scope
 weight: 16
 ---
 
-|     |     |
-| --- | --- |
-| ![Scope][1] | ![Scope-swift][2] |
-| ![Scope-android][3] |   |
-
+![Scope][1] ![Scope-swift][2] ![Scope-android][3]
 
   * Timebase 0.1ms &ndash; 0.5sec
   * Resolution 0.022ms @ 44100 samples/sec
