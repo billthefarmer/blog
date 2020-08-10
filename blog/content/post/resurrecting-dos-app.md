@@ -137,14 +137,14 @@ if this is the case.
 
 The console window which pops up when starting a console app is the
 wrong dimensions for this app which was written for full screen, which
-appears not to be available except ty typing `Alt-Enter` into an
+appears not to be available except by typing `Alt-Enter` into an
 existing console window. The [SetConsoleWindowInfo][5] and
 [SetConsoleScreenBufferSize][6] functions would appear to fix this,
 but in practice didn't work. It was necessary to create a new screen
 buffer with [CreateConsoleScreenBuffer][7] and set it active with
 [SetConsoleActiveScreenBuffer][8]. Doing this ensures the screen
 buffer is the right size and gets rid of any scroll bars. Resizing the
-window or making it full screen destroy the existing display, but
+window or making it full screen destroys the existing display, but
 subsequent output is positioned correctly.
 
 ```c
