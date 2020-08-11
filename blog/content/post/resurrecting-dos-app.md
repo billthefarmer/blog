@@ -33,9 +33,9 @@ to the console functions. Most of it is fairly straight forward, there
 were slight differences in the cursor addressing, but keyboard input
 needed some finessing.
 
-## Keyboard input
-The conio library provided `kbhit()` and `getch` functions. the
-`getch` function returned the character code for normal keys, and a
+### Keyboard input
+The conio library provided `kbhit()` and `getch()` functions. the
+`getch()` function returned the character code for normal keys, and a
 zero followed by a code for special and function keys. Windows
 provides [GetNumberOfConsoleInputEvents()][2] and [ReadConsoleInput()][3]
 functions which offer similar functionality.
@@ -77,9 +77,10 @@ int kbhit()
 ```
 
 The app is in a loop continually calling `kbhit()` and processing keys
-and timed events at the same time. so [WaitForSingleObject()][4] with
-a timeout is used to drop the CPU usage and still allow the timed
-events. Shift, control, alt and caps lock key events are discarded.
+and timed actions at the same time, using a lot of CPU. So
+[WaitForSingleObject()][4] with a timeout is used to drop the CPU
+usage and still allow the timed actions. Shift, control, alt and caps
+lock key events are discarded.
 
 ```c
 int getch()
@@ -127,13 +128,13 @@ int getch()
 
 If the key is not a normal key, return zero, set a flag, and don't
 read the event. Next time around read the event and return the
-code. The conio library return different codes for special keys if the
-shit or alt keys are pressed and the app uses this, so add an offset
-if this is the case.
+code. The conio library returned different codes for special keys if
+the shift or alt keys are pressed and the app uses this, so add an
+offset if this is the case.
 
 ![Cadec][9]
 
-## Console output
+### Console output
 
 The console window which pops up when starting a console app is the
 wrong dimensions for this app which was written for full screen, which
