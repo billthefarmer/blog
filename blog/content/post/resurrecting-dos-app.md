@@ -33,6 +33,8 @@ to the console functions. Most of it is fairly straight forward, there
 were slight differences in the cursor addressing, but keyboard input
 needed some finessing.
 
+![RSX][10]
+
 ### Keyboard input
 The conio library provided `kbhit()` and `getch()` functions. the
 `getch()` function returned the character code for normal keys, and a
@@ -208,5 +210,6 @@ To tidy up, save the old handle and close it when done.
  [6]: https://docs.microsoft.com/en-us/windows/console/setconsolescreenbuffersize
  [7]: https://docs.microsoft.com/en-us/windows/console/createconsolescreenbuffer
  [8]: https://docs.microsoft.com/en-us/windows/console/setconsoleactivescreenbuffer
- [9]: images/2020/08/Cadec.png
+ [9]: images/2020/08/Cadec.png "CADEC display"
+ [10]: images/2020/08/RSX.png "RSX startup"
  
