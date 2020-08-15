@@ -50,8 +50,8 @@ deal with this.
 // kbhit
 int kbhit()
 {
-    DWORD n;
     INPUT_RECORD record;
+    DWORD n;
 
     // Wait for something to happen
     WaitForSingleObject(hConsoleInput, TIMER);
@@ -87,9 +87,9 @@ lock key events are discarded.
 ```c
 int getch()
 {
-    DWORD n;
     INPUT_RECORD record;
     static BOOL special;
+    DWORD n;
 
     // If the char is zero, return zero, but don't read event
     PeekConsoleInput(hConsoleInput, &record, 1, &n);
@@ -142,13 +142,10 @@ The console window which pops up when starting a console app is the
 wrong dimensions for this app which was written for full screen, which
 appears not to be available except by typing `Alt-Enter` into an
 existing console window. The [SetConsoleWindowInfo][5] and
-[SetConsoleScreenBufferSize][6] functions would appear to fix this,
-but in practice didn't work. It was necessary to create a new screen
-buffer with [CreateConsoleScreenBuffer][7] and set it active with
-[SetConsoleActiveScreenBuffer][8]. Doing this ensures the screen
-buffer is the right size and gets rid of any scroll bars. Resizing the
-window or making it full screen destroys the existing display, but
-subsequent output is positioned correctly.
+[SetConsoleScreenBufferSize][6] are used to resize the window and
+ensure the screen buffer is the right size and get rid of any scroll
+bars. Resizing the window or making it full screen destroys the
+existing display, but subsequent output is positioned correctly.
 
 ```c
 
@@ -156,7 +153,7 @@ subsequent output is positioned correctly.
 void textmode()
 {
     CONSOLE_SCREEN_BUFFER_INFO info;
-    HANDLE handle;
+    COORD size;
     DWORD mode;
 
     // Do it once
@@ -177,30 +174,20 @@ void textmode()
 
         // Resize window
         GetConsoleScreenBufferInfo(hConsoleOutput, &info);
-        info.srWindow.Right = info.srWindow.Left + WIDTH;
-        info.srWindow.Bottom = info.srWindow.Top + HEIGHT;
+        info.srWindow.Right = info.srWindow.Left + SCREEN_WIDTH;
+        info.srWindow.Bottom = info.srWindow.Top + SCREEN_HEIGHT;
         SetConsoleWindowInfo(hConsoleOutput, TRUE, &info.srWindow);
-
-        // Save handle
-        handle = hConsoleOutput;
-
-        // Create new screen buffer to get rid of scroll bars
-        hConsoleOutput =
-            CreateConsoleScreenBuffer(GENERIC_READ | GENERIC_WRITE, 0,
-                                      NULL, CONSOLE_TEXTMODE_BUFFER,
-                                      NULL);
-        SetConsoleActiveScreenBuffer(hConsoleOutput);
+        size.X = BUFFER_WIDTH;
+        size.Y = BUFFER_HEIGHT;
+        SetConsoleScreenBufferSize(hConsoleOutput, size);
 
         // Set code page
         SetConsoleOutputCP(437);
-
-        // Close old handle
-        CloseHandle(handle);
     }
 }
 ```
 
-To tidy up, save the old handle and close it when done.
+Set the code page so the character graphics work.
 
  [1]: https://docs.microsoft.com/en-us/windows/console
  [2]: https://docs.microsoft.com/en-us/windows/console/getnumberofconsoleinputevents
