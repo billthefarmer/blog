@@ -16,17 +16,38 @@ keywords:
 
 Since I wrote [Download streamed video][1] video web sites have upped
 their game to stop downloading. One of the techniques used is to use a
-[M3U][2] playlist and a complicated set of parameters.
+[M3U][2] playlist and a complicated set of parameters. Other
+techniques are to use JavaScript to create a blob and play that, and
+to use a JavaScript browser app which goes into debug mode if you use
+the developer tools.
 
-To handle this it is necessary to use the web browser developer
+To handle a playlist it is necessary to use the web browser developer
 tools. Select the network tab and refresh the relevent web page. Among
 the various files downloaded will be a file with a name like
-`index.m3u8`. The browser may also start preloading some of the video
-segments.
+`720p.h264.mp4` or `index.m3u8`. The browser may also start preloading
+some of the video segments.
 
 ![Url][3]
 
-Copy the url and use `curl` to download it.
+Copy the url. You may be able to play it with `ffplay`. This will
+generate losts of output.
+
+```shell
+$ ffplay https://video3.xhcdn.com/key=LJjdx9Px03F-Y2Zmcw4-Kw,end=1597942800,limit=3/\
+    data=81.174.214.218/speed=0/initial_buffer=275184/media=hlsA/010/877/489/\
+    720p.h264.mp4
+```
+
+If so, you can use `ffmpeg` to download the segments and copy them to
+a new file. Again, lots of output.
+
+```shell
+$ ffmpeg -i https://video3.xhcdn.com/key=+UoaQySV1FrfRWeeVX6dOA,end=1597939200,limit=3/\
+    data=81.174.214.218/speed=0/initial_buffer=846704/media=hlsA/013/857/098/\
+    720p.h264.mp4 -c copy video.mp4
+```
+
+If this doesn't work, use `curl` to download the index file.
 
 ```shell
 $ curl "https://19-12.b.cdn13.com/hls/bsd/4000/sd/8000/014/953/848/2160p.h264.mp4/index.m3u8?\
@@ -64,8 +85,8 @@ $ curl "https://1-384-19-12.b.cdn13.com/hls/bsd/4000/sd/8000/014/953/848/2160p.h
     cdn_hash=fa429b99fe263a5cdb34180778526c39" -o "seg-#1-v1-a1.ts"
 ```
 
-Then use an editor like emacs to remove everything except for the file
-name from the index file.
+Then use an editor like `emacs` or your favourite text editor to
+remove everything except for the file names from the index file.
 
 ```shell
 #EXTM3U
