@@ -13,6 +13,8 @@ keywords:
   - windows
 ---
 
+![Label][0]
+
 Back in the late 90's I wrote an simulation app for an old telecontrol
 system that was being superceded. It was written in Turbo C to run on
 a DOS or Win95 PC.
@@ -189,6 +191,7 @@ void textmode()
 
 Set the code page so the character graphics work.
 
+ [0]: images/2020/08/Label.jpg
  [1]: https://docs.microsoft.com/en-us/windows/console
  [2]: https://docs.microsoft.com/en-us/windows/console/getnumberofconsoleinputevents
  [3]: https://docs.microsoft.com/en-us/windows/console/readconsoleinput

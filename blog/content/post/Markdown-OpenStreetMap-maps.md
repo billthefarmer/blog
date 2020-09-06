@@ -154,7 +154,7 @@ and replacement.
 #### Update
 
 After I had implemented this It was suggested that perhaps I should be
-using a geo Uri (`![](geo:<lat,<lng>)`) for the map markdown syntax. I
+using a geo Uri (`![](geo:<lat>,<lng>)`) for the map markdown syntax. I
 hadn't thought of that, and it raises the possibility of receiving a
 geo Uri and turning it into a map. So I decided to convert existing
 `[<lat>,<lng>]` markdown to `![osm](geo:<lat>,<lng>)` markdown, and
