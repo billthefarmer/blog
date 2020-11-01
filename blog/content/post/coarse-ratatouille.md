@@ -12,6 +12,7 @@ keywords:
   - onion
   - potato
   - carrot
+  - oil
 ---
 This is slow cooked vegetables using whatever comes to hand.
 
@@ -32,4 +33,6 @@ This is slow cooked vegetables using whatever comes to hand.
   4. Next a layer of sliced carrots
   5. Add layers of whatever else is to hand to fill up the pan
   6. Pour a bit more oil over the top
-  7. Put the lid on and cook gently until the carrots are cooked. The onions should caramelise on the bottom and add some delicious flavour
+  7. Put the lid on and cook gently until the carrots are cooked. The
+     onions should caramelise on the bottom and add some delicious
+     flavour

@@ -9,6 +9,8 @@ categories:
 keywords:
   - tomatoes
   - baked
+  - olive
+  - oil
 ---
 
 On a holiday staying at the [Atlantic Hotel][1], St Mary's there
