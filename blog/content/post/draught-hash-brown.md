@@ -5,7 +5,7 @@ type: post
 date: 2020-11-01T11:55:12Z
 url: /draught-hash-brown/
 categories:
-    - recipes
+    - Recipes
 keywords:
     - hash
     - brown

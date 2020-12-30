@@ -5,7 +5,7 @@ type: post
 date: 2020-10-31T17:41:08Z
 url: /australian-meatball-wiggleoni/
 categories:
-    - recipes
+    - Recipes
 keywords:
     - meatballs
     - fusilli

@@ -5,7 +5,7 @@ type: post
 date: 2020-10-29T19:38:45Z
 url: /not-swedish-meatballs/
 categories:
-    - recipes
+    - Recipes
 keywords:
     - meatballs
     - swedish

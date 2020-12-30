@@ -5,7 +5,7 @@ type: post
 date: 2020-08-18T20:49:05+01:00
 url: /download-playlist-video/
 categories:
-    - hacking
+    - Hacking
 keywords:
     - download
     - playlist

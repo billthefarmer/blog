@@ -5,7 +5,7 @@ type: post
 date: 2020-03-26T13:02:53Z
 url: /lambda-expressions/
 categories:
-    - hacking
+    - Hacking
 keywords:
     - lambda
     - expression
