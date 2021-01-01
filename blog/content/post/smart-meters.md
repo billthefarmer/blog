@@ -44,7 +44,7 @@ bits. The messages were 50 bits long with a 13 bit CRC and a start
 bit. This was implemented by a ferrite rod aerial connected to a
 simple transistor amplifier connected to an input pin on the
 processor, an [Intel 8051][2] variant with an
-[EPROM][6]. Sychronisation to radio teleswitch messages was achieved
+[EPROM][6]. Synchronisation to radio teleswitch messages was achieved
 by a successful 13 bit CRC and start bit check.
 
 ![Crystal][11]
@@ -110,16 +110,17 @@ from the nearest substation. This worked during times of low demand on
 the power network, but became unreliable during times of high demand
 due to the high noise level.
 
-#### Kilostream
+#### Bitstream
 The various utilities were all nationalised industries at the time, so
 there was not too much difficulty working with other utilities on an
 interesting project such as this. Shortly after the end of the project
-[BT][13] rolled out a new tariff they called [Kilostream][14] to offer
-communication with devices on a customer's premises via the telephone
-line. The prices they wanted for the service were completely out of
-scope for meter reading. So that was the end of that. Since then all
-the utilities have been privatised, so any joint metering projects
-became exceedingly unlikely. They have since all done their own thing.
+[BT][13] rolled out a new tariff I think they called [Bitstream][14]
+to offer communication with devices on a customer's premises via the
+telephone line. The prices they wanted for the service were completely
+out of scope for meter reading. So that was the end of that. Since
+then all the utilities have been privatised, so any joint metering
+projects became exceedingly unlikely. They have since all done their
+own thing.
 
  [0]: https://www.umsmeters.co.uk/contact-us/manuals-and-downloads/old-pri-meters-kit
  [1]: https://en.wikipedia.org/wiki/Vacuum_fluorescent_display
@@ -135,5 +136,5 @@ became exceedingly unlikely. They have since all done their own thing.
  [11]: images/2018/07/P1020804.JPG
  [12]: https://en.wikipedia.org/wiki/Central_Electricity_Generating_Board
  [13]: https://en.wikipedia.org/wiki/BT_Group
- [14]: https://www.btwholesale.com/pages/static/products-services/kilostream.htm
+ [14]: https://www.btwholesale.com/pages/static/products-services/data.htm
  [15]: images/2018/07/F5326385-01.jpg

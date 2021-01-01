@@ -33,6 +33,6 @@ decided that [Truly Evil Onion Gravy][1] was the way to go.
  3. Cook the peas in accordance with the instructions. When they are
     done, use the cooking water for the gravy, first pouring it into
     the skillet to get any burnt on bits.
-  4. Serve, pouring the gravy over the faggots and peas.
+  4. Serve, pouring the gravy over the meatballs and peas.
 
  [1]: truly-evil-onion-gravy

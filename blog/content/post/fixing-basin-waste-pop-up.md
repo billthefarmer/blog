@@ -26,7 +26,7 @@ plunger, otherwise you will need to take off the U bend and poke it
 back up with a long screwdriver. To take it out, unscrew the plug from
 the top and use a small adjustable spanner to remove the clicker. It
 will be choked up with sludge and hair, clean it out and put some
-petroleom jelly on it for lubrication. It should then work again.
+petroleum jelly or WD40 on it for lubrication. It should then work again.
 
 If it refuses to stay down, the internal grooves for the mechanism are
 probably worn. You will need to get a new one. See above for how to
