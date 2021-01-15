@@ -2,7 +2,7 @@ baseURL: https://billthefarmer.github.io/editor/
 languageCode: en-gb
 
 title: Editor
-copyright: Copyright &copy; 2020 Bill Farmer
+copyright: Copyright &copy; 2021 Bill Farmer
 theme: kraiklyn
 publishDir: d:/android/editor/docs
 metaDataFormat: yaml

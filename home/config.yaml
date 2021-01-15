@@ -43,7 +43,7 @@ params:
     github: billthefarmer
     gitlab: williamjfarmer
     copyright:
-      - Copyright &copy; 2020 Bill Farmer
+      - Copyright &copy; 2021 Bill Farmer
 
   sharingicons:
     hide: true
