@@ -5,7 +5,7 @@ anchor: introduction
 weight: 100
 ---
 
-[Diary][1] is an android diary which can be used as a diary or journal,
+[Diary][1] is an android diary which may be used as a diary or journal,
 or any way you choose.
 
 ![Diary][2] ![Calendar][3]
