@@ -14,7 +14,7 @@ keywords:
 ---
 
 A musical staff is not a trivial thing to draw because of the complex
-curves needed for the treble and base clef. What is needed is a source
+curves needed for the treble and bass clef. What is needed is a source
 of vector drawing coordinates.
 
 The data used was originally intended for use in postscript, so the

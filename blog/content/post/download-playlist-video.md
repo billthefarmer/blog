@@ -14,6 +14,8 @@ keywords:
     - curl
 ---
 
+This has been superceded by [youtube-dl][4], which seems to work on most video sites.
+
 Since I wrote [Download streamed video][1] video web sites have upped
 their game to stop downloading. One of the techniques used is to use a
 [M3U][2] playlist and a complicated set of parameters. Other
@@ -115,3 +117,4 @@ file and reading through it to find the last segment.
  [1]: download-streamed-video
  [2]: https://en.wikipedia.org/wiki/M3U
  [3]: images/2020/08/Url.png
+ [4]: https://youtube-dl.org/
