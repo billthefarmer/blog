@@ -11,6 +11,7 @@ weight: 110
  * Currency rates updated daily
  * Last rate update retained for use offline
  * Extra currency for unsupported currencies
- * Ukrainian, German, Italian, French, Spanish and Indonesian translation
+ * Ukrainian, German, Italian, French, Spanish, Indonesian and Russian
+   translation
 
 [1]: https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html
