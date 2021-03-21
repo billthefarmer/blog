@@ -83,7 +83,7 @@ both for equal temperament and for that temperament.
     // Temperament adjustment
     double temperamentAdjust = temperamentRatio / equalRatio;
 ```
-</br />
+
 Then adjust the reference note frequency for that temperament and key.
 
 ```java
