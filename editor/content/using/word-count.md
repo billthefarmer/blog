@@ -5,4 +5,6 @@ anchor: word-count
 weight: 285
 ---
 
-The file word count and character count are shown in the toolbar.
+The file word count and character count are shown in the toolbar. Due
+to the algorithm used, the result may differ from that produced by
+other utilities.
