@@ -41,4 +41,4 @@ Delicious lunch for two.
  4. Cover and allow to steam until the potatoes mash easily with a fork
  5. Add milk to cover and mash most of the potato with the fork
  6. Season to taste and ladle into bowls, add the slices of chorizo on top
- 7. Serve with toast or crust bread
+ 7. Serve with toast or crusty bread
