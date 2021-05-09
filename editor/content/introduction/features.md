@@ -14,7 +14,7 @@ weight: 110
  * Optionally view files
  * Optional auto save
  * Optional Word wrap
- * Light/Dark/Retro themes
+ * Light/Dark/Black/Retro themes
  * Small/Medium/Large font size
  * Monospace/Proportional font faces
 

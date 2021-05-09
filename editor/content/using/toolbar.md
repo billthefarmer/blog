@@ -27,6 +27,7 @@ And on the menu:
 * **Theme** &ndash; Choose theme
   * **Light**
   * **Dark**
+  * **Black**
   * **Retro**
 * **Text size** &ndash; Choose text size
   * **Small**
