@@ -31,12 +31,12 @@ result:
   - "You got %d%. Perhaps you'll get a different squire next year"
   - You got %d%. Are you up for squire next year?
 colours: lightgreen,darkgreen,black,black
-more: http://billthefarmer.users.sourceforge.net/buccaneers
+more: http://www.thakeham-morris.org.uk
 
 ---
 
 <h2 style="text-align: center;">
-  <a id="meter"></a>The <a title="http://billthefarmer.users.sourceforge.net/buccaneers" href="http://www.thakeham-morris.org.uk" target="_blank">Thakeham Morris</a>-o-meter
+  <a id="meter"></a>The <a title="http://www.thakeham-morris.org.uk" href="http://www.thakeham-morris.org.uk" target="_blank">Thakeham Morris</a>-o-meter
 </h2>
 
 {{< whatever-o-meter >}}
