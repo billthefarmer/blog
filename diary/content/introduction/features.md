@@ -15,6 +15,7 @@ weight: 110
 * Optional entry template
 * Display media stored in diary folders
 * Display [OpenStreetMap](https://www.openstreetmap.org) maps
+* Print diary entries
 * Share diary entries
 * Add media from media providers
 * Receive media from other apps

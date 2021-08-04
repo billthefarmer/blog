@@ -17,6 +17,7 @@ And on the menu:
 * **Index** &ndash; go to index page if set
 * **Search** &ndash; incremental search of diary entry
 * **Find all** &ndash; find all diary entries containing search text
+* **Print** &ndash; print current diary entry
 * **Share** &ndash; share current diary entry
 * **Use template** &ndash; use template for current entry if empty
 * **Add time** &ndash; add the current time to diary entry
