@@ -11,6 +11,7 @@ weight: 110
 * Optional note template
 * Display media
 * Display [OpenStreetMap](https://www.openstreetmap.org/) maps
+* Print notes
 * Share notes
 * Add date and time
 * Add media from media providers

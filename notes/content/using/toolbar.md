@@ -17,6 +17,7 @@ And on the menu:
 * **Find all** &ndash; Find all notes containing search text
 * **Open recent** &ndash; Pop up a list of recent files
   * **Clear list** &ndash; Clear list of recent files
+* **Print** &ndash; Print note
 * **Share** &ndash; Share note
 * **Save as** &ndash; Save note in another file
 * **Add date** &ndash; Add the current date and time
