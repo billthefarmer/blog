@@ -1,0 +1,18 @@
+baseURL: https://billthefarmer.github.io/buses/
+languageCode: en-gb
+
+title: Buses
+copyright: Copyright &copy; 2021 Bill Farmer
+theme: kraiklyn
+publishDir: d:/android/buses/docs
+metaDataFormat: yaml
+
+params:
+  logo:
+    - image: images/icon.png
+      link: https://github.com/billthefarmer/buses
+      width: 25%
+  sidebarColor: cyan
+  customCss:
+      - css/custom.css
+
