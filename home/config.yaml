@@ -63,6 +63,15 @@ params:
     hide: false
     title: Recent projects
     links:
+    - title: Specie
+      url: https://github.com/billthefarmer/specie
+      description: Android currency converter
+    - title: Buses
+      url: https://github.com/billthefarmer/buses
+      description: Android GB bus times
+    - title: Print
+      url: https://github.com/billthefarmer/print
+      description: Android print utility
     - title: Notes
       url: https://github.com/billthefarmer/notes
       description: Android notebook

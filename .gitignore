@@ -2,6 +2,9 @@
 public/
 themes/
 
+# Hugo files
+.hugo_*
+
 # Emacs backups
 *~
 
