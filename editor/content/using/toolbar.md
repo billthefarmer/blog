@@ -18,6 +18,7 @@ And on the menu:
 * **Save as** &ndash; Save the current file with a new name
 * **Search** &ndash; Interactive search of text using a regular
     expression
+* **Charset** &ndash; Select character set, shows current set
 * **View markdown** &ndash; View markdown in browser or html viewer
 * **View files** &ndash; Open files read only for viewing
 * **Auto save** &ndash; Save the current file on app pause

@@ -9,6 +9,7 @@ weight: 110
  * Default file
  * View markdown in browser or html viewer
  * Regular expression text search
+ * Character set detection and selection
  * Optional syntax highlighting
  * Open recent files from menu
  * Optionally view files
