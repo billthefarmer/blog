@@ -9,4 +9,8 @@ In the toolbar you can…
 
 * **Open** a document with the file manager
 * **Print** the document, or write a pdf file
+
+In the menu you can…
+
+* **Markdown** toggle markdown processing off and on
 * **About** show the app copyright and version

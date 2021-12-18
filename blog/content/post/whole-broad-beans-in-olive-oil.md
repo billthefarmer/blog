@@ -8,6 +8,7 @@ categories:
   - Recipes
 keywords:
   - broad beans
+  - olive oil
 ---
 This is from a transport caff near the village of Pissouri, Cyprus many years ago. The pods need to be picked before the beans have fully developed and before the pods have grown a tough membrane around the beans. I have not seen beans this young for sale.
 

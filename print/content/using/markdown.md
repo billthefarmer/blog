@@ -6,8 +6,8 @@ weight: 230
 ---
 
 
-Markdown markup in the text will be parsed and rendered by the
-[commonmark][1] markdown library. URLs in the text will be turned into
-links so they may be followed.
+Markdown markup in the text will be parsed and rendered, if enabled,
+by the [commonmark][1] markdown library. URLs in the text will be
+turned into links so they may be followed.
 
 [1]: https://github.com/commonmark/commonmark-java
