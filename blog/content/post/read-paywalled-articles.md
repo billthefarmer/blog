@@ -25,14 +25,14 @@ find another source for the text of the item. To do this:
  * Click on the link for the article, you will see the first paragraph
    or so, with the rest not available without an account.
  * Double click on the title of the article to select all of the
-   title.
+   text.
  * Right click on the selected title to pop up a context menu, then
-   select 'Search {search engine} for "Title of Article"'.
+   select 'Search &lt;search engine&gt; for "Title of Article"'.
 
 ![Tanks](images/2021/12/Tanks.png)
 
  * From the results, if it appears, select the result that begins
-   'https://epaper.{newspaper url}...'.
+   'https://epaper.&lt;newspaper url&gt;...'.
    
  ![Search](images/2021/12/Search.png)
  
