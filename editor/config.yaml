@@ -12,7 +12,8 @@ params:
     - image: images/icon.png
       link: https://github.com/billthefarmer/editor
       width: 25%
-    - image: https://f-droid.org/wiki/images/c/ca/F-Droid-button_available-on_smaller.png
+    - image: https://fdroid.gitlab.io/artwork/badge/get-it-on.svg
+      width: 40%
       link: https://f-droid.org/packages/org.billthefarmer.editor
     - image: https://img.shields.io/github/v/release/billthefarmer/editor.svg?logo=github
       link: https://github.com/billthefarmer/editor/releases

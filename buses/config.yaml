@@ -12,6 +12,9 @@ params:
     - image: images/icon.png
       link: https://github.com/billthefarmer/buses
       width: 25%
+    - image: https://fdroid.gitlab.io/artwork/badge/get-it-on.svg
+      width: 40%
+      link: https://f-droid.org/packages/org.billthefarmer.buses
     - image: https://img.shields.io/github/v/release/billthefarmer/buses.svg?logo=github
       link: https://github.com/billthefarmer/buses/releases
   sidebarColor: cyan
