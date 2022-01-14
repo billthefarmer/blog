@@ -1,0 +1,19 @@
+baseURL: https://billthefarmer.github.io/gurgle/
+languageCode: en-gb
+
+title: Gurgle
+copyright: Copyright &copy; 2021 Bill Farmer
+theme: kraiklyn
+publishDir: d:/android/gurgle/docs
+metaDataFormat: yaml
+
+params:
+  logo:
+    - image: images/icon.png
+      link: https://github.com/billthefarmer/gurgle
+      width: 25%
+    - image: https://img.shields.io/github/v/release/billthefarmer/gurgle.svg?logo=github
+      link: https://github.com/billthefarmer/gurgle/releases
+  sidebarColor: cyan
+  customCss:
+      - css/custom.css

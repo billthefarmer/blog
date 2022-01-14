@@ -1,0 +1,11 @@
+---
+title: Display colours
+date: 2022-01-14T15:41:44Z
+anchor: display
+weight: 300
+---
+
+Letters which are in the word but in the wrong place will turn
+yellow. If they are in the right place they will turn green. Keep
+trying until you have guessed the word. The display will start again
+from the top if you run out of guesses.
