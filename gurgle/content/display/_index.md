@@ -6,6 +6,7 @@ weight: 300
 ---
 
 Letters which are in the word but in the wrong place will turn
-yellow. If they are in the right place they will turn green. Keep
-trying until you have guessed the word. The display will start again
-from the top if you run out of guesses.
+yellow. If they are in the right place they will turn green. If they
+are not in the word they will turn grey. Keep trying until you have
+guessed the word. The display will start again from the top if you run
+out of guesses.
