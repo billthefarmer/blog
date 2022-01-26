@@ -1,0 +1,22 @@
+baseURL: https://billthefarmer.github.io/crossword/
+languageCode: en-gb
+
+title: Crossword
+copyright: Copyright &copy; 2022 Bill Farmer
+theme: kraiklyn
+publishDir: d:/android/crossword/docs
+metaDataFormat: yaml
+
+params:
+  logo:
+    - image: images/icon.png
+      link: https://github.com/billthefarmer/crossword
+      width: 25%
+    - image: https://fdroid.gitlab.io/artwork/badge/get-it-on.svg
+      link: https://f-droid.org/packages/org.billthefarmer.crossword
+      width: 40%
+    - image: https://img.shields.io/github/v/release/billthefarmer/crossword.svg?logo=github
+      link: https://github.com/billthefarmer/crossword/releases
+  sidebarColor: cyan
+  customCss:
+      - css/custom.css

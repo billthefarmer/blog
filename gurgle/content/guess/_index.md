@@ -6,4 +6,6 @@ weight: 200
 ---
 
 Tap letters on the keyboard to enter a guess. Use the **Back** key to
-backspace. When you have finished a guess, tap the **Enter** key.
+backspace. When you have finished a guess, tap the **Enter** key. If
+you have guessed the word correctly, tap the **Gurgle** icon for the
+definition of the word.
