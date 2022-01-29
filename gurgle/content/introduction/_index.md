@@ -8,3 +8,7 @@ weight: 100
 Fairly simple android word game.
 
 ![Gurgle](images/Gurgle.png) ![Help](images/Help.png)
+
+ * Multiple coloured themes
+ * Multiple languages
+ * Look up word meaning
