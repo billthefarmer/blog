@@ -5,5 +5,6 @@ anchor: cheat
 weight: 800
 ---
 
-Use my [Crossword](https://github.com/billthefarmer/crossword) app to
+Use my [Crossword](https://github.com/billthefarmer/crossword) or
+[WordleSolver](https://github.com/billthefarmer/wordlesolver) app to
 cheat.
