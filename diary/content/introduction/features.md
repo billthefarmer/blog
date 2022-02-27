@@ -23,6 +23,7 @@ weight: 110
 * Incremental search of diary entries
 * Add events to calendar
 * Add events from calendar
+* Show today's entry in app widget
 * Dark or light theme for editing
 * Back up entries to a zip file
 * Optional edit cursor position control
