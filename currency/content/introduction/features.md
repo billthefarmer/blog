@@ -13,5 +13,6 @@ weight: 110
  * Extra currency for unsupported currencies
  * Ukrainian, German, Italian, French, Spanish, Indonesian and Russian
    translation
+ * App widget to display selected currency
 
 [1]: https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html
