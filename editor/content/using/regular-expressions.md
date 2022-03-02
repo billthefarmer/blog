@@ -2,7 +2,7 @@
 title: Regular Expressions
 date: 2021-09-05T09:48:08+01:00
 anchor: regular-expressions
-weight: 265
+weight: 258
 ---
 
 Explaining [regular expressions][1] used in the text search is beyond

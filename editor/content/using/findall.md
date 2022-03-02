@@ -2,7 +2,7 @@
 title: Findall
 date: 2020-03-26T09:56:27Z
 anchor: findall
-weight: 260
+weight: 252
 ---
 
 ![FindAll](images/Editor-findall.png)

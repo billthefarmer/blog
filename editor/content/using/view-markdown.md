@@ -2,7 +2,7 @@
 title: View Markdown
 date: 2020-03-04T19:40:02Z
 anchor: view-markdown
-weight: 260
+weight: 254
 ---
 
 You will be prompted to choose a viewer for an html file containing
