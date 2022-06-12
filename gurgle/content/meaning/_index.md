@@ -5,4 +5,5 @@ anchor: meaning
 weight: 500
 ---
 
-Tap the word once it has been guessed to display the meaning.
+Tap any word once the puzzle has been solved to display the meaning of
+that word.
