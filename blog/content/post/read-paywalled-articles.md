@@ -46,7 +46,18 @@ find another source for the text of the item. To do this:
 
 ![Reader.png](images/2021/12/Reader.png)
  
+### Update
+
+If this doesn't work, I have since discovered a site,
+[archive.today][4], that archives Times articles and probably others
+as well. Copy the URL of the article and paste it into the search box
+of the site and click the **search** button.
+
+![Link](images/2021/12/Link.png)
+
+![archive.today](images/2021/12/archive.today.png)
 
 [1]: https://github.com/iamadamdev/bypass-paywalls-chrome/blob/master/README.md
 [2]: https://www.thetimes.co.uk/
 [3]: https://www.mozilla.org/en-GB/firefox/new/
+[4]: https://archive.today/
