@@ -2,7 +2,7 @@ baseURL: https://billthefarmer.github.io/audiotools/
 languageCode: en-gb
 
 title: Audiotools
-copyright: Copyright &copy; 2019 Bill Farmer
+copyright: Copyright &copy; 2006 Bill Farmer
 theme: kraiklyn
 publishDir: d:/c/github/audiotools/docs
 metaDataFormat: yaml
@@ -12,7 +12,8 @@ params:
     - image: images/Icon.png
       link: https://github.com/billthefarmer/audiotools
       width: 25%
-    - image: https://img.shields.io/github/v/release/billthefarmer/audiotools.svg?logo=github
+    - image: https://fdroid.gitlab.io/artwork/badge/get-it-on.svg
+      width: 40%
       link: https://github.com/billthefarmer/audiotools/releases
   sidebarColor: cyan
   customCss:

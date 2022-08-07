@@ -2,7 +2,7 @@ baseURL: https://billthefarmer.github.io/diary/
 languageCode: en-gb
 
 title: Diary
-copyright: Copyright &copy; 2021 Bill Farmer
+copyright: Copyright &copy; 2006 Bill Farmer
 theme: kraiklyn
 publishDir: d:/android/diary/docs
 metaDataFormat: yaml

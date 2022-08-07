@@ -2,7 +2,7 @@ baseURL: https://billthefarmer.github.io/specie/
 languageCode: en-gb
 
 title: Specie
-copyright: Copyright &copy; 2021 Bill Farmer
+copyright: Copyright &copy; 2006 Bill Farmer
 theme: kraiklyn
 publishDir: d:/android/specie/docs
 metaDataFormat: yaml

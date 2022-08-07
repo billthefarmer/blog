@@ -2,7 +2,7 @@ baseURL: https://billthefarmer.github.io/ctuner/
 languageCode: en-gb
 
 title: Tuner
-copyright: Copyright &copy; 2018 Bill Farmer
+copyright: Copyright &copy; 2006 Bill Farmer
 theme: kraiklyn
 publishDir: d:/c/github/ctuner/docs
 metaDataFormat: yaml
@@ -16,7 +16,8 @@ params:
     - image: images/Tuner.png
       link: https://github.com/billthefarmer/ctuner
       width: 25%
-    - image: https://f-droid.org/wiki/images/c/ca/F-Droid-button_available-on_smaller.png
+    - image: https://fdroid.gitlab.io/artwork/badge/get-it-on.svg
+      width: 40%
       link: https://f-droid.org/packages/org.billthefarmer.tuner
     - image: https://img.shields.io/github/v/release/billthefarmer/ctuner.svg?logo=github
       link: https://github.com/billthefarmer/ctuner/releases

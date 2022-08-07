@@ -2,7 +2,7 @@ baseURL: https://billthefarmer.github.io/crossword/
 languageCode: en-gb
 
 title: Crossword
-copyright: Copyright &copy; 2022 Bill Farmer
+copyright: Copyright &copy; 2006 Bill Farmer
 theme: kraiklyn
 publishDir: d:/android/crossword/docs
 metaDataFormat: yaml

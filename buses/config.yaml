@@ -2,7 +2,7 @@ baseURL: https://billthefarmer.github.io/buses/
 languageCode: en-gb
 
 title: Buses
-copyright: Copyright &copy; 2021 Bill Farmer
+copyright: Copyright &copy; 2006 Bill Farmer
 theme: kraiklyn
 publishDir: d:/android/buses/docs
 metaDataFormat: yaml

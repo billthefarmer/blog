@@ -2,7 +2,7 @@ baseURL: https://billthefarmer.github.io/currency/
 languageCode: en-gb
 
 title: Currency
-copyright: Copyright &copy; 2021 Bill Farmer
+copyright: Copyright &copy; 2006 Bill Farmer
 theme: kraiklyn
 publishDir: d:/android/currency/docs
 metaDataFormat: yaml
