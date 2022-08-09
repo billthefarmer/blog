@@ -26,6 +26,13 @@ menu:
       weight: 60
     - name: Tuner
       url: https://billthefarmer.github.io/ctuner
+      weight: 70
+    - name: Gurgle
+      url: https://billthefarmer.github.io/gurgle
+      weight: 80
+    - name: Print
+      url: https://billthefarmer.github.io/print
+      weight: 90
 
 params:
   date_format: Monday January 2nd 2006
@@ -43,7 +50,7 @@ params:
     github: billthefarmer
     gitlab: williamjfarmer
     copyright:
-      - Copyright &copy; 2021 Bill Farmer
+      - Copyright &copy; 2006 Bill Farmer
 
   sharingicons:
     hide: true
