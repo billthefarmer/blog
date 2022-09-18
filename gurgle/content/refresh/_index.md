@@ -2,7 +2,7 @@
 title: Refresh
 date: 2022-01-14T15:42:48Z
 anchor: refresh
-weight: 400
+weight: 500
 ---
 
 Tap the **Refresh** button in the toolbar to clear the display and
