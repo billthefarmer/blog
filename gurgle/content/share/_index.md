@@ -9,6 +9,9 @@ weight: 550
 Share an image of the current display.
 
 ### Code
+
+![QR Code](images/Gurgle-code.png)
+
 Display an alphanumeric code and a QR code which represents a new
 sequence of words to guess. This code may be shared with another copy
 of Gurgle on another device to set the same sequence of words. Tapping
