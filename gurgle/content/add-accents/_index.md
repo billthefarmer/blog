@@ -5,6 +5,8 @@ anchor: add-accents
 weight: 450
 ---
 
+![Accents](images/Gurgle-accents.png)
+
 Long press on a letter in a completed guess. This will show a pop-up
 menu of unaccented and accented letters. Pick the required unaccented
 or accented letter.
