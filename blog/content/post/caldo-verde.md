@@ -18,7 +18,7 @@ keywords:
 
 This is not the traditional method of making caldo verde. The cabbage
 should something like spring greens, collard greens or cavalo
-nero. Roll up the leaves and slice thinly.
+nero. Spinach beet works also. Roll up the leaves and slice thinly.
 
 Delicious lunch for two.
 
