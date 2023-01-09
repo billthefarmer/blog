@@ -20,4 +20,3 @@ params:
   sidebarColor: cyan
   customCss:
       - css/custom.css
-
