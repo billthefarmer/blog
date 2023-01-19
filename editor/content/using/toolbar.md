@@ -15,16 +15,19 @@ There are five toolbar items which may appear:
 And on the menu:
 * **Open recent** &ndash; Pop up a list of recent files
   * **Clear list** &ndash; Clear list of recent files
-* **Save as** &ndash; Save the current file with a new name
 * **Search** &ndash; Interactive search of text using a regular
     expression
+* **Find all** &ndash; Find all recent files containing search text
+* **Save as** &ndash; Save the current file with a new name
 * **Go to** &ndash; Scroll to selected position in file
-* **Charset** &ndash; Select character set, shows current set
 * **View markdown** &ndash; View markdown in browser or html viewer
-* **View files** &ndash; Open files read only for viewing
-* **Auto save** &ndash; Save the current file on app pause
-* **Word wrap** &ndash; Limit text width to screen width and word wrap
-* **Suggestions** &ndash; Text input and spelling suggestions
+* **Charset** &ndash; Select character set, shows current set
+* **Options** &ndash; Select options
+  * **View files** &ndash; Open files read only for viewing
+  * **Auto save** &ndash; Save the current file on app pause
+  * **Word wrap** &ndash; Limit text width to screen width and word wrap
+  * **Suggestions** &ndash; Text input and spelling suggestions
+  * **Highlight syntax** &ndash; Highlight programming language syntax
 * **Highlight syntax** &ndash; Highlight programming language syntax
 * **Theme** &ndash; Choose theme
   * **Light**
