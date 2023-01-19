@@ -28,7 +28,6 @@ And on the menu:
   * **Word wrap** &ndash; Limit text width to screen width and word wrap
   * **Suggestions** &ndash; Text input and spelling suggestions
   * **Highlight syntax** &ndash; Highlight programming language syntax
-* **Highlight syntax** &ndash; Highlight programming language syntax
 * **Theme** &ndash; Choose theme
   * **Light**
   * **Dark**
