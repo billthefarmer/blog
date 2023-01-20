@@ -30,6 +30,9 @@ menu:
     - name: Gurgle
       url: https://billthefarmer.github.io/gurgle
       weight: 80
+    - name: Gridle
+      url: https://billthefarmer.github.io/gridle
+      weight: 80
     - name: Print
       url: https://billthefarmer.github.io/print
       weight: 90
@@ -70,6 +73,12 @@ params:
     hide: false
     title: Recent projects
     links:
+    - title: Gridle
+      url: https://github.com/billthefarmer/gridle
+      description: Android simple word game
+    - title: Gurgle
+      url: https://github.com/billthefarmer/gurgle
+      description: Android simple word game
     - title: Specie
       url: https://github.com/billthefarmer/specie
       description: Android currency converter
