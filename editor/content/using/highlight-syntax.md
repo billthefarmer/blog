@@ -52,7 +52,7 @@ recognised.
 Markdown headers, links, emphasis and code will be highlighted.
 
 #### Emacs Org
-Headers, links, emphasis and comments will be highlighted.
+Metadata, headers, links, emphasis and inline code will be highlighted.
 
 #### Default
 Files with unrecognised extensions which are not plain text files will
