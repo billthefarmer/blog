@@ -8,8 +8,9 @@ weight: 270
 ![Syntax](images/Editor-syntax.png)
 
 If the current open file is a C, C++, Objective C, Go, Java,
-Javascript, Python, Shell script, Swift, CSS, HTML or Markdown file,
-the keywords, classes comments, strings, etc will be highlighted.
+Javascript, Python, Shell script, Swift, CSS, HTML, [Emacs Org][2] or
+Markdown file, the keywords, classes comments, strings, etc will be
+highlighted.
 
 ### Selection
 The type of highlighting is selected by file extension. Files with
@@ -18,7 +19,8 @@ The type of highlighting is selected by file extension. Files with
 highlighting. Files with `.htm`, `.html` extensions will be
 highlighted as HTML. Files with `.cs`, `.css` extensions will be
 highlighted as CSS. Files with `.md` extensions will be highlighted as
-markdown.
+markdown. Files with `.org` extensions will be highlighted as Emacs
+Org.
 
 
 ### Parsing
@@ -49,13 +51,19 @@ recognised.
 #### Markdown
 Markdown headers, links, emphasis and code will be highlighted.
 
+#### Emacs Org
+Headers, links, emphasis and comments will be highlighted.
+
 #### Default
-Files with unrecognised extensions which are not plain text files
-will be highlighted with default highlighting, similar to C type
+Files with unrecognised extensions which are not plain text files will
+be highlighted with default highlighting, similar to C type
 highlighting. Comments will not be highlighted as there is little
 consistency with comment delimiters outside C type languages.
 
-### Limitations
+**Caution** Files with strings of symbols may defeat the
+regex processing and cause the app to stop responding.
+
+#### Limitations
 Because scanning and highlighting a large file can be quite slow,
 making the app unresponsive, only the text currently in view is
 scanned and highlighted. Therefore as the text is edited or scrolled,
@@ -77,3 +85,4 @@ smaller or rotate the device to avoid this. Or turn the highlighting
 off.
 
  [1]: https://billthefarmer.github.io/blog/post/source-code-highlighting (https://billthefarmer.github.io/blog/post/source-code-highlighting)
+ [2]: https://orgmode.org (https://orgmode.org)
