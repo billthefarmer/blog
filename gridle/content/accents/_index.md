@@ -5,6 +5,8 @@ anchor: accents
 weight: 7000
 ---
 
+![Accents](images/Accents.png)
+
 Long press on a letter in the solved word grid. This will show a
 pop-up menu of unaccented and accented letters. Pick the required
 unaccented or accented letter.
