@@ -32,6 +32,7 @@ And on the menu:
 * **Theme** &ndash; Choose theme
   * **Light**
   * **Dark**
+  * **System**
   * **White**
   * **Black**
   * **Retro**
