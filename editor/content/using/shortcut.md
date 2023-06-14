@@ -1,7 +1,7 @@
 ---
-title: Shortcut
+title: Shortcuts
 date: 2022-03-02T09:34:09Z
-anchor: shortcut
+anchor: shortcuts
 weight: 260
 ---
 
