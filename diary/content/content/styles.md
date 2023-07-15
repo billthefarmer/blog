@@ -20,3 +20,7 @@ You may include the built in styles file with an `@import` statement
 `@import "file:///android_asset/styles.css";` or
 `@import url("file:///android_asset/styles.css");`, which should be on
 the first line.
+
+There is a dark theme example
+[styles](https://github.com/billthefarmer/diary/blob/master/data/dark.md)
+file, which may be copied to the styles editor.

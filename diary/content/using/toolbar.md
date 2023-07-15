@@ -7,6 +7,7 @@ weight: 210
 
 The toolbar items:
 
+* **Cancel** &ndash; cancel edits of current entry
 * **Previous** &ndash; show the previous entry or today
 * **Next** &ndash; show the next entry or today if next
 * **Today** &ndash; show today's entry

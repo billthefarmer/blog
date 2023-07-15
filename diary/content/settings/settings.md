@@ -15,5 +15,5 @@ weight: 510
     choose a date.
 * **Browser** &ndash; Use browser for external links
 * **Copy images** &ndash; Copy images to current folder
-* **Dark theme** &ndash; Use dark theme for editing
+* **Theme** &ndash; Choose theme for editing
 * **About** &ndash; Show app version, licence and credits
