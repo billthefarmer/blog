@@ -117,6 +117,31 @@ up a delayed reset in case the update failed.
 After a successful update send a broadcast to update the widget and a
 delayed method call to do it again unless the flag is set.
 
+From android 10 there are restrictions on what background processes
+can do to start other processes. To work around this create an
+activity with the **Theme.NoDisplay** theme just to start the service.
+```java
+    // On create
+    @Override
+    @SuppressWarnings("deprecation")
+    public void onCreate(Bundle savedInstanceState)
+    {
+        super.onCreate(savedInstanceState);
+
+        if (BuildConfig.DEBUG)
+            Log.d(TAG, "onCreate " + getIntent());
+
+        // Start update service
+        Intent update = new Intent(this, BusesWidgetUpdate.class);
+        startService(update);
+
+        if (BuildConfig.DEBUG)
+            Log.d(TAG, "Update " + update);
+
+        finish();
+    }
+```
+
  [1]: https://github.com/billthefarmer/buses
  [2]: https://developer.android.com/reference/android/app/Service
  [3]: https://developer.android.com/reference/android/os/Handler
