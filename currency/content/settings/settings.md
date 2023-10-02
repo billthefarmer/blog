@@ -21,7 +21,7 @@ weight: 310
 * **Fill** Fill the chart trace.
 
 #### Theme
-* **Dark** Use dark theme
+* **Theme** Choose app theme.
 
 #### About
 * **About** Display the version, copyright and licence.

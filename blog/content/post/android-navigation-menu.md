@@ -43,6 +43,13 @@ Create a recursive function to traverse the views and find the toolbar.
         return (Toolbar) result;
     }
 ```
+Having written this hack, I then discovered a more efficient way using
+built in functionality.
+```java
+        // Find toolbar
+        toolbar = findViewById(getResources().getIdentifier("action_bar",
+                                                            "id", "android"));
+```
 Set up navigation on the toolbar.
 ```java
         // Find toolbar

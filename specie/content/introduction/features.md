@@ -10,5 +10,6 @@ weight: 110
  * 150 international currencies
  * Currency rates updated daily
  * Last rate update retained for use offline
+ * App widget to display selected currency
 
 [1]: https://www.floatrates.com

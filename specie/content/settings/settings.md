@@ -17,7 +17,7 @@ weight: 310
 
 #### Theme
 
-* **Dark** Use dark theme
+* **Theme** Choose app theme.
 
 #### About
 
