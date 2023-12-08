@@ -8,6 +8,14 @@ weight: 550
 ### Image
 Share an image of the current display.
 
+### Text
+
+![Gurgle-solver](images/Gurgle-solver.png) ![WordleSolver.png](images/WordleSolver.png)
+
+Share the letters and colours of finished guesses. Select the
+[WordleSolver](https://github.com/billthefarmer/wordlesolver) app to
+pick the next guess.
+
 ### Code
 
 ![QR Code](images/Gurgle-code.png)
