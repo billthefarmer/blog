@@ -15,9 +15,112 @@ keywords:
 Google have made a big [thing][0] of their [flutter][1] development
 platform, so I thought I ought to give it a try. It's easy to install,
 just download the [sdk][2], unzip it in a suitable place and add the
-`bin` folder to your `path`. I had to tell it where I had installed
-Android Studio.
+`bin` folder to your `path`.
 
+### Update
+I decided to have another look as it appears to be liked by developers
+on [Reddit][4]. The old version wouldn't update, so I downloaded the
+latest (Flutter 3.16.5) and replaced it. This time it found everything
+it wanted. This time I build a simplistic app that just displays an
+image.
+
+To remove the annoying diagonal banner on the debug version which
+overlays a possible icon on the app bar, add
+`debugShowCheckedModeBanner: false` to the `MaterialApp`
+widget. Because the image is larger than the display height in
+landscape, I added a `SingleChildScrollView` so that it can scroll. I
+also added a `Padding` widget so the image is inset slightly.
+
+```dart
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const AnneApp());
+}
+
+class AnneApp extends StatelessWidget {
+  const AnneApp({super.key});
+
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Anne',
+      theme: ThemeData.dark(useMaterial3: true,),
+      home: const Anne(title: 'Anne'),
+    );
+  }
+}
+
+class Anne extends StatelessWidget {
+  const Anne({super.key, required this.title});
+
+  final String title;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(title),
+      ),
+      body: Center(
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Image.asset('images/anne.png'),
+              ),
+              Text(title, style: Theme.of(context).textTheme.headlineLarge),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+```
+In order to include images, you need an `assets` entry in the
+`pubspec.yaml` file. The file includes helpful comments.
+
+```yaml
+  # To add assets to your application, add an assets section, like this:
+  # assets:
+  #   - images/a_dot_burr.jpeg
+  #   - images/a_dot_ham.jpeg
+  assets:
+    - images/anne.png
+```
+The debug app is large (~70Mb) because it contains the flutter run
+time debugging system, also below. If you build a release version the
+app size is more reasonable.
+```shell
+$ flutter build apk
+Running Gradle task 'assembleRelease'...                           14.4s
+√  Built build\app\outputs\flutter-apk\app-release.apk (18.5MB).
+Bill@Cecelia MINGW64 /d/flutter/Anne (main)
+$ flutter install apk
+Installing app-release.apk to Moto G...
+Uninstalling old version...
+Installing build\app\outputs\flutter-apk\app-release.apk...         8.1s
+```
+Building and installing the debug version of the app takes a long
+time. It is also slow starting, which is annoying. Because the release
+version is built with the debug keys by default, you can build and
+install that instead, which is much quicker.
+```shell
+$ flutter run
+Launching lib\main.dart on Moto G in debug mode...
+Running Gradle task 'assembleDebug'...                             22.2s
+√  Built build\app\outputs\flutter-apk\app-debug.apk.
+Installing build\app\outputs\flutter-apk\app-debug.apk...          22.7s
+Syncing files to device Moto G...                                  198ms
+```
+
+I had to tell the earlier version (Flutter 2.2.3) where I had
+installed Android Studio.
 ```shell
 $ flutter config --android-studio-dir 'D:\adt\Android Studio'
 Setting "android-studio-dir" value to "D:\adt\Android Studio".
@@ -276,3 +379,4 @@ etc. Rather a lot of bloat, considering that most of my apps are about
  [1]: https://flutter.dev/
  [2]: https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_2.2.3-stable.zip
  [3]: images/2021/07/Screenshot_20210715-213310.png
+ [4]: https://old.reddit.com/r/FlutterDev/
