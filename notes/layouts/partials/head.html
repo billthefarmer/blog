@@ -22,5 +22,8 @@
         p.innerHTML = p.innerHTML.replace(/\d{4}/, d);
     }
   </script>
+  {{ if .Param "math" }}
+    {{ partialCached "math.html" . }}
+  {{ end }}
 </head>
 <body>
