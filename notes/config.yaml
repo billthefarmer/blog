@@ -6,6 +6,20 @@ copyright: Copyright &copy; 2006 Bill Farmer
 theme: kraiklyn
 publishDir: d:/android/notes/docs
 metaDataFormat: yaml
+markup:
+  goldmark:
+    extensions:
+      passthrough:
+        delimiters:
+          block:
+          - - \[
+            - \]
+          - - $$
+            - $$
+          inline:
+          - - \(
+            - \)
+        enable: true
 
 params:
   logo:
@@ -20,3 +34,4 @@ params:
   sidebarColor: cyan
   customCss:
       - css/custom.css
+  math: true
