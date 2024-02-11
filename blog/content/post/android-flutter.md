@@ -8,6 +8,7 @@ categories:
     - Hacking
 keywords:
     - android
+    - flutter
     - dart
     - kotlin
 ---

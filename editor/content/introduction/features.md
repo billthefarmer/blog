@@ -18,5 +18,5 @@ weight: 110
  * New file shortcut
  * Light/Dark/Black/Retro themes
  * Small/Medium/Large font size
- * Monospace/Proportional font faces
+ * Monospace/Proportional/Sans serif/Serif font faces
 
