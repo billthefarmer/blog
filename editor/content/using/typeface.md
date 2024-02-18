@@ -5,6 +5,8 @@ anchor: typeface
 weight: 257
 ---
 
+![Typeface](images/Editor-typeface.png)
+
 The **Typeface** menu item shows a choice of common typefaces. These
 are aliases for the fonts commonly provided on android devices. Some
 of them resolve to the same font, depending on the device.
