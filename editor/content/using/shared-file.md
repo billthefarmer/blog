@@ -8,6 +8,9 @@ weight: 330
 Text files opened or shared by another app may be viewed and
 edited. Some apps may share files or text using a `content` URI that
 is not resolvable to a path to a file in storage. In that case the
-editor will read the file into the default file. The default file in
-storage will not be overwritten unless the file is saved. Use the
-**Save as** menu item to save the file elsewhere.
+editor will read the file into a new file. The **Save** item will save
+the file in the original location if possible.
+
+**Note** &ndash; Apps that share files will usually only give another
+app read permission. Use the **Save as** menu item to save the file
+elsewhere.

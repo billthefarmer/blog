@@ -11,7 +11,17 @@ implemented:
  * Ctrl+Shift+E &ndash; View mode
  * Ctrl+F &ndash; Search
  * Ctrl+Shift+F &ndash; Close search
+ * Ctrl+Alt+F &ndash; Find next
+ * Ctrl+G &ndash; Go to
+ * Ctrl+M &ndash; Show menu
  * Ctrl+N &ndash; New file
  * Ctrl+O &ndash; Open file
  * Ctrl+S &ndash; Save file
  * Ctrl+Shift+S &ndash; Save as
+ * Ctrl++ &ndash; Increase text size
+ * Ctrl+- &ndash; Decrease text size
+ * F3 &ndash; Find next
+ * F10 &ndash; Show menu
+
+Many other shortcuts &ndash; Ctrl+A, Ctrl+C, Ctrl+V, Ctrl+X, Ctrl+Z
+are already build in to android.
