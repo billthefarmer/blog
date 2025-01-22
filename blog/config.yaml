@@ -20,7 +20,8 @@ taxonomies:
   category: categories
 
 # number of posts to show on home/category/tag pages (Default: 10)
-paginate: 5
+pagination:
+  pagersize: 5
 
 related:
   threshold: 10
