@@ -67,3 +67,7 @@ Country cottage near Porto Koufo, Sithonia, Greece.
 ![Lyscombe](images/2024/03/Lyscombe.jpg)
 
 Priests house Lyscombe, Dorset, UK
+
+![Fiddlers Green](images/2024/03/Fiddlers.jpg)
+
+Cottage at Fiddlers Green, Waterston Ridge, Dorset, UK
