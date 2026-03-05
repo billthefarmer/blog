@@ -1,0 +1,30 @@
+baseURL: https://billthefarmer.github.io/mindmap/
+languageCode: en-gb
+
+title: MindMap
+copyright: Copyright &copy; 2006 Bill Farmer
+theme: kraiklyn
+publishDir: d:/android/mindmap/docs
+metaDataFormat: yaml
+
+markup:
+  highlight:
+    codeFences: true
+    style: emacs
+  goldmark:
+    renderer:
+      unsafe: true
+
+params:
+  logo:
+    - image: images/MindMap.svg
+      link: https://github.com/billthefarmer/mindmap
+      width: 25%
+#    - image: https://fdroid.gitlab.io/artwork/badge/get-it-on.svg
+#      width: 40%
+#      link: https://f-droid.org/packages/org.billthefarmer.buses
+    - image: https://img.shields.io/github/v/release/billthefarmer/mindmap.svg?logo=github
+      link: https://github.com/billthefarmer/mindmap/releases
+  sidebarColor: cyan
+  customCss:
+      - css/custom.css

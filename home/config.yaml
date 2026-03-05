@@ -45,6 +45,8 @@ params:
     hide: true
   custom_css:
     - css/sidebar.css
+  custom_js:
+    - js/sidebar.js
 
   name: Bill Farmer
   description: Home page

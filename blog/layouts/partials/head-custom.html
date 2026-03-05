@@ -31,13 +31,27 @@ table {
 }
 </style>
 
+<script type="text/javascript"
+        src="{{ absURL "js/jquery-3.7.0.min.js" }}"></script>
+
+<script>
+  jQuery(document).ready(function($) {
+
+      // Get year
+      let now = new Date();
+      let year = now.getFullYear();
+
+      // Fix copyright
+      let copy = $(".row.column").first().html().replace(/\d{4}/, year);
+      $(".row.column").first().html(copy);
+  });
+</script>
+
 {{ if isset .Params "question" }}
 <!-- Whatever-o-meter css -->
 <link href="{{ absURL "css/jquery-ui.min.css" }}" rel="stylesheet">
 
 <!-- Whatever-o-meter js -->
-<script type="text/javascript"
-        src="{{ absURL "js/jquery-3.7.0.min.js" }}"></script>
 <script type="text/javascript"
         src="{{ absURL "js/jquery-ui.min.js" }}"></script>
 <script type="text/javascript"

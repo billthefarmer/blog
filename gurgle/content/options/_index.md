@@ -7,6 +7,7 @@ weight: 620
 
  * **Confetti** &ndash; Select confetti display on guessing word.
  * **Fanfare** &ndash; Select fanfare on guessing word.
+ * **Auto enter** &ndash; Select to auto enter correct letters.
  * **Default word** &ndash; Select default word. The first word
    entered will become the default word entered at the beginning of
    each game. Reset to clear word.

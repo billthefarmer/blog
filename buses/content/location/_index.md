@@ -12,5 +12,4 @@ and date, OS six figure reference, and OS twelve figure reference are
 shown in the left upper corner of the map. The current longitude,
 latitude, altitude and accuracy are shown in the right upper corner of
 the map. If the map is panned, these figures will change to the
-current map centre. After a delay they will revert to the current GPS
-location.
+current map centre.
