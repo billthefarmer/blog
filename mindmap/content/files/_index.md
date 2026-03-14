@@ -2,7 +2,7 @@
 title: File format
 date: 2026-03-05T16:48:07Z
 anchor: files
-weight: 500
+weight: 600
 ---
 
 The mindmap files contain text in the
