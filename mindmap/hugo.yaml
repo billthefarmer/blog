@@ -22,7 +22,7 @@ params:
       width: 25%
 #    - image: https://fdroid.gitlab.io/artwork/badge/get-it-on.svg
 #      width: 40%
-#      link: https://f-droid.org/packages/org.billthefarmer.buses
+#      link: https://f-droid.org/packages/org.billthefarmer.mindmap
     - image: https://img.shields.io/github/v/release/billthefarmer/mindmap.svg?logo=github
       link: https://github.com/billthefarmer/mindmap/releases
   sidebarColor: cyan
