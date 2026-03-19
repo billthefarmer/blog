@@ -29,7 +29,6 @@ So you start off with something like this:
 ```markdown
 ---
 title: Test
-something: Probably
 ---
 ## Node 1
 - Node 1.1
@@ -46,9 +45,72 @@ something: Probably
 
 And you get this:
 
-![MindMap][4]
+![MindMap][5]
+
+First, read the markdown and give it to the [commonmark][2] parser,
+including the `YamlFrontMatterExtension`.
+
+```java
+        // Get the text
+        StringBuilder text = new StringBuilder();
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader
+               (getContentResolver().openInputStream(uri))))
+        {
+            String line;
+            while ((line = reader.readLine()) != null)
+            {
+                text.append(line);
+                text.append(System.getProperty("line.separator"));
+            }
+
+            // Use commonmark
+            List<Extension> extensions =
+                List.of(YamlFrontMatterExtension.create());
+            Parser parser = Parser.builder().extensions(extensions).build();
+            Node document = parser.parse(text.toString());
+```
+
+The document contains a tree of [commonmark][2] nodes which can be
+navigated using the API. Create a new [MindMapView][4] tree and
+initialise the mindmap view.
+
+```java
+            // New tree
+            tree = new Tree<>(this);
+            mindMapView.setTree(tree);
+            mindMapView.initialize();
+```
+
+Create a list to keep track of nodes and handle YAML front matter if
+it exists. The root node must be replaced to change the description.
+
+```java
+            List<String> nodeList = new ArrayList<>();
+            document.accept(new YamlFrontMatterVisitor()
+            {
+                @Override
+                public void visit(CustomNode custom)
+                {
+                    int level = 0;
+                    YamlFrontMatterNode node = (YamlFrontMatterNode)custom;
+                    if (TITLE.equals(node.getKey()))
+                    {
+                        NodeData<?> root = tree.getRootNode();
+                        tree.updateNode(root.getId(),
+                                        node.getValues().get(0),
+                                        root.getChildren(),
+                                        root.getPath().getCenterX(),
+                                        root.getPath().getCenterY());
+                        nodeList.add(level, root.getId());
+                        name = node.getValues().get(0);
+                        setTitle(name);
+                    }
+                }
+            });
+```
 
  [1]: https://github.com/billthefarmer/mindmap
  [2]: https://github.com/commonmark/commonmark-java
  [3]: https://markmap.js.org/repl
- [4]: images/MindMap.png
+ [4]: https://github.com/hegleB/MindMapView
+ [5]: images/2026/MindMap.png
