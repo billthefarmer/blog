@@ -83,10 +83,15 @@ initialise the mindmap view.
 ```
 
 Create a list to keep track of nodes and handle YAML front matter if
-it exists. The root node must be replaced to change the description.
+it exists. Fill the list with references to the root node to take care
+of inconsistencies in the input markdown.The root node must be
+replaced to change the description.
 
 ```java
             List<String> nodeList = new ArrayList<>();
+            NodeData<?> root = tree.getRootNode();
+            for (int i = 0; i < 10; i++)
+                nodeList.add(root.getId());
             document.accept(new YamlFrontMatterVisitor()
             {
                 @Override
@@ -96,15 +101,12 @@ it exists. The root node must be replaced to change the description.
                     YamlFrontMatterNode node = (YamlFrontMatterNode)custom;
                     if (TITLE.equals(node.getKey()))
                     {
-                        NodeData<?> root = tree.getRootNode();
                         tree.updateNode(root.getId(),
                                         node.getValues().get(0),
                                         root.getChildren(),
                                         root.getPath().getCenterX(),
                                         root.getPath().getCenterY());
                         nodeList.add(level, root.getId());
-                        name = node.getValues().get(0);
-                        setTitle(name);
                     }
                 }
             });
@@ -130,6 +132,9 @@ tree.
                         if (child instanceof Text)
                             content.append(((Text)child).getLiteral());
 
+                        else if (child instanceof Code)
+                            content.append(((Code)child).getLiteral());
+
                         else if (child instanceof Emphasis ||
                                  child instanceof StrongEmphasis ||
                                  child instanceof Link)
@@ -142,8 +147,7 @@ tree.
 
 Handle a `H1` header, similar to the above. The `level` variable is
 used to keep track of header level and bullet/ordered list levels. Set
-the name and the app title as above. The name is used when saving
-the map.
+the name and the app title as above.
 
 ```java
                     // Title
@@ -157,8 +161,6 @@ the map.
                                         root.getPath().getCenterX(),
                                         root.getPath().getCenterY());
                         nodeList.add(level, root.getId());
-                        name = content.toString();
-                        setTitle(name);
                     }
 ```
 
@@ -166,6 +168,7 @@ Handle other header nodes. The call to `super` handles recursion. To
 add a node you need an `id`, a `parentId` and the `content`.
 
 ```java
+                    // Node
                     else
                     {
                         level = heading.getLevel() - 1;
@@ -192,6 +195,9 @@ handled identically.
                     if (list.getParent() instanceof ListItem)
                         level++;
 
+                    else if (list.getParent() instanceof Heading)
+                        level = ((Heading)list.getParent()).getLevel() - 1;
+
                     super.visit(list);
                 }
 ```
@@ -212,6 +218,12 @@ of recursion.
                     {
                         if (child instanceof Text)
                             content.append(((Text)child).getLiteral());
+
+                        else if (child instanceof Code)
+                            content.append(((Code)child).getLiteral());
+
+                        else if (child instanceof HtmlInline)
+                            content.append(((HtmlInline)child).getLiteral());
 
                         else if (child instanceof Emphasis ||
                                  child instanceof StrongEmphasis ||
@@ -244,8 +256,27 @@ blocks, inline code, etc.
 ```
 
 Although there is no such thing as a markdown syntax error, irrational
-markdown will break this code. It just generates an `Exception` and
+markdown may break this code. It just generates an `Exception` and
 gives up.
+
+```java
+        catch (Exception e)
+        {
+            alertDialog(R.string.appName, e.getMessage());
+            e.printStackTrace();
+        }
+```
+
+Get the name from the Uri and set the title. Recreate the activity to
+let the library lay out the new map.
+
+```java
+        // Get the name
+        name = (queryName(uri)).replace(".md", "");
+        setTitle(name);
+        recreate();
+    }
+```
 
 [1]: https://github.com/billthefarmer/mindmap
  [2]: https://github.com/commonmark/commonmark-java
