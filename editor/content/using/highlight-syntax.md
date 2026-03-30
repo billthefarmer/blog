@@ -7,19 +7,20 @@ weight: 270
 
 ![Syntax](images/Editor-syntax.png)
 
-If the current open file is a C, C++, Objective C, Go, Java,
-Javascript, Python, Shell script, Swift, CSS, HTML, [Emacs Org][2] or
-Markdown file, the keywords, classes comments, strings, etc will be
-highlighted.
+If the current open file is a C, C++, Objective C, Dart, Go, Java,
+Javascript, Python, Rust, Shell script, Swift, CSS, HTML, [Emacs
+Org][2] or Markdown file, the keywords, classes comments, strings, etc
+will be highlighted.
 
 ### Selection
+
 The type of highlighting is selected by file extension. Files with
-`.c`, `.cc`, `.c++`, `.cxx`, `.m`, `.h`, `.go`, `.js`, `.java`, `.py`,
-`.sh`, `.swift` extensions will be highlighted with 'C' style
-highlighting. Files with `.htm`, `.html` extensions will be
-highlighted as HTML. Files with `.cs`, `.css` extensions will be
-highlighted as CSS. Files with `.md` extensions will be highlighted as
-markdown. Files with `.org` extensions will be highlighted as Emacs
+`.c`, `.cc`, `.c++`, `.cxx`, `.m`, `.h`, `.dart`, `.go`, `.js`,
+`.java`, `.py`, `.rs`, `.sh`, `.swift` extensions will be highlighted
+with 'C' style highlighting. Files with `.htm`, `.html` extensions
+will be highlighted as HTML. Files with `.cs`, `.css` extensions will
+be highlighted as CSS. Files with `.md` extensions will be highlighted
+as markdown. Files with `.org` extensions will be highlighted as Emacs
 Org.
 
 
